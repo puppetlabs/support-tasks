@@ -1,5 +1,5 @@
 {
-  "name": "martinewings-support_tasks",
+  "name": "puppetlabs-support_tasks",
   "version": "0.1.0",
   "author": "Puppet Support Team",
   "summary": "",
@@ -12,25 +12,29 @@
     {
       "operatingsystem": "CentOS",
       "operatingsystemrelease": [
-        "7"
+        "7",
+        "6"
       ]
     },
     {
       "operatingsystem": "OracleLinux",
       "operatingsystemrelease": [
-        "7"
+        "7",
+        "6"
       ]
     },
     {
       "operatingsystem": "RedHat",
       "operatingsystemrelease": [
-        "7"
+        "7",
+        "6"
       ]
     },
     {
       "operatingsystem": "Scientific",
       "operatingsystemrelease": [
-        "7"
+        "7",
+        "6"
       ]
     },
     {
@@ -42,6 +46,7 @@
     {
       "operatingsystem": "Ubuntu",
       "operatingsystemrelease": [
+        "14.04",
         "16.04"
       ]
     },
@@ -50,7 +55,7 @@
       "operatingsystemrelease": [
         "2008 R2",
         "2012 R2",
-        "10"
+        "2016"
       ]
     },
     {
@@ -68,12 +73,14 @@
     {
       "operatingsystem": "SLES",
       "operatingsystemrelease": [
+        "11",
         "12"
       ]
     },
     {
       "operatingsystem": "Solaris",
       "operatingsystemrelease": [
+        "10",
         "11"
       ]
     }
@@ -84,7 +91,7 @@
       "version_requirement": ">= 4.7.0 < 6.0.0"
     }
   ],
-  "pdk-version": "1.4.1",
-  "template-url": "file:///opt/puppetlabs/pdk/share/cache/pdk-templates.git",
-  "template-ref": "1.4.1-0-g52adbbb"
+  "pdk-version": "1.6.0 (heads/master-0-ga339b38)",
+  "template-url": "https://github.com/puppetlabs/pdk-templates",
+  "template-ref": "heads/master-0-gc87eee3"
 }
