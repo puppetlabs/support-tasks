@@ -75,7 +75,7 @@ end
 
 desc 'Syntax check shellscripts'
 task :shellcheck do
-  Dir['**/*.sh'].each do |shell_file|
+  Dir['{tasks,files}/**/*.sh'].each do |shell_file|
     sh "shellcheck #{shell_file}" do |ok, res|
         exit res.exitstatus unless ok
     end
