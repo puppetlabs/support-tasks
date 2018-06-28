@@ -2,9 +2,9 @@
   "name": "puppetlabs-support_tasks",
   "version": "0.1.0",
   "author": "Puppet Support Team",
-  "summary": "",
+  "summary": "A module used to deliver Tasks for the solutions & configurations described in the PE Support Knowledgebase https://support.puppet.com/hc/en-us",
   "license": "Apache-2.0",
-  "source": "",
+  "source": "https://github.com/puppetlabs/support-tasks",
   "dependencies": [
 
   ],
@@ -91,7 +91,7 @@
       "version_requirement": ">= 4.7.0 < 6.0.0"
     }
   ],
-  "pdk-version": "1.6.0 (heads/master-0-ga339b38)",
+  "pdk-version": "1.6.0",
   "template-url": "https://github.com/puppetlabs/pdk-templates",
   "template-ref": "heads/master-0-gc87eee3"
 }

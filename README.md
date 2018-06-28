@@ -8,6 +8,7 @@
     * [Beginning with support_tasks](#beginning-with-support_tasks)
 3. [Usage - Configuration options and additional functionality](#usage)
 4. [Reference - An under-the-hood peek at what the module is doing and how](#reference)
+    * [Tasks](#tasks)
 5. [Getting Help](#getting-help)
 
 ## Description
@@ -24,7 +25,7 @@ The Puppet Enterprise Support Knowledgebase, avialable to PE customers, offers a
 ### Beginning with support_tasks
 
 
-Tasks in this module should only be executed by PE customers in accompaniment with the corresponding Knowledgebase article. The Task name will correspond the KB Article Number for instance, article KB#9999 will correspond to Puppet Task KB#9999
+Tasks in this module should only be executed by PE customers in accompaniment with the corresponding Knowledgebase article. The Task name will correspond the KB Article Number, for instance, article KB#9999 will correspond to Puppet Task kb9999
 
 ## Usage
 
@@ -35,6 +36,10 @@ PE customers should execute the task designated by the Knowledgebase article bas
 ## Reference
 
 To view the available actions and parameters, on the command line, run `puppet task show <task_name>` or see the support_tasks module page on the [Forge](https://forge.puppet.com/puppetlabs/support_tasks/tasks).
+
+**Tasks:**
+
+* [`kb0149`](https://support.puppet.com/hc/en-us/articles/218763948)
 
 
 ## Getting Help
