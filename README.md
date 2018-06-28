@@ -14,7 +14,7 @@
 
 This is the companion module used to deliver the Tasks for the solutions and configurations described in the Puppet Enterprise Support Knowledgebase https://support.puppet.com/hc/en-us
 
-The Puppet Enterprise Support Knowledgebase, avialable to PE customers, offers a range of self service support solutions, ranging from fixes to known issues to  useful configuration and deployment options. Some of the knowledge base articles include an accompanying Puppet Task to automate the configuration of these self service solutions, this module delivers these Puppet Tasks.
+The Puppet Enterprise Support Knowledgebase, available to PE customers, offers a range of self service support solutions, ranging from fixes to known issues to  useful configuration and deployment options. Some of the knowledge base articles include an accompanying Puppet Task to automate the configuration of these self service solutions, this module delivers these Puppet Tasks.
 
 
 ## Setup
