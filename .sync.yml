@@ -1,0 +1,32 @@
+.gitlab-ci.yml:
+  delete: true
+appveyor.yml:
+  delete: true
+
+Rakefile:
+  extras:
+    - |
+       desc 'Syntax check shellscripts'
+       task :shellcheck do
+         Dir['{tasks,files}/**/*.sh'].each do |shell_file|
+           sh "shellcheck #{shell_file}" do |ok, res|
+               exit res.exitstatus unless ok
+           end
+         end
+       end
+
+.travis.yml:
+  branches:
+    - /.*/
+  deploy: false
+  includes:
+    - 
+      env: CHECK="syntax lint metadata_lint check:symlinks check:git_ignore check:dot_underscore check:test_file rubocop shellcheck"
+  remove_includes:
+    -
+      env: CHECK="syntax lint metadata_lint check:symlinks check:git_ignore check:dot_underscore check:test_file rubocop"
+    -
+      env: CHECK=parallel_spec
+    -
+      env: PUPPET_GEM_VERSION="~> 4.0" CHECK=parallel_spec
+      rvm: 2.1.9
