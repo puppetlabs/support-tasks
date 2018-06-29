@@ -1,4 +1,5 @@
 #!/bin/bash
+# shellcheck disable=SC2230
 
 
 if [ -e "/etc/sysconfig/pe-puppetserver" ] # Test to see if EL-based system
