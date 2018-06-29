@@ -8,13 +8,14 @@
     * [Beginning with support_tasks](#beginning-with-support_tasks)
 3. [Usage - Configuration options and additional functionality](#usage)
 4. [Reference - An under-the-hood peek at what the module is doing and how](#reference)
+    * [Tasks](#tasks)
 5. [Getting Help](#getting-help)
 
 ## Description
 
 This is the companion module used to deliver the Tasks for the solutions and configurations described in the Puppet Enterprise Support Knowledgebase https://support.puppet.com/hc/en-us
 
-The Puppet Enterprise Support Knowledgebase, avialable to PE customers, offers a range of self service support solutions, ranging from fixes to known issues to  useful configuration and deployment options. Some of the knowledge base articles include an accompanying Puppet Task to automate the configuration of these self service solutions, this module delivers these Puppet Tasks.
+The Puppet Enterprise Support Knowledgebase, available to PE customers, offers a range of self service support solutions, ranging from fixes to known issues to  useful configuration and deployment options. Some of the knowledge base articles include an accompanying Puppet Task to automate the configuration of these self service solutions, this module delivers these Puppet Tasks.
 
 
 ## Setup
@@ -24,7 +25,7 @@ The Puppet Enterprise Support Knowledgebase, avialable to PE customers, offers a
 ### Beginning with support_tasks
 
 
-Tasks in this module should only be executed by PE customers in accompaniment with the corresponding Knowledgebase article. The Task name will correspond the KB Article Number for instance, article KB#9999 will correspond to Puppet Task KB#9999
+Tasks in this module should only be executed by PE customers in accompaniment with the corresponding Knowledgebase article. The Task name will correspond the KB Article Number, for instance, article KB#9999 will correspond to Puppet Task kb9999
 
 ## Usage
 
@@ -35,6 +36,10 @@ PE customers should execute the task designated by the Knowledgebase article bas
 ## Reference
 
 To view the available actions and parameters, on the command line, run `puppet task show <task_name>` or see the support_tasks module page on the [Forge](https://forge.puppet.com/puppetlabs/support_tasks/tasks).
+
+**Tasks:**
+
+* [`kb0149`](https://support.puppet.com/hc/en-us/articles/218763948)
 
 
 ## Getting Help
