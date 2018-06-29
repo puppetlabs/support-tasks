@@ -6,9 +6,9 @@ then
  echo "-Puppetmaster node detected - EL "   #Log Line to StdOut for the Console
 
 
-        if $(/usr/bin/which grep) -q "ss2m" /etc/sysconfig/pe-puppetserver
+        if $(/usr/bin/which grep) -q "Xss" /etc/sysconfig/pe-puppetserver
         then  echo "Argument Already  Present"
-        else  $(/usr/bin/which sed) -i 's/\(JAVA_ARGS="\)/JAVA_ARGS="-Xss2m /g' /etc/sysconfig/pe-puppetserver
+        else  $(/usr/bin/which sed) -i 's/^\s*\(JAVA_ARGS="\)/JAVA_ARGS="-Xss2m /g' /etc/sysconfig/pe-puppetserver
                 puppet resource service pe-puppetserver ensure=stopped
                 puppet resource service pe-puppetserver ensure=running
         fi
@@ -17,9 +17,9 @@ then
  echo "-Puppetmaster node detected - Ubuntu "   #Log Line to StdOut for the Console
 
 
-        if $(/usr/bin/which grep) -q "ss2m" /etc/default/pe-puppetserver
+        if $(/usr/bin/which grep) -q "Xss" /etc/default/pe-puppetserver
         then  echo "Argument Already  Present"
-        else  $(/usr/bin/which sed) -i 's/\(JAVA_ARGS="\)/JAVA_ARGS="-Xss2m /g' /etc/default/pe-puppetserver
+        else  $(/usr/bin/which sed) -i 's/^\s*\(JAVA_ARGS="\)/JAVA_ARGS="-Xss2m /g' /etc/default/pe-puppetserver
                 puppet resource service pe-puppetserver ensure=stopped
                 puppet resource service pe-puppetserver ensure=running
         fi
