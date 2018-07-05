@@ -4,11 +4,11 @@
   "description": "This Task to be used in conjunction with Puppet Enterprise Knowledge Base Article KB0009 - https://support.puppet.com/hc/en-us/articles/115000177368",
   "parameters": {
      "loglevel": {
-        "type": "String",
+        "type": "Enum[info, debug]",
         "description": "The log level to be set, either debug or info"
      }
      "service": {
-	"type": "String",
+	"type": "Enum[puppetserver, puppetdb, console-services, orchestration-services]",
 	"description": "Service to be set with specific log level, either one of the following puppetserver, puppetdb, console-services or orchestration-services"
      }
   }
