@@ -28,19 +28,30 @@
 #
 # Adjust PE services log level
 
+loglevel=$PT_loglevel
+peservice=$PT_peservice
+
+if [ $peservice == 'consoleservices' ]
+then
+ peservice='console-services'
+elif [ $peservice == 'orchestrationservices' ]
+then
+ peservice='orchestration-services'
+fi
 
 if [ -e "/etc/sysconfig/pe-puppetserver" ] # Test to see if EL-based system
 then
- echo "-Puppetmaster node detected - EL "   #Log Line to StdOut for the Console
- FACTER_level="$PT_loglevel" FACTER_service="$PT_service" puppet apply -e "augeas {'toggle logging level': incl => \"/etc/puppetlabs/$::service/logback.xml\", lens => 'Xml.lns', context => \"/files/etc/puppetlabs/$::service/logback.xml/configuration/root/#attribute\", changes => \"set level \'$::level\'\"}~> service {\"pe-$::service\": ensure => running }"
+ echo "Puppetmaster node detected - EL, updating $peservice log level to $loglevel "   #Log Line to StdOut for the Console
+ FACTER_level="$loglevel" FACTER_service="$peservice" puppet apply -e "augeas {'toggle logging level': incl => \"/etc/puppetlabs/$::service/logback.xml\", lens => 'Xml.lns', context => \"/files/etc/puppetlabs/$::service/logback.xml/configuration/root/#attribute\", changes => \"set level \'$::level\'\"}~> service {\"pe-$::service\": ensure => running }"
+ echo "Updated $peservice log level to $loglevel"
 
 elif [ -e "/etc/default/pe-puppetserver" ] # cover ubuntu
 then
- echo "-Puppetmaster node detected - Ubuntu "   #Log Line to StdOut for the Console
- FACTER_level="$PT_loglevel" FACTER_service="$PT_service" puppet apply -e "augeas {'toggle logging level': incl => \"/etc/puppetlabs/$::service/logback.xml\", lens => 'Xml.lns', context => \"/files/etc/puppetlabs/$::service/logback.xml/configuration/root/#attribute\", changes => \"set level \'$::level\'\"}~> service {\"pe-$::service\": ensure => running }"
-
+ echo "Puppetmaster node detected - Ubuntu, updating $peservice log level to $loglevel "   #Log Line to StdOut for the Console
+ FACTER_level="$loglevel" FACTER_service="$peservice" puppet apply -e "augeas {'toggle logging level': incl => \"/etc/puppetlabs/$::service/logback.xml\", lens => 'Xml.lns', context => \"/files/etc/puppetlabs/$::service/logback.xml/configuration/root/#attribute\", changes => \"set level \'$::level\'\"}~> service {\"pe-$::service\": ensure => running }"
+ echo "Updated $peservice log level to $loglevel"
 else
   echo  "-Not a Puppet MASTER node exiting "
 
 fi
-echo " -KB#0009 Task ended   $(date +%s)    --"
+echo " -- KB#0009 Task ended   $(date +%s) --"
