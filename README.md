@@ -45,6 +45,7 @@ To view the available actions and parameters, on the command line, run `puppet t
 
 * [`kb0267`](https://support.puppet.com/hc/en-us/articles/360003883933)
 * [`kb0236`](https://support.puppet.com/hc/en-us/articles/360001060434)
+* ['kb0285`](https://support.puppet.com/hc/en-us/articles/360006717334)
 
 
 
