@@ -40,7 +40,12 @@ To view the available actions and parameters, on the command line, run `puppet t
 **Tasks:**
 
 * [`kb0149`](https://support.puppet.com/hc/en-us/articles/218763948)
+
 * [`kb0244`](https://support.puppet.com/hc/en-us/articles/360002051354)
+
+* [`kb0267`](https://support.puppet.com/hc/en-us/articles/360003883933)
+
+
 
 ## Getting Help
 
