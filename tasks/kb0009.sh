@@ -31,10 +31,10 @@
 loglevel=$PT_loglevel
 peservice=$PT_peservice
 
-if [ $peservice = "consoleservices" ]
+if [ "$peservice" = "consoleservices" ]
 then
  peservice="console-services"
-elif [ $peservice = "orchestrationservices" ]
+elif [ "$peservice" = "orchestrationservices" ]
 then
  peservice="orchestration-services"
 fi
