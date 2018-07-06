@@ -31,12 +31,12 @@
 loglevel=$PT_loglevel
 peservice=$PT_peservice
 
-if [ $peservice = 'consoleservices' ]
+if [ $peservice = "consoleservices" ]
 then
- peservice='console-services'
-elif [ $peservice = 'orchestrationservices' ]
+ peservice="console-services"
+elif [ $peservice = "orchestrationservices" ]
 then
- peservice='orchestration-services'
+ peservice="orchestration-services"
 fi
 
 if [ -e "/etc/sysconfig/pe-puppetserver" ] || [ -e "/etc/default/pe-puppetserver" ] # check if node is Puppet Master
