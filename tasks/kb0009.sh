@@ -28,6 +28,8 @@
 #
 # Adjust PE services log level
 
+declare PT_loglevel
+declare PT_peservice
 loglevel=$PT_loglevel
 peservice=$PT_peservice
 
