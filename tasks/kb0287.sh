@@ -1,5 +1,6 @@
 #!/bin/bash
 # Puppet Task Name: KB0287
+# shellcheck disable=SC2078
 
 declare PT_dbname
 dbname=$PT_dbname
