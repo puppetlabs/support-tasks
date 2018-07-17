@@ -12,10 +12,10 @@ then
     su - pe-postgres -s /bin/bash -c "/opt/puppetlabs/server/bin/psql -d $dbname -c '\di+;'"
   else
     echo "pe-postgresql service detected, will continue to run."
-    dbnames='pe-puppetdb pe-postgres pe-classifier pe-rbac pe-activity pe-orchestrator postgres'
-    for dbnames in $dbnames
+    pedbnames='pe-puppetdb pe-postgres pe-classifier pe-rbac pe-activity pe-orchestrator postgres'
+    for pedbnames in $pedbnames
     do
-      su - pe-postgres -s /bin/bash -c "/opt/puppetlabs/server/bin/psql -d $dbname -c '\di+;'"
+      su - pe-postgres -s /bin/bash -c "/opt/puppetlabs/server/bin/psql -d $pedbnames -c '\di+;'"
     done
   fi
 else
