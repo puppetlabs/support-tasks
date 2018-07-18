@@ -5,7 +5,7 @@
   "parameters": {
     "dbname": {
       "description": "The name of the db to connect to",
-      "type": "Enum['pe-puppetdb', 'pe-postgres', 'pe-classifier', 'pe-rbac', 'pe-activity', 'pe-orchestrator', 'postgres']"
+      "type": "Enum['pe-puppetdb', 'pe-postgres', 'pe-classifier', 'pe-rbac', 'pe-activity', 'pe-orchestrator', 'postgres', all]"
     }
   }
 }
