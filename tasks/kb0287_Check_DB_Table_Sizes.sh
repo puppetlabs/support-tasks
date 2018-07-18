@@ -6,7 +6,7 @@ dbname=$PT_dbname
 
 if puppet resource service pe-postgresql | grep -q running
 then
-  if $dbname != 'all'
+  if [ "$dbname" != 'all' ]
   then
     echo "pe-postgresql service detected, will continue to run."
     su - pe-postgres -s /bin/bash -c "/opt/puppetlabs/server/bin/psql -d $dbname -c '\di+;'"
