@@ -82,3 +82,11 @@ task :shellcheck do
   end
 end
 
+desc 'Check task names'
+ task :tasknames do
+   errors = Dir['tasks/**/*'].map do |task|
+       "Task name \"#{task}\" is invalid" if File.basename(task) !~ /\A[a-z][a-z0-9_]*\.[a-z0-9_]+\Z/
+   end.compact
+   abort errors.join("\n") if errors.any?
+end
+
