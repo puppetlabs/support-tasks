@@ -39,17 +39,22 @@ To view the available actions and parameters, on the command line, run `puppet t
 
 **Tasks:**
 
-* [`kb0149`](https://support.puppet.com/hc/en-us/articles/218763948)
+* [`kb0009_Change_PE_Service_Loglevel`](https://support.puppet.com/hc/en-us/articles/115000177368)
 
-* [`kb0244`](https://support.puppet.com/hc/en-us/articles/360002051354)
+* [`kb0149_Resolve_Stack_Level_Too_Deep`](https://support.puppet.com/hc/en-us/articles/218763948)
 
-* [`kb0267`](https://support.puppet.com/hc/en-us/articles/360003883933)
+* [`kb0244_disable_mco_logrotate`](https://support.puppet.com/hc/en-us/articles/360002051354)
 
-* [`kb0236`](https://support.puppet.com/hc/en-us/articles/360001060434)
+* [`kb0267_clear_file_sync_locks`](https://support.puppet.com/hc/en-us/articles/360003883933)
 
-* ['kb0285`](https://support.puppet.com/hc/en-us/articles/360006717334)
+* [`kb0236_set_cache_paths_to_default`](https://support.puppet.com/hc/en-us/articles/360001060434)
 
-* [`kb0286`](https://support.puppet.com/hc/en-us/articles/360006721014)
+* [`kb0285_find_disabled_agents`](https://support.puppet.com/hc/en-us/articles/360006717334)
+
+* [`kb0286_change_puppet_daemon_runmode`](https://support.puppet.com/hc/en-us/articles/360006721014)
+
+* [`kb0287_Check_DB_Table_Sizes`](https://support.puppet.com/hc/en-us/articles/360006922673)
+
 
 
 
