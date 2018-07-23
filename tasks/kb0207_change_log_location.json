@@ -1,0 +1,15 @@
+{
+  "puppet_task_version": 1,
+  "supports_noop": false,
+  "description": "This task is to be used in conjunction with Puppet Enterprise Knowledge Base Article - https://support.puppet.com/hc/en-us/articles/115003080414-KB-0207-Direct-agent-logs-somewhere-other-than-var-log-messages-in-Puppet-Enterprise-2015-2-to-2017-3-x",
+  "parameters": {
+    "logdir": {
+      "description": "The directory you want the new log to exist in",
+      "type": "String"
+    }
+    "disable_messages": {
+      "description": "if true then disable logging to messages",
+      "type": "Optional[Boolean]"
+    }
+  }
+}
