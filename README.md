@@ -1,4 +1,3 @@
-
 # support_tasks
 
 #### Table of Contents
@@ -13,29 +12,25 @@
 
 ## Description
 
-This is the companion module used to deliver the Tasks for the solutions and configurations described in the Puppet Enterprise Support Knowledgebase https://support.puppet.com/hc/en-us
+This is the companion module used to deliver the tasks for the solutions and configurations described in Puppet Support knowledge base <https://support.puppet.com/hc/en-us>.
 
-The Puppet Enterprise Support Knowledgebase, available to PE customers, offers a range of self service support solutions, ranging from fixes to known issues to  useful configuration and deployment options. Some of the knowledge base articles include an accompanying Puppet Task to automate the configuration of these self service solutions, this module delivers these Puppet Tasks.
+The knowledge base, available to our support customers, offers a range of self service solutions, ranging from fixes to known issues to  useful configuration and deployment options. Some of the knowledge base articles include an accompanying Puppet task to automate the configuration of these self service solutions, this module delivers these tasks.
 
 
 ## Setup
 
-
-
 ### Beginning with support_tasks
 
-
-Tasks in this module should only be executed by PE customers in accompaniment with the corresponding Knowledgebase article. The Task name will correspond the KB Article Number, for instance, article KB#9999 will correspond to Puppet Task kb9999
+Tasks in this module should only be executed by PE support customers in accompaniment with the corresponding knowledge base article. The task name corresponds to the KB article number, for instance, article KB#9999 corresponds to task kb9999.
 
 ## Usage
 
-PE customers should execute the task designated by the Knowledgebase article based on the instructions within.
-
+Support customers should follow the instructions in the corresponding knowledge base articles linked below.
 
 
 ## Reference
 
-To view the available actions and parameters, on the command line, run `puppet task show <task_name>` or see the support_tasks module page on the [Forge](https://forge.puppet.com/puppetlabs/support_tasks/tasks).
+To view the available actions and parameters for each task, on the command line, run `puppet task show <task_name>` or see the support\_tasks module page on the [Forge](https://forge.puppet.com/puppetlabs/support_tasks/tasks).
 
 **Tasks:**
 
@@ -56,23 +51,16 @@ To view the available actions and parameters, on the command line, run `puppet t
 * [`kb0287_Check_DB_Table_Sizes`](https://support.puppet.com/hc/en-us/articles/360006922673)
 
 
-
-
-
 ## Getting Help
 
-PE Customers can raise a ticket with PE support for assistance
+Support customers can open a ticket with us at our portal for assistance <https://support.puppet.com/hc/en-us>.
 
-To display help for the support_tasks task, run `puppet task show support_tasks`
+To display help for the support\_tasks task, run `puppet task show support_tasks`
 
 ## Copyright and License
 
 Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
-http://www.apache.org/licenses/LICENSE-2.0
+<http://www.apache.org/licenses/LICENSE-2.0>
 
 Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.
-
-
-
-
