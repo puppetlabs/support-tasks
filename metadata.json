@@ -93,5 +93,5 @@
   ],
   "pdk-version": "1.6.0",
   "template-url": "https://github.com/puppetlabs/pdk-templates",
-  "template-ref": "heads/master-0-gc87eee3"
+  "template-ref": "heads/master-0-g0657063"
 }
