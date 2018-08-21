@@ -21,6 +21,6 @@ then
     exit 1 
   fi
 else
-  echo "Node is not a MoM, please select MoM node."
+  echo "Node is not a MoM or does not have Code Manager configured, cannot run Task. To enable Code Manager please follow the documentation here: https://puppet.com/docs/pe/latest/code_mgr_config.html "
   exit 1  
 fi
