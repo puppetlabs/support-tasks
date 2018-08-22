@@ -27,6 +27,8 @@ Rakefile:
   branches:
     - /.*/
   deploy: false
+  global_env:
+      - SHELLCHECK_OPTS="-e SC1117"
   includes:
     - 
       env: CHECK="syntax lint metadata_lint check:symlinks check:git_ignore check:dot_underscore check:test_file rubocop shellcheck tasknames"
