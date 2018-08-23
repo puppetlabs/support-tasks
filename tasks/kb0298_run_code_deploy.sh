@@ -11,7 +11,7 @@ then
     if [ "$environment" != 'all' ]
     then
       echo "Attempting to deploy environment: $environment."
-      /opt/puppetlabs/bin/puppet-code deploy $environment --wait -l debug 2>&1
+      /opt/puppetlabs/bin/puppet-code deploy "$environment" --wait -l debug 2>&1
     else
       echo "Attempting to deploy all environments."
       /opt/puppetlabs/bin/puppet-code deploy --all --wait -l debug 2>&1
