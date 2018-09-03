@@ -14,11 +14,11 @@ Addition of the following tasks:
 
 - kb0287_Check_DB_Table_Sizes
 
-- kb0263 Rename Pe Master
+- kb0263_Rename_Pe_Master
 
-- kb0298 Run Code Deploy
+- kb0298_Run_Code_Deploy
 
-- kb0299 Regen Master Cert
+- kb0299_Regen_Master_Cert
 
 **Features**
 
