@@ -50,6 +50,13 @@ To view the available actions and parameters for each task, on the command line,
 
 * [`kb0287_Check_DB_Table_Sizes`](https://support.puppet.com/hc/en-us/articles/360006922673)
 
+* [`kb0263 Rename Pe Master`](https://support.puppet.com/hc/en-us/articles/360003489634)
+
+* [`kb0298 Run Code Deploy`](https://support.puppet.com/hc/en-us/articles/360008192734)
+
+* [`kb0299 Regen Master Cert`](https://support.puppet.com/hc/en-us/articles/360008505193)
+
+
 
 ## Getting Help
 
