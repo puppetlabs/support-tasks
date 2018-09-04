@@ -4,12 +4,12 @@
   "description": "This Task to be used in conjunction with Puppet Enterprise Knowledge Base Article - https://support.puppet.com/hc/en-us/articles/115000177368",
   "parameters": {
     "loglevel": {
-      "description": "The level of log to be set",
-      "type": "Enum[debug, info]"
+      "description": "The level to which the logging will be set",
+      "type": "Enum[trace, debug, info, warn, error]"
     },
-    "peservice": {
+    "service": {
       "description": "PE service",
-      "type": "Enum[puppetserver, puppetdb, consoleservices, orchestrationservices]"
+      "type": "Enum[puppetserver, puppetdb, console-services, orchestration-services]"
     }
   }
 }
