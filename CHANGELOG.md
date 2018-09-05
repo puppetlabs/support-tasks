@@ -25,3 +25,11 @@ Addition of the following tasks:
 **Bugfixes**
 
 **Known Issues**
+
+## Release 1.0.3
+
+September 5th 2018
+
+Updated the following tasks:
+
+- kb0009_change_pe_service_loglevel
