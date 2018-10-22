@@ -3,8 +3,10 @@
 # shellcheck disable=2013
 declare PT_dnsaltname_override
 CERTNAME="$(puppet config print certname)"
-PUPPETCMD="/opt/puppetlabs/bin/puppet"
-PATH=/opt/puppetlabs/bin:$PATH
+PUPPET_BIN_DIR="/opt/puppetlabs/bin"
+PUPPETCMD="${PUPPET_BIN_DIR}/puppet"
+PUPPETSERVERCMD="${PUPPET_BIN_DIR}/puppetserver"
+PATH="${PUPPET_BIN_DIR}":"${PATH}"
 
 backup_ssl() {
   tar -cvf "/etc/puppetlabs/puppet/ssl_$(date +%Y-%m-%d-%M-%S).tar.gz" /etc/puppetlabs/puppet/ssl /etc/puppetlabs/puppetdb/ssl /opt/puppetlabs/server/data/console-services/certs /opt/puppetlabs/server/data/postgresql/9.6/data/certs /etc/puppetlabs/orchestration-services/ssl
@@ -22,8 +24,12 @@ exit_if_compile_master() {
 }
 
 check_dns_alt_names() {
-  str=$(puppet cert list "${CERTNAME}")
-  
+  if [ "${PUPPET_6}" = true ]; then
+    str=$(/opt/puppetlabs/bin/puppetserver ca list --all |grep "${CERTNAME}")
+  else
+    str=$(puppet cert list "${CERTNAME}")
+  fi
+
   for host in $(grep -oP '(?<="DNS:)(.*?)(?<=")' <<<"${str}"); do
     tmphost="$(echo "${host}"|cut -d'"' -f 1)"
     if [ "$tmphost" == "$CERTNAME" ] || [ "$tmphost" == "puppet" ]
@@ -39,6 +45,13 @@ check_dns_alt_names() {
 }
 
 # main
+
+puppet_version=$("${PUPPET_BIN_DIR?}/puppet" --version)
+if [[ ${puppet_version%%.*} -ge 6 ]];then
+  PUPPET_6=true
+else
+  PUPPET_6=false
+fi
 
 exit_if_compile_master
 
@@ -57,10 +70,15 @@ backup_ssl
 
 rm -f "/opt/puppetlabs/puppet/cache/client_data/catalog/${CERTNAME}.json"
 
-$PUPPETCMD cert clean "${CERTNAME}"
+if [ ${PUPPET_6} = true ]; then
+  "${PUPPETSERVERCMD}" ca clean --certname "${CERTNAME}"
+  find /etc/puppetlabs/puppet/ssl -name "${CERTNAME}".pem -delete
+else
+  "${PUPPETCMD}" cert clean "${CERTNAME}"
+fi
 
-$PUPPETCMD infrastructure configure --no-recover
-$PUPPETCMD agent -t
+"${PUPPETCMD}" infrastructure configure --no-recover
+"${PUPPETCMD}" agent -t
 
 if [ $? -eq 2 ]; then
   exit 0
