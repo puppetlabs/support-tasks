@@ -74,6 +74,10 @@ setfilecontents /etc/puppetlabs/activemq/activemq.xml "<beans></beans>"
 
 $PUPPETCMD infrastructure configure --no-recover
 $PUPPETCMD node purge "$OLDNAME"
+puppet_version=$("${PUPPET_BIN_DIR?}/puppet" --version)
+if [[ ${puppet_version%%.*} -ge 6 ]];then
+  find /etc/puppetlabs/puppet/ssl -name "$OLDNAME.pem" -delete
+fi
 $PUPPETCMD agent -t
 
 if [ $? -eq 2 ]; then
