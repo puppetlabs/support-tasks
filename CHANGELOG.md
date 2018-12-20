@@ -33,3 +33,12 @@ September 5th 2018
 Updated the following tasks:
 
 - kb0009_change_pe_service_loglevel
+
+## Release 1.0.4
+
+December 19th 2018
+
+New task to clean and purge certnames:
+
+- kb0317a_clean_cert
+- kb0317b_purge_node
