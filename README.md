@@ -56,6 +56,8 @@ To view the available actions and parameters for each task, on the command line,
 
 * [`kb0299_Regen_Master_Cert`](https://support.puppet.com/hc/en-us/articles/360008505193)
 
+* [`kb0317_Clean_Or_Purge_Nodes`](https://support.puppet.com/hc/en-us/articles/360012551294)
+
 
 
 ## Getting Help
