@@ -1,28 +1,40 @@
 ---
-sudo: false
 dist: trusty
 language: ruby
 cache: bundler
 before_install:
   - bundle -v
   - rm -f Gemfile.lock
-  - gem update --system
+  - gem update --system $RUBYGEMS_VERSION
   - gem --version
   - bundle -v
 script:
   - 'bundle exec rake $CHECK'
 bundler_args: --without system_tests
 rvm:
-  - 2.4.4
+  - 2.5.3
 env:
   global:
-    - BEAKER_PUPPET_COLLECTION=puppet5 PUPPET_GEM_VERSION="~> 5.0"
     - SHELLCHECK_OPTS="-e SC1117"
+stages:
+  - static
+  - spec
+  - acceptance
+  -
+    if: tag =~ ^v\d
+    name: deploy
 matrix:
   fast_finish: true
   include:
     -
-      env: CHECK="syntax lint metadata_lint check:symlinks check:git_ignore check:dot_underscore check:test_file rubocop shellcheck tasknames"
+      env: CHECK="check:symlinks check:git_ignore check:dot_underscore check:test_file rubocop syntax lint metadata_lint"
+      stage: static
+    -
+      env: DEPLOY_TO_FORGE=yes
+      stage: deploy
+    -
+      env: CHECK="shellcheck tasknames"
+      stage: static
 branches:
   only:
     - master
