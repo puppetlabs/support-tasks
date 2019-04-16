@@ -1,0 +1,17 @@
+{
+  "description": "Check the expiration date of a CA certificate",
+  "parameters": {
+    "cert": {
+      "description": "Location of the cert to check.  Defaults to the standard Puppet ca.pem location",
+      "type": "Optional[String[1]]"
+    },
+    "date": {
+      "description": "YYYY-MM-DD date to test whether the cert will expire by. Defaults to three months from today",
+      "type": "Optional[String[1]]"
+    }
+  },
+
+  "implementations": [
+    {"name": "kb0337g_check_ca_expiry.sh", "requirements": ["shell"], "files": ["support_tasks/files/common.sh"], "input_method": "environment"}
+  ]
+}
