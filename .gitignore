@@ -25,3 +25,6 @@
 .project
 .envrc
 /inventory.yaml
+/html/
+1
+.ruby-version
