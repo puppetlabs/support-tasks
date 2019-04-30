@@ -2,8 +2,26 @@
   delete: true
 appveyor.yml:
   delete: true
-
+Gemfile:
+  required:
+    ':system_tests':
+      - gem: 'puppet-module-posix-system-r#{minor_version}'
+        platforms: ruby
+      - gem: 'puppet-module-win-system-r#{minor_version}'
+        platforms:
+          - mswin
+          - mingw
+          - x64_mingw
+      - gem: 'puppet_litmus'
+        platforms:
+          - ruby
+          - mswin
+          - mingw
+          - x64_mingw
+        condition: "ENV['PUPPET_GEM_VERSION'].nil? or ENV['PUPPET_GEM_VERSION'] !~ %r{ 5}"
 Rakefile:
+  requires:
+  use_litmus_tasks: true
   extras:
     - |
        desc 'Syntax check shellscripts'
@@ -24,21 +42,4 @@ Rakefile:
        end
 
 .travis.yml:
-  branches:
-    - /.*/
-  deploy: false
-  global_env:
-      - SHELLCHECK_OPTS="-e SC1117"
-  includes:
-    - 
-      env: CHECK="shellcheck tasknames"
-      stage: static
-  remove_includes:
-    -
-      env: PUPPET_GEM_VERSION="~> 5.0" CHECK=parallel_spec
-      rvm: 2.4.5
-      stage: spec
-    -
-      env: PUPPET_GEM_VERSION="~> 6.0" CHECK=parallel_spec
-      rvm: 2.5.3
-      stage: spec
+  unmanaged: true
