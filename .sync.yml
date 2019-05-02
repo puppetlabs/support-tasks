@@ -43,3 +43,6 @@ Rakefile:
 
 .travis.yml:
   unmanaged: true
+.gitignore:
+  paths:
+    - /html/
