@@ -8,6 +8,6 @@
   },
 
   "implementations": [
-    {"name": "kb0337d_configure_master.sh", "requirements": ["shell"], "files": ["support_tasks/files/common.sh", "support_tasks/files/extend.sh"], "input_method": "environment"}
+    {"name": "kb0337d_configure_master.sh", "requirements": ["shell"], "files": ["support_tasks/files/common.sh"], "input_method": "environment"}
   ]
 }
