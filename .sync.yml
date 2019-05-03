@@ -66,7 +66,7 @@ Rakefile:
       dist: trusty
       env:
         - PLATFORMS=deb_puppet5
-        - PROVISION_LIST=waffle_deb
+        - PROVISION_LIST=litmus_deb
         - PUPPET_VERSION=puppet5
       rvm: 2.5.1
       script:
@@ -83,7 +83,7 @@ Rakefile:
       dist: trusty
       env:
         - PLATFORMS=deb_puppet6
-        - PROVISION_LIST=waffle_deb
+        - PROVISION_LIST=litmus_deb
         - PUPPET_VERSION=puppet6
       rvm: 2.5.1
       script:
@@ -100,7 +100,7 @@ Rakefile:
       dist: trusty
       env:
         - PLATFORMS=el_puppet5
-        - PROVISION_LIST=waffle_el
+        - PROVISION_LIST=litmus_el
         - PUPPET_VERSION=puppet5
       rvm: 2.5.1
       script:
@@ -116,7 +116,7 @@ Rakefile:
       dist: trusty
       env:
         - PLATFORMS=el_puppet6
-        - PROVISION_LIST=waffle_el
+        - PROVISION_LIST=litmus_el
         - PUPPET_VERSION=puppet6
       rvm: 2.5.1
       script:
