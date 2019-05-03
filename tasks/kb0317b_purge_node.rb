@@ -48,4 +48,4 @@ end
 
 puts results.to_json
 
-exit(results.values.all? { |v| v[:result] == 'Certificate removed' }) ? 0 : 1
+exit(results.values.all? { |v| v[:result] == 'Node purged' }) ? 0 : 1
