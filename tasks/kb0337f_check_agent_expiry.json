@@ -1,0 +1,13 @@
+{
+  "description": "Check the expiration date of all agents",
+  "parameters": {
+    "date": {
+      "description": "YYYY-MM-DD date to test whether the cert will expire by. Defaults to three months from today",
+      "type": "Optional[String[1]]"
+    }
+  },
+
+  "implementations": [
+    {"name": "kb0337f_check_agent_expiry.sh", "requirements": ["shell"], "files": ["support_tasks/files/common.sh"], "input_method": "environment"}
+  ]
+}
