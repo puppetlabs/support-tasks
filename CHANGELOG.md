@@ -42,3 +42,24 @@ New task to clean and purge certnames:
 
 - kb0317a_clean_cert
 - kb0317b_purge_node
+
+## Release 1.0.5
+
+May 9th 2019
+
+**Features**
+
+New plans to extend the CA certificate on a master:
+
+- kb0337a_extend_ca_cert
+- kb0337b_upload_ca_cert
+- kb0337c_get_agent_facts
+
+New tasks to check the expiry date of the CA certificate and signed agent certificates
+
+- kb0337f_check_agent_expiry
+- kb0337g_check_ca_expiry
+
+Updated to support PE 2019.x
+
+Added acceptance testing using [Litmus](https://github.com/puppetlabs/puppet_litmus)
