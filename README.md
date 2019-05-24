@@ -58,6 +58,8 @@ To view the available actions and parameters for each task, on the command line,
 
 * [`kb0317_Clean_Or_Purge_Nodes`](https://support.puppet.com/hc/en-us/articles/360012551294)
 
+* [`kb0045_Thundering_Herd_resolver`](https://support.puppet.com/hc/en-us/articles/115004312247)
+
 
 
 ## Getting Help
