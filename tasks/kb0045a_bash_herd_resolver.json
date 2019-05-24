@@ -1,0 +1,7 @@
+{
+  "puppet_task_version": 1,
+  "supports_noop": false,
+  "description": "This Task will restart the puppet agent process in a randomised period between 0 and the currently set runinterval",
+  "parameters": {
+  }
+}
