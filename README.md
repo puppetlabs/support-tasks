@@ -58,13 +58,13 @@ To view the available actions and parameters for each task, on the command line,
 
 * [`kb0317_Clean_Or_Purge_Nodes`](https://support.puppet.com/hc/en-us/articles/360012551294)
 
-* [`kb0045_Thundering_Herd_resolver`](https://support.puppet.com/hc/en-us/articles/115004312247)
+* [`kb0346_Thundering_Herd_resolver`](https://support.puppet.com/hc/en-us/articles/360023988353)
 
 
 
 ## Getting Help
 
-Support customers can open a ticket with us at our portal for assistance <https://support.puppet.com/hc/en-us>.
+Puppet Enterprise Support customers can open a ticket with us at our portal for assistance <https://support.puppet.com/hc/en-us>, this module is officially supported by the Puppet Enterprise Support Team
 
 To display help for the support\_tasks task, run `puppet task show support_tasks`
 
