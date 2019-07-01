@@ -63,3 +63,17 @@ New tasks to check the expiry date of the CA certificate and signed agent certif
 Updated to support PE 2019.x
 
 Added acceptance testing using [Litmus](https://github.com/puppetlabs/puppet_litmus)
+
+## Release 1.0.6
+
+July 1st 2019
+
+**Features**
+
+
+New tasks to fix resolve thundering herd in Linux and windows
+
+- kb0346a
+  kb0346ba
+
+Updated to PDK template version PDK 1.11
