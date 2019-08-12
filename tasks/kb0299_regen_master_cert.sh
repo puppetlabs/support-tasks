@@ -16,10 +16,10 @@ exit_if_compile_master() {
   grep reverse-proxy-ca-service /etc/puppetlabs/puppetserver/bootstrap.cfg 2>&1 /dev/null
   if [ $? -eq 0 ]; then
     echo "Target server appears to be a PE compile master.  This script is intended to be targeted only at a PE Master of Masters.  Exiting."
-    exit -1
+    exit 255
   elif [ $? -eq 2 ]; then
     echo "Target server does not appear to be a PE master.  This script is intended to be targeted only at a PE Master of Masters.  Exiting."
-    exit -1
+    exit 255
   fi
 }
 
@@ -39,7 +39,7 @@ check_dns_alt_names() {
     if ! grep "pe_install::puppet_master_dnsaltname.*${tmphost}" /etc/puppetlabs/enterprise/conf.d/pe.conf > /dev/null 2>&1
     then
       echo "'${tmphost}' is set up as a DNS alt name in the existing certificate, but is not present in the 'pe_install::puppet_master_dnsaltnames' setting of '/etc/puppetlabs/enterprise/conf.d/pe.conf'.  Please add it to continue, or use the 'dnsaltname_override' task parameter to skip this check."
-      exit -1
+      exit 255
     fi
   done
 }
@@ -62,7 +62,7 @@ fi
 
 if [ ! -x $PUPPETCMD ]; then
   echo "Unable to locate executable Puppet command at ${PUPPETCMD}"
-  exit -1
+  exit 255
 fi
 
 # Back up the SSL directories
