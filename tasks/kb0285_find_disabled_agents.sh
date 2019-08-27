@@ -1,11 +1,11 @@
 #!/bin/bash
 
-LOCKFILE="$(puppet config print vardir)/state/agent_disabled.lock"
+LOCKFILE="$(puppet config print statedir)/agent_disabled.lock"
 
 if [ -e "$LOCKFILE" ] 
 then
   echo "Puppet agent is disabled"
-  cat "$(puppet config print vardir)/state/agent_disabled.lock"
+  cat "$(puppet config print statedir)/agent_disabled.lock"
 else
   echo "Puppet agent is enabled"
   exit 1
