@@ -14,9 +14,9 @@ describe 'tasks' do
     run_shell('/opt/puppetlabs/bin/puppet config set rundir /tmp')
     result = run_bolt_task('support_tasks::kb0236_set_cache_paths_to_default')
     expect(result['result']['_output']).to contain('rundir set to /tmp, resetting to the default')
-    it 'when all dirs are already default ' do
-      result = run_bolt_task('support_tasks::kb0236_set_cache_paths_to_default')
-      expect(result['result']['_output']).to contain('No changes necessary')
-    end
+  end
+  it 'when all dirs are already default ' do
+    result = run_bolt_task('support_tasks::kb0236_set_cache_paths_to_default')
+    expect(result['result']['_output']).to contain('No changes necessary')
   end
 end
