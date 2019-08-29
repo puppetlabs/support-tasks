@@ -64,6 +64,8 @@ done
 
 sed -i "s/${OLDNAME}/${HOSTNAME}/g" /etc/puppetlabs/puppet/puppet.conf
 
+sed -i "s/${OLDNAME}/${HOSTNAME}/g" /etc/puppetlabs/enterprise/conf.d/user_data.conf
+
 rm -f /opt/puppetlabs/puppet/cache/client_data/catalog/*
 
 setfilecontents /etc/puppetlabs/nginx/conf.d/proxy.conf ""
