@@ -77,3 +77,17 @@ New tasks to fix resolve thundering herd in Linux and windows
   kb0346ba
 
 Updated to PDK template version PDK 1.11
+
+## Release 1.0.7
+
+September 2019
+
+**Features**
+
+
+Fix for SUP-1217
+
+Updated to PDK template version PDK 1.12
+
+Updated Readme for missing links
+
