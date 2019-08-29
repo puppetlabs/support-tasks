@@ -58,7 +58,7 @@ matrix:
       dist: trusty
       env: ["PLATFORMS=el_puppet5", "PROVISION_LIST=litmus_el", "PUPPET_VERSION=puppet5"]
       rvm: 2.5.1
-      script: ["bundle exec rake \"litmus:provision_list[${PROVISION_LIST}]\"", "bundle exec rake \"litmus:install_agent[${PUPPET_VERSION}]\"", "bundle exec rake litmus:install_module", travis_wait "bundle exec rake litmus:acceptance:parallel"]
+      script: travis_wait  ["bundle exec rake \"litmus:provision_list[${PROVISION_LIST}]\"", "bundle exec rake \"litmus:install_agent[${PUPPET_VERSION}]\"", "bundle exec rake litmus:install_module", "bundle exec rake litmus:acceptance:parallel"]
       services: docker
       stage: acceptance
       sudo: required
@@ -67,7 +67,7 @@ matrix:
       dist: trusty
       env: ["PLATFORMS=el_puppet6", "PROVISION_LIST=litmus_el", "PUPPET_VERSION=puppet6"]
       rvm: 2.5.1
-      script: ["bundle exec rake \"litmus:provision_list[${PROVISION_LIST}]\"", "bundle exec rake \"litmus:install_agent[${PUPPET_VERSION}]\"", "bundle exec rake litmus:install_module", travis_wait "bundle exec rake litmus:acceptance:parallel"]
+      script:travis_wait ["bundle exec rake \"litmus:provision_list[${PROVISION_LIST}]\"", "bundle exec rake \"litmus:install_agent[${PUPPET_VERSION}]\"", "bundle exec rake litmus:install_module",  "bundle exec rake litmus:acceptance:parallel"]
       services: docker
       stage: acceptance
       sudo: required
