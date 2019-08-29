@@ -8,6 +8,7 @@ before_install:
   - gem update --system $RUBYGEMS_VERSION
   - gem --version
   - bundle -v
+install: travis_wait mvn install
 script:
   - 'bundle exec rake $CHECK'
 bundler_args: --without system_tests
