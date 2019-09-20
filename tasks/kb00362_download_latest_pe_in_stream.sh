@@ -53,5 +53,5 @@ echo
 curl \
   -L \
   -o "$dllocation/${tarball_name}" \
-  "https://pm.puppetlabs.com/puppet-enterprise/"$latest"/puppet-enterprise-"$latest"-"$curlfam"-"$(facter -p os.release.major)"-"$(facter -p os.architecture)".tar.gz"
+  "https://pm.puppetlabs.com/puppet-enterprise/$latest/puppet-enterprise-$latest-$curlfam-$(facter -p os.release.major)-$(facter -p os.architecture).tar.gz"
 
