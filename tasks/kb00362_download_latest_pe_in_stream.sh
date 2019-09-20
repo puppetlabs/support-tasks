@@ -5,6 +5,7 @@
 
 declare PT_dlpath
 dllocation=$PT_dlpath
+family=$(facter -p os.family)
 pe=$(facter -p pe_server_version)
 majorversion=${pe%.*}
 latest=$(curl https://forge.puppet.com/private/versions/pe |  sed -E -e 's/(release")/\n\1/g'  | grep "${majorversion}.x"  |grep -o -P '.{0,0}latest.{0,13}' | awk '{split($0,a,":"); print a[2]}' |  grep -o '".*"' | sed 's/"//g')
@@ -49,7 +50,7 @@ tarball_name="puppet-enterprise-$latest-$curlfam-$(facter -p os.release.major)-$
 echo "Downloading PE $latest $curlfam $(facter -p os.release.major) $(facter -p os.architecture)  to: $dllocation/${tarball_name}"
 echo
 
-curl --progress-bar \
+curl \
   -L \
   -o "$dllocation/${tarball_name}" \
   "https://pm.puppetlabs.com/puppet-enterprise/"$latest"/puppet-enterprise-"$latest"-"$curlfam"-"$(facter -p os.release.major)"-"$(facter -p os.architecture)".tar.gz"
