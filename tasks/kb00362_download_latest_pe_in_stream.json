@@ -1,0 +1,11 @@
+{
+  "puppet_task_version": 1,
+  "supports_noop": false,
+  "description": "KB0362 Download Latest PE Z release in the currently installed stream  - This task to be used in conjunction with Puppet Enterprise Knowledge Base Article KB00362 - https://support.puppet.com/hc/en-us/articles/360036141593",
+  "parameters": {
+    "dlpath": {
+      "description": "The Path to Download PE too",
+      "type": "String"
+    }
+  }
+}
