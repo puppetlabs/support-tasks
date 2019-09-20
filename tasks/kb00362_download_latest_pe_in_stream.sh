@@ -18,7 +18,7 @@ if [ -e "/etc/sysconfig/pe-puppetserver" ] || [ -e "/etc/default/pe-puppetserver
         fi
 
 
- if [ $pe  = $latest ]; then
+ if [ "$pe"  = "$latest" ]; then
                echo "Currently installed Version of Puppet Enterprise $pe ,  is the Latest Release in the $majorversion stream"
              exit 0
            fi
