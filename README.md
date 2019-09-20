@@ -62,6 +62,10 @@ To view the available actions and parameters for each task, on the command line,
 
 * [`kb0337_Check_and_fix_the_expiry_date_for_your_CA`](https://support.puppet.com/hc/en-us/articles/360022508353)
 
+* [`KB#0361 Uploading facts to the Puppet master`](https://support.puppet.com/hc/en-us/articles/360036136533)
+
+* [`KB#0362 Check for and download the latest patch for your current major release for Puppet Enterprise `](https://support.puppet.com/hc/en-us/articles/360036141593 )
+
 ## Getting Help
 
 Puppet Enterprise Support customers can open a ticket with us at our portal for assistance <https://support.puppet.com/hc/en-us>, this module is officially supported by the Puppet Enterprise Support Team
