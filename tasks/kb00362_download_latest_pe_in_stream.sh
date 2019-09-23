@@ -1,7 +1,7 @@
 #!/bin/bash
 # shellcheck disable=1117
 
-# Adjust PE services log level
+# Check and Download Latest Z release
 
 declare PT_dlpath
 dllocation=$PT_dlpath
