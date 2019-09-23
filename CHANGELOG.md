@@ -91,3 +91,19 @@ Updated to PDK template version PDK 1.12
 
 Updated Readme for missing links
 
+
+## Release 1.0.8
+
+September 20th 2019
+
+**Features**
+
+Updated to PDK 1.13
+
+New Tasks:
+
+kb00362_download_latest_pe_in_stream
+kb00361b_uploading_facts
+kb00361a_uploading_facts
+
+
