@@ -56,6 +56,8 @@ To view the available actions and parameters for each task, on the command line,
 
 * [`kb0299_Regen_Master_Cert`](https://support.puppet.com/hc/en-us/articles/360008505193)
 
+* [`kb0305_support_script_and_upload`](https://support.puppet.com/hc/en-us/articles/360009970114)
+
 * [`kb0317_Clean_Or_Purge_Nodes`](https://support.puppet.com/hc/en-us/articles/360012551294)
 
 * [`kb0346_Thundering_Herd_resolver`](https://support.puppet.com/hc/en-us/articles/360023988353)
@@ -65,6 +67,7 @@ To view the available actions and parameters for each task, on the command line,
 * [`KB#0361 Uploading facts to the Puppet master`](https://support.puppet.com/hc/en-us/articles/360036136533)
 
 * [`KB#0362 Check for and download the latest patch for your current major release for Puppet Enterprise `](https://support.puppet.com/hc/en-us/articles/360036141593 )
+
 
 ## Getting Help
 
