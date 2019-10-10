@@ -1,6 +1,0 @@
-{
-  "description": "Get the platform release of a node",
-  "implementations": [
-    {"name": "kb0337e_extend_ca_cert.sh", "requirements": ["shell"], "files": ["support_tasks/files/common.sh", "support_tasks/files/kb0337/extend.sh"], "input_method": "environment"}
-  ]
-}
