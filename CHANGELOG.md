@@ -1,53 +1,92 @@
-# Changelog
-
+# Change Log
 All notable changes to this project will be documented in this file.
+ 
+The format is based on [Keep a Changelog](http://keepachangelog.com/)
+and this project adheres to [Semantic Versioning](http://semver.org/).
 
-## Release 1.0.0
+## [1.0.9] - 2019-10-10
+ 
+### Added
 
-Initial Release July 20th 2018
+- kb0305_support_script_and_upload
 
-## Release 1.0.2
 
-September 3rd 2018
+### Changed
 
-Addition of the following tasks:
+- Remove ca_extend plans and tasks from this module
+- [SUP-1408] Added cross-platform task metatdata where applicable 
 
-- kb0287_Check_DB_Table_Sizes
+### Fixed
 
-- kb0263_Rename_Pe_Master
+## [1.0.8] - 2019-09-20
+ 
+### Added
 
-- kb0298_Run_Code_Deploy
+New Tasks:
 
-- kb0299_Regen_Master_Cert
+ - kb00362_download_latest_pe_in_stream
+ - kb00361b_uploading_facts
+ - kb00361a_uploading_facts
 
-**Features**
+### Changed
 
-**Bugfixes**
+- Updated to PDK 1.13
 
-**Known Issues**
+ ### Fixed
 
-## Release 1.0.3
 
-September 5th 2018
+## [1.0.8] - 2019-09-20
+ 
+### Added
 
-Updated the following tasks:
+New Tasks:
 
-- kb0009_change_pe_service_loglevel
+ - kb00362_download_latest_pe_in_stream
+ - kb00361b_uploading_facts
+ - kb00361a_uploading_facts
 
-## Release 1.0.4
+### Changed
 
-December 19th 2018
+- Updated to PDK 1.13
 
-New task to clean and purge certnames:
+ ### Fixed
 
-- kb0317a_clean_cert
-- kb0317b_purge_node
 
-## Release 1.0.5
+## [1.0.7] - 2019-09-01
+ 
+### Added
 
-May 9th 2019
 
-**Features**
+### Changed
+
+- Updated to PDK template version PDK 1.12
+
+- Updated Readme for missing links
+ 
+### Fixed
+
+ - SUP-1217
+
+## [1.0.6] - 2019-07-01
+ 
+### Added
+
+New tasks to fix resolve thundering herd in Linux and windows
+
+- kb0346a
+  kb0346ba
+
+### Changed
+
+  - Updated to PDK template version PDK 1.11
+ 
+### Fixed
+
+
+
+## [1.0.5] - 2018-05-09
+ 
+### Added
 
 New plans to extend the CA certificate on a master:
 
@@ -60,50 +99,69 @@ New tasks to check the expiry date of the CA certificate and signed agent certif
 - kb0337f_check_agent_expiry
 - kb0337g_check_ca_expiry
 
+
+### Changed
+
 Updated to support PE 2019.x
 
 Added acceptance testing using [Litmus](https://github.com/puppetlabs/puppet_litmus)
-
-## Release 1.0.6
-
-July 1st 2019
-
-**Features**
+ 
+### Fixed
 
 
-New tasks to fix resolve thundering herd in Linux and windows
 
-- kb0346a
-  kb0346ba
+## [1.0.4] - 2018-12-19
+ 
+### Added
 
-Updated to PDK template version PDK 1.11
-
-## Release 1.0.7
-
-September 2019
-
-**Features**
+- kb0317a_clean_cert
+- kb0317b_purge_node
 
 
-Fix for SUP-1217
-
-Updated to PDK template version PDK 1.12
-
-Updated Readme for missing links
+### Changed
+ 
+### Fixed
 
 
-## Release 1.0.8
+## [1.0.3] - 2018-09-05
+ 
+### Added
 
-September 20th 2019
-
-**Features**
-
-Updated to PDK 1.13
-
-New Tasks:
-
-kb00362_download_latest_pe_in_stream
-kb00361b_uploading_facts
-kb00361a_uploading_facts
+- kb0009_change_pe_service_loglevel
 
 
+### Changed
+ 
+### Fixed
+
+
+ 
+## [1.0.2] - 2018-09-18
+  
+ 
+### Added
+
+ - kb0287_Check_DB_Table_Sizes
+
+ - kb0263_Rename_Pe_Master
+
+ - kb0298_Run_Code_Deploy
+
+ - kb0299_Regen_Master_Cert
+ 
+### Changed
+
+### Fixed
+ 
+
+ 
+## [1.0.0] - 2018-07-20
+ 
+### Added
+
+Initial Release of Module
+
+### Changed
+ 
+### Fixed
+ 
