@@ -62,8 +62,6 @@ To view the available actions and parameters for each task, on the command line,
 
 * [`kb0346_Thundering_Herd_resolver`](https://support.puppet.com/hc/en-us/articles/360023988353)
 
-* [`kb0337_Check_and_fix_the_expiry_date_for_your_CA`](https://support.puppet.com/hc/en-us/articles/360022508353)
-
 * [`KB#0361 Uploading facts to the Puppet master`](https://support.puppet.com/hc/en-us/articles/360036136533)
 
 * [`KB#0362 Check for and download the latest patch for your current major release for Puppet Enterprise `](https://support.puppet.com/hc/en-us/articles/360036141593 )
