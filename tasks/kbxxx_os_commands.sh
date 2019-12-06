@@ -1,28 +1,53 @@
-#!/bin/sh
+#!/bin/bash
 
-# Puppet Task Name: kbxxx_os_commands
 #
-# This is where you put the shell code for your task.
-#
-# You can write Puppet tasks in any language you want and it's easy to
-# adapt an existing Python, PowerShell, Ruby, etc. script. Learn more at:
-# https://puppet.com/docs/bolt/0.x/writing_tasks.html
-#
-# Puppet tasks make it easy for you to enable others to use your script. Tasks
-# describe what it does, explains parameters and which are required or optional,
-# as well as validates parameter type. For examples, if parameter "instances"
-# must be an integer and the optional "datacenter" parameter must be one of
-# portland, sydney, belfast or singapore then the .json file
-# would include:
-#   "parameters": {
-#     "instances": {
-#       "description": "Number of instances to create",
-#       "type": "Integer"
-#     },
-#     "datacenter": {
-#       "description": "Datacenter where instances will be created",
-#       "type": "Enum[portland, sydney, belfast, singapore]"
-#     }
-#   }
-# Learn more at: https://puppet.com/docs/bolt/0.x/writing_tasks.html#ariaid-title11
-#
+
+
+declare PT_command
+command=$PT_command
+
+
+
+if [ -e "/etc/sysconfig/pe-puppetserver" ] || [ -e "/etc/default/pe-puppetserver" ] # Test to confirm this is a Puppetserver
+then
+  echo "Puppet master node detected"   #Log Line to StdOut for the Console
+
+
+case $command in
+     puppet_port_status)
+          netstat -ln | grep '8140\|5432\|8170\|8143\|443 \|4433\|8081\|8150\|8151'
+          ;;
+       puppetserver_log)
+           tail -100 /var/log/puppetlabs/puppetserver/puppetserver.log
+          ;;
+  puppetdb_log)
+          tail -100 /var/log/puppetlabs/puppetdb/puppetdb.log
+          ;;
+     console_log)
+          tail -100 /var/log/puppetlabs/console-services/console-services.log
+          ;;
+    orchestrator_log)
+          tail -100 /var/log/puppetlabs/orchestration-services/orchestration-services.log
+          ;;
+  syslog_log)
+	  if [ -e "/var/log/messages" ]
+	    then
+                tail -100 /var/log/messages
+	  elif [ -e "/var/log/syslog" ]
+            then
+               tail -100 /var/log/syslog
+	else 
+		echo "No default syslog found"
+	fi
+          ;;
+  ssldir_permissions)
+          find $(puppet config print ssldir) -maxdepth 10 -type d -exec ls -ld "{}" \;
+          ;;
+esac
+else
+  echo  "Not a Puppet master node, exiting"
+
+fi
+
+
+
