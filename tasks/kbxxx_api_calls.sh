@@ -1,28 +1,44 @@
-#!/bin/sh
+#!/bin/bash
 
-# Puppet Task Name: kbxxx_api_calls
 #
-# This is where you put the shell code for your task.
-#
-# You can write Puppet tasks in any language you want and it's easy to
-# adapt an existing Python, PowerShell, Ruby, etc. script. Learn more at:
-# https://puppet.com/docs/bolt/0.x/writing_tasks.html
-#
-# Puppet tasks make it easy for you to enable others to use your script. Tasks
-# describe what it does, explains parameters and which are required or optional,
-# as well as validates parameter type. For examples, if parameter "instances"
-# must be an integer and the optional "datacenter" parameter must be one of
-# portland, sydney, belfast or singapore then the .json file
-# would include:
-#   "parameters": {
-#     "instances": {
-#       "description": "Number of instances to create",
-#       "type": "Integer"
-#     },
-#     "datacenter": {
-#       "description": "Datacenter where instances will be created",
-#       "type": "Enum[portland, sydney, belfast, singapore]"
-#     }
-#   }
-# Learn more at: https://puppet.com/docs/bolt/0.x/writing_tasks.html#ariaid-title11
-#
+
+
+declare PT_command
+command=$PT_command
+
+
+
+if [ -e "/etc/sysconfig/pe-puppetserver" ] || [ -e "/etc/default/pe-puppetserver" ] # Test to confirm this is a Puppetserver
+then
+  echo "Puppet master node detected"   #Log Line to StdOut for the Console
+
+
+case $command in
+     create_role_cd4pe)
+          curl -X POST -H 'Content-Type: application/json' --cert $(puppet config print hostcert) --key $(puppet config print hostprivkey) --cacert $(puppet config print localcacert) https://$(hostname -f):4433/rbac-api/v1/roles -d '{"description":"CD4PE user role","display_name":"CD4PE Role","user_ids":[],"group_ids":[],"permissions":[{"object_type":"node_groups","action":"modify_children","instance":"*"},{"object_type":"node_groups","action":"set_environment","instance":"*"},{"object_type":"node_groups","action":"view","instance":"*"},{"object_type":"puppet_agent","action":"run","instance":"*"},{"object_type":"environment","action":"deploy_code","instance":"*"},{"object_type":"nodes","action":"view_data","instance":"*"},{"object_type":"node_groups","action":"edit_config_data","instance":"*"},{"object_type":"orchestrator","action":"view","instance":"*"}]}'
+          ;;
+       list_tokens)
+          su - pe-postgres -s /bin/bash -c "/opt/puppetlabs/server/bin/psql -d pe-rbac -c \"select subjects.login,tokens.expiration FROM subjects LEFT JOIN tokens ON subjects.id = tokens.user_id\"" 
+          ;;
+  manual_gitlab_webhook_hit)
+	  #needs detection of token
+          curl -k -v -X POST -H "Content-Type: application/json" "https://$(hostname -f):8170/code-manager/v1/webhook?type=gitlab&token=$(cat ~/.puppetlabs/token)" -d '{ "ref": "refs/heads/production" }'
+          ;;
+     get_all_services_status)
+          SET_SERVER=$(puppet config print server)
+	  CONSOLE="${CONSOLE:-$SET_SERVER}"
+
+	curl -X GET \
+ 	 --tlsv1 \
+ 	 --cert   $(puppet config print hostcert) \
+  	--key    $(puppet config print hostprivkey) \
+  	--cacert $(puppet config print localcacert) \
+  	https://"${CONSOLE}":4433/status/v1/services | python -m json.tool
+	  ;;
+esac
+else
+  echo  "Not a Puppet master node, exiting"
+
+fi
+
+

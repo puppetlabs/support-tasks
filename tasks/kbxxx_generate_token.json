@@ -1,0 +1,16 @@
+{
+  "puppet_task_version": 1,
+  "supports_noop": false,
+  "description": "KBxxx_Generate_Token This task to be used in conjunction with Puppet Enterprise Knowledge Base Article KBxxx - https://support.puppet.com/hc/en-us/articles",
+  "parameters": {
+    "user": {
+      "description": "PE RBAC User",
+      "type": "String",
+    "password": {
+      "description": "PE RBAC User Password",
+      "type": "String"
+    }
+    
+  }
+}
+}
