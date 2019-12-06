@@ -26,6 +26,7 @@ case $command in
      tune)
           puppet infrastructure tune
           ;;
+esac
 else
   echo  "Not a Puppet master node, exiting"
 
