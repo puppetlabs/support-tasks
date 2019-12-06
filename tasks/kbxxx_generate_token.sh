@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Adjust PE services log level
+# Generate Token for requested user, for consumption in other tasks
 
 declare PT_user
 declare PT_password
