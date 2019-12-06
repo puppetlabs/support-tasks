@@ -5,12 +5,13 @@
   "parameters": {
     "user": {
       "description": "PE RBAC User",
-      "type": "String",
+      "type": "String"
+    },
     "password": {
       "description": "PE RBAC User Password",
       "type": "String"
     }
     
-  }
+  
 }
 }
