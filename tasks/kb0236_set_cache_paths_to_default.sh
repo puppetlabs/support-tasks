@@ -1,7 +1,7 @@
 #!/bin/bash
 # shellcheck disable=SC2230
 
-if [ -e "/etc/sysconfig/pe-puppetserver" ] || [ -e "/etc/default/pe-puppetserver" ] || [-e "/etc/sysconfig/puppetserver"] || [-e "/etc/default/puppetserver"] # Test to confirm this is a Puppetserver
+if [ -e "/etc/sysconfig/pe-puppetserver" ] || [ -e "/etc/default/pe-puppetserver" ] || [ -e "/etc/sysconfig/puppetserver" ] || [ -e "/etc/default/puppetserver" ] # Test to confirm this is a Puppetserver
 then
   echo "Puppet master node detected"   #Log Line to StdOut for the Console
   echo " This task should only be run on an agent, exiting"
