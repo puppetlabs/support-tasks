@@ -26,7 +26,7 @@ then
         fi
 elif [ -e "/etc/sysconfig/puppetserver" ] # cover OSP EL-based system
 then
- echo "-Puppetmaster node detected - EL "   #Log Line to StdOut for the Console
+ echo "-Puppetserver node detected - EL "   #Log Line to StdOut for the Console
 
 
         if $(/usr/bin/which grep) -q "Xss" /etc/sysconfig/puppetserver
@@ -37,7 +37,7 @@ then
         fi
 elif [ -e "/etc/default/puppetserver" ] # cover ubuntu OSP
 then
- echo "-Puppetmaster node detected - Ubuntu "   #Log Line to StdOut for the Console
+ echo "-Puppetserver node detected - Ubuntu "   #Log Line to StdOut for the Console
 
 
         if $(/usr/bin/which grep) -q "Xss" /etc/default/puppetserver
@@ -47,7 +47,7 @@ then
                 puppet resource service puppetserver ensure=running
         fi
 else
-  echo  "-Not a Puppet MASTER node exiting "
+  echo  "-Not a Puppetserver node exiting "
 
 fi
 echo " -KB#0149 Task ended   $(date +%s)    --"
