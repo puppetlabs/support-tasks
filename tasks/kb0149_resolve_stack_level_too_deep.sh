@@ -24,6 +24,28 @@ then
                 puppet resource service pe-puppetserver ensure=stopped
                 puppet resource service pe-puppetserver ensure=running
         fi
+elif [ -e "/etc/sysconfig/puppetserver" ] # cover OSP EL-based system
+then
+ echo "-Puppetmaster node detected - EL "   #Log Line to StdOut for the Console
+
+
+        if $(/usr/bin/which grep) -q "Xss" /etc/sysconfig/puppetserver
+        then  echo "Argument Already  Present"
+        else  $(/usr/bin/which sed) -i 's/^\s*\(JAVA_ARGS="\)/JAVA_ARGS="-Xss2m /g' /etc/sysconfig/puppetserver
+                puppet resource service puppetserver ensure=stopped
+                puppet resource service puppetserver ensure=running
+        fi
+elif [ -e "/etc/default/puppetserver" ] # cover ubuntu OSP
+then
+ echo "-Puppetmaster node detected - Ubuntu "   #Log Line to StdOut for the Console
+
+
+        if $(/usr/bin/which grep) -q "Xss" /etc/default/puppetserver
+        then  echo "Argument Already  Present"
+        else  $(/usr/bin/which sed) -i 's/^\s*\(JAVA_ARGS="\)/JAVA_ARGS="-Xss2m /g' /etc/default/puppetserver
+                puppet resource service puppetserver ensure=stopped
+                puppet resource service puppetserver ensure=running
+        fi
 else
   echo  "-Not a Puppet MASTER node exiting "
 
