@@ -41,7 +41,7 @@ case $command in
 	fi
           ;;
   ssldir_permissions)
-          find $("puppet config print ssldir") -maxdepth 10 -type d -exec ls -ld "{}" \;
+          find "$(puppet config print ssldir)" -maxdepth 10 -type d -exec ls -ld "{}" \;
           ;;
 esac
 else
