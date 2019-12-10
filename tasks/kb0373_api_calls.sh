@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #
-
+# shellcheck disable=SC2046
 
 declare PT_command
 command=$PT_command
