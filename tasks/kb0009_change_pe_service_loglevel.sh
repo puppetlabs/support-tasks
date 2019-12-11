@@ -12,7 +12,7 @@ declare -a arrpathstocheck=("/etc/sysconfig/pe-puppetserver" "/etc/default/pe-pu
 
 function checkpaths(){
   pathsarry=("$@")
-    for servin in ${pathsarry[@]}
+    for servin in "${pathsarry[@]}"
         do
            if [ -f "$servin" ]; then
               path=$servin
