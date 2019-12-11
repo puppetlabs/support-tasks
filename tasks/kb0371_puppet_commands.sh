@@ -26,16 +26,16 @@ case $command in
             echo "Open Source Puppet detected, this command cannot be run"
           else
           puppet infrastructure status
-          ;;
           fi
+          ;;
      tune)
           if [ -e "/etc/sysconfig/puppetserver" ] || [ -e "/etc/default/puppetserver" ]
           then
             echo "Open Source Puppet detected, this command cannot be run"
           else
           puppet infrastructure tune
-          ;;
           fi
+          ;;
 esac
 else
   echo  "Not a Puppetserver node, exiting"
