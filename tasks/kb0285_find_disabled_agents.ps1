@@ -1,9 +1,10 @@
-$service = Get-WmiObject -Class Win32_Service -Property StartMode -Filter "Name='Puppet'"
+$LOCKFILE="$(cmd.exe /c puppet config print statedir)/agent_disabled.lock"
 
-if($service.StartMode -eq "Disabled"){
-  echo "Puppet agent is disabled"
+if(Test-Path $LOCKFILE) {
+  Write-Output "Puppet agent is disabled"
+  cat $LOCKFILE
 }
-else{
-  echo "Puppet agent is enabled"
+else {
+  Write-Output "Puppet agent is enabled"
   EXIT 1
 } 
