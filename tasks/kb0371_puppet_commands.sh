@@ -8,7 +8,7 @@ command=$PT_command
 
 
 
-if [ -e "/etc/sysconfig/pe-puppetserver" ] || [ -e "/etc/default/pe-puppetserver" ] # Test to confirm this is a Puppetserver
+if [ -e "/etc/sysconfig/pe-puppetserver" ] || [ -e "/etc/default/pe-puppetserver" ] || [ -e "/etc/default/puppetserver" ] || [ -e "/etc/default/puppetserver" ] # Test to confirm this is a Puppetserver
 then
   echo "Puppet master node detected"   #Log Line to StdOut for the Console
 
