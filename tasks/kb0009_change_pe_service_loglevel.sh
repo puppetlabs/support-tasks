@@ -1,4 +1,4 @@
-!/bin/bash
+#!/bin/bash
 # shellcheck disable=1117
 
 # Adjust PE services log level
@@ -24,7 +24,7 @@ function changeServiceLevel(){
 
   serv=$1
   echo "Updating '$serv' log level to '${loglevel}'"   #Log Line to StdOut for the Console
-  FACTER_level="${loglevel}" FACTER_service="${service}" puppet apply -e "augeas {'toggle logging level': incl => \"/etc/puppetlabs/$::service/logback.xml\", lens => 'Xml.lns', context => \"/files/etc/puppetlabs/$::service/logback.xml/configuration/root/#attribute\", changes => \"set level \'$::level\'\"}~> service {"$serv": ensure => running }"
+  FACTER_level="${loglevel}" FACTER_service="${service}" puppet apply -e "augeas {'toggle logging level': incl => \"/etc/puppetlabs/$::service/logback.xml\", lens => 'Xml.lns', context => \"/files/etc/puppetlabs/$::service/logback.xml/configuration/root/#attribute\", changes => \"set level \'$::level\'\"}~> service {$serv: ensure => running }"
   echo " -- KB#0009 Task ended   $(date +%s) --"
 
 }
