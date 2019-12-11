@@ -7,4 +7,4 @@ if(Test-Path $LOCKFILE) {
 else {
   Write-Output "Puppet agent is enabled"
   EXIT 1
-} 
+}
