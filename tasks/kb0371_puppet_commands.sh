@@ -8,9 +8,9 @@ command=$PT_command
 
 
 
-if [ -e "/etc/sysconfig/pe-puppetserver" ] || [ -e "/etc/default/pe-puppetserver" ] || [ -e "/etc/default/puppetserver" ] || [ -e "/etc/default/puppetserver" ] # Test to confirm this is a Puppetserver
+if [ -e "/etc/sysconfig/pe-puppetserver" ] || [ -e "/etc/default/pe-puppetserver" ] || [ -e "/etc/sysconfig/puppetserver" ] || [ -e "/etc/default/puppetserver" ] # Test to confirm this is a Puppetserver
 then
-  echo "Puppet master node detected"   #Log Line to StdOut for the Console
+  echo "Puppetserver node detected"   #Log Line to StdOut for the Console
 
 
 case $command in
@@ -21,13 +21,23 @@ case $command in
            puppet module list --all
           ;;
      infrastructure_status)
+          if [ -e "/etc/sysconfig/puppetserver" ] || [ -e "/etc/default/puppetserver" ]
+          then
+            echo "Open Source Puppet detected, this command cannot be run"
+          else
           puppet infrastructure status
           ;;
+          fi
      tune)
+          if [ -e "/etc/sysconfig/puppetserver" ] || [ -e "/etc/default/puppetserver" ]
+          then
+            echo "Open Source Puppet detected, this command cannot be run"
+          else
           puppet infrastructure tune
           ;;
+          fi
 esac
 else
-  echo  "Not a Puppet master node, exiting"
+  echo  "Not a Puppetserver node, exiting"
 
 fi
