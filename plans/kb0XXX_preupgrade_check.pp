@@ -1,12 +1,12 @@
-plan preupgrade_check(
+plan support_tasks::kb0XXX_preupgrade_check(
   TargetSpec $nodes,
   Boolean    $fail_plan_on_errors = true,
   Integer    $time_skew = 60,  ## May want to keep under 300 seconds due to hitting SSL limitations.
   Boolean    $debug = false,
 ) {
   if $nodes.empty { return ResultSet.new([]) } 
-  $os_results = run_task(preupgrade_check::check_os, $nodes, '_catch_errors' => true )
-  $time_results = run_task(preupgrade_check::check_time, $nodes, '_catch_errors' => true )
+  $os_results = run_task(support_tasks::kb0XXX_check_os, $nodes, '_catch_errors' => true )
+  $time_results = run_task(support_tasks::kb0XXX_check_time, $nodes, '_catch_errors' => true )
   $targets = $os_results.targets
 
   $failed_results = $os_results.error_set()
@@ -72,9 +72,9 @@ plan preupgrade_check(
            _codedir_output   => $codedir_msg,
            _puppetdir_output => $puppetdir_msg,
            _time_output      => $time_msg,
-          _output           => 'Please contact support prior to upgrading',
+          _output           => 'Please contact support prior to upgrading.',
           _error            => {
-              msg  => 'The pre-upgrade checks have failed in one or more areas.',
+              msg  => 'At least one pre-upgrade check failed.',
               kind => 'bolt/plan/preupgrade_check'
             }
           })
@@ -104,7 +104,7 @@ plan preupgrade_check(
     }
     $result_set = ResultSet($total_results)
     if ($fail_plan_on_errors and !$error_set.empty) {
-      fail_plan('One or more targets have failed the checks.', 'plan/preupgrade_check', {
+      fail_plan('At least one target failed the pre-upgrade checks.', 'plan/kb0XXX_preupgrade_check', {
         data        => $result_set,
         errors      => $error_set,
         failednodes => $error_set.names,
@@ -116,7 +116,7 @@ plan preupgrade_check(
   }
   else {
     if ($fail_plan_on_errors and !$error_set.empty) {
-      fail_plan('One or more targets have failed the checks.', 'plan/preupgrade_check', {
+      fail_plan('At least one target failed the pre-upgrade checks.', 'plan/kb0XXX_preupgrade_check', {
         errors      => $error_set,
         failednodes => $error_set.names,
       })
