@@ -1,7 +1,7 @@
 {
   "puppet_task_version": 1,
   "supports_noop": false,
-  "description": "KB0XXX Task to check various aspects of the OS, such as agent processes, filesystem usage, and license expiration prior to a Puppet Enterprise upgrade.",
+  "description": "KB0XXX Task to check various aspects of the OS, such as agent processes, filesystem usage, and license expiration prior to a Puppet Enterprise upgrade. -- https://support.puppet.com/hc/en-us/XXXXXXXXXXXX",
   "parameters": {
   }
 }

@@ -1,7 +1,7 @@
 {
   "puppet_task_version": 1,
   "supports_noop": false,
-  "description": "KB0XXX Task to check the time, in UTC, on a Puppet Enterprise infrastructure. This task also returns whether the node is the Puppet CA and the associated time for the Puppet CA. This data is to be used in the KB0XXX plan to calculate time drift between the Puppet CA and compilers, as part of a pre-upgrade check.",
+  "description": "KB0XXX Task to check the time, in UTC, on a Puppet Enterprise infrastructure. This task also returns whether the node is the Puppet CA and the associated time for the Puppet CA. This data is to be used in the KB0XXX plan to calculate time drift between the Puppet CA and compilers, as part of a pre-upgrade check. -- https://support.puppet.com/hc/en-us/XXXXXXXXXX",
   "parameters": {
   }
 }

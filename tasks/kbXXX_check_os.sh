@@ -1,4 +1,6 @@
 #!/bin/sh
+# Task to collect details about the current PE master install
+# and check for states that could potentially disrupt an upgrade.
 
 # Reset paths in case the environment has been reset.
 PATH=/opt/puppetlabs/puppet/bin:/opt/puppetlabs/server/bin:/usr/local/bin:$PATH
@@ -32,3 +34,4 @@ cacert_expires=$(openssl x509 -enddate -noout -in $(puppet config print cacert) 
 # Export the data in json format for parsing in plan.
 printf '{"PuppetDirectoryUsage":"%s","CodeDirectoryUsage":"%s","puppet-agent":"%s","pxp-agent":"%s","LicensedNodes":"%s","LicenseEndDate":"%s","pe_build":"%s","pe_server_version":"%s","agent_build":"%s","CAcertExpiration":"%s"}\n' "$puppetdir_usage" "$codedir_usage" "$agent_status" "$pxp_status" "$licensed_nodes" "$license_end" "$pe_build" "$pe_server_version" "$agent_build" "$cacert_expires"
 
+echo " -- KB#0XXX check_os task ended   $(date +%s) --"
