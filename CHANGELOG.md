@@ -1,15 +1,23 @@
 # Change Log
+
 All notable changes to this project will be documented in this file.
  
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
+
+## [X.X.X] - 2019-XX-XX
+
+### Added
+
+- kb0XXX_preupgrade_check plan
+    - kb0XXX_check_os task
+    - kb0XXX_check_time task
 
 ## [1.0.9] - 2019-10-10
  
 ### Added
 
 - kb0305_support_script_and_upload
-
 
 ### Changed
 

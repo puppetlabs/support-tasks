@@ -27,10 +27,13 @@ Tasks in this module should only be executed by PE support customers in accompan
 
 Support customers should follow the instructions in the corresponding knowledge base articles linked below.
 
-
 ## Reference
 
 To view the available actions and parameters for each task, on the command line, run `puppet task show <task_name>` or see the support\_tasks module page on the [Forge](https://forge.puppet.com/puppetlabs/support_tasks/tasks).
+
+**Plans:**
+
+* ['kb0XXX_preupgrade_check`](https://support.puppet.com/hc/en-us/articles/XXXXXXXXXXXXXX)
 
 **Tasks:**
 
@@ -65,7 +68,6 @@ To view the available actions and parameters for each task, on the command line,
 * [`KB#0361 Uploading facts to the Puppet master`](https://support.puppet.com/hc/en-us/articles/360036136533)
 
 * [`KB#0362 Check for and download the latest patch for your current major release for Puppet Enterprise `](https://support.puppet.com/hc/en-us/articles/360036141593 )
-
 
 ## Getting Help
 
