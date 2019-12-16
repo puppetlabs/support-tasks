@@ -1,0 +1,7 @@
+{
+  "puppet_task_version": 1,
+  "supports_noop": false,
+  "description": "This task is to check the time, in UTC, on your Puppet Infrastructure.  This task also returns if the node is the PuppetCA and associated time for the PuppetCA.  This data is to be used later in the plan to calculate time drift between PuppetCA and compilers.",
+  "parameters": {
+  }
+}
