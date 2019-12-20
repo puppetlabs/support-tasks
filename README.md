@@ -66,6 +66,13 @@ To view the available actions and parameters for each task, on the command line,
 
 * [`KB#0362 Check for and download the latest patch for your current major release for Puppet Enterprise `](https://support.puppet.com/hc/en-us/articles/360036141593 )
 
+* [`kb0370_generate_token`](https://support.puppet.com/hc/en-us)
+
+* [`kb0371_puppet_commands`](https://support.puppet.com/hc/en-us)
+
+* [`kb0372_os_commands`](https://support.puppet.com/hc/en-us)
+
+* [`kb0373_api_calls`](https://support.puppet.com/hc/en-us)
 
 ## Getting Help
 
