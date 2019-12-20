@@ -1,8 +1,24 @@
 # Change Log
 All notable changes to this project will be documented in this file.
  
-The format is based on [Keep a Changelog](http://keepachangelog.com/)
-and this project adheres to [Semantic Versioning](http://semver.org/).
+
+## [1.1] - 2019-12-20
+ 
+### Added
+
+ - kb0370_generate_token
+ - kb0371_puppet_commands
+ - kb0372_os_commands
+ - kb0373_api_calls
+
+
+### Changed
+
+- Updated kb0285 for Windows support
+- Added Puppet OpenSource Support to compatible tasks
+- PDK 1.14 Update
+
+### Fixed
 
 ## [1.0.9] - 2019-10-10
  

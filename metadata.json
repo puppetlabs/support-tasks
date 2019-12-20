@@ -1,10 +1,12 @@
 {
   "name": "puppetlabs-support_tasks",
-  "version": "1.0.9",
+  "version": "1.1.0",
   "author": "Puppet Support Team",
   "summary": "A module used to deliver Tasks for the solutions & configurations described in the PE Support Knowledgebase https://support.puppet.com/hc/en-us",
   "license": "Apache-2.0",
   "source": "https://github.com/puppetlabs/support-tasks",
+  "project_page": "https://support.puppet.com/hc/en-us",
+  "issues_url": "https://github.com/puppetlabs/support-tasks/issues",
   "dependencies": [
 
   ],
