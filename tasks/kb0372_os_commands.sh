@@ -15,7 +15,7 @@ then
 
 case $command in
      puppet_port_status)
-          netstat -ln | grep '8140\|5432\|8170\|8143\|443 \|4433\|8081\|8150\|8151'
+          netstat -ln | grep '8140\|5432\|8170\|8143\|443 \|4433\|8081\|8150\|8151\|8142'
           ;;
        puppetserver_log)
            tail -100 /var/log/puppetlabs/puppetserver/puppetserver.log
