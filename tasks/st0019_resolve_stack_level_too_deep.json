@@ -1,7 +1,0 @@
-{
-  "puppet_task_version": 1,
-  "supports_noop": false,
-  "description": "KB0149 Resolve Stack Level Too Deep - This Task to be used in conjunction with Puppet Enterprise Knowledge Base Article KB0149 - https://support.puppet.com/hc/en-us/articles/218763948",
-  "parameters": {
-  }
-}

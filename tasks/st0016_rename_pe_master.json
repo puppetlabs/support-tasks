@@ -1,7 +1,0 @@
-{
-  "puppet_task_version": 1,
-  "supports_noop": false,
-  "description": "KB0263 Rename PE Master - This task to be used in conjunction with Puppet Enterprise Knowledge Base Article KB0263 - https://support.puppet.com/hc/en-us/articles/360003489634",
-  "parameters": {
-  }
-}

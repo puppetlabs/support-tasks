@@ -1,7 +1,0 @@
-{
-  "puppet_task_version": 1,
-  "supports_noop": false,
-  "description": "KB0244 Disable MCO Logrotate - This Task to be used in conjunction with Puppet Enterprise Knowledge Base Article KB0244 - https://support.puppet.com/hc/en-us/articles/360002051354",
-  "parameters": {
-  }
-}

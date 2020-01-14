@@ -2,22 +2,6 @@
 All notable changes to this project will be documented in this file.
 
 
-## [1.1.1] - 2020-01-15
-
-### Added
-
-
-
-### Changed
-
- - Changed Task Numbering Prefix to ST
-
-### Fixed
-
-
-
-
-
 ## [1.1] - 2019-12-20
  
 ### Added

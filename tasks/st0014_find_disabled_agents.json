@@ -1,6 +1,0 @@
-{
-  "puppet_task_version": 1,
-  "description": "KB0285 Find Disabled Agents - This Task to be used in conjunction with Puppet Enterprise Knowledge Base Article KB0285 - https://support.puppet.com/hc/en-us/articles/360006717334",
-  "supports_noop": false
-}
-
