@@ -1,0 +1,15 @@
+{
+  "puppet_task_version": 1,
+  "supports_noop": false,
+  "description": "KB0009 Change PE Service Loglevel - This Task to be used in conjunction with Puppet Enterprise Knowledge Base Article KB0009 - https://support.puppet.com/hc/en-us/articles/115000177368",
+  "parameters": {
+    "loglevel": {
+      "description": "The level to which the logging will be set",
+      "type": "Enum[trace, debug, info, warn, error]"
+    },
+    "service": {
+      "description": "PE service",
+      "type": "Enum[puppetserver, puppetdb, console-services, orchestration-services]"
+    }
+  }
+}
