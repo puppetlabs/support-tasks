@@ -1,0 +1,7 @@
+{
+  "puppet_task_version": 1,
+  "supports_noop": false,
+  "description": "KB0236 Set Cache Paths To Default - This Task to be used in conjunction with Puppet Enterprise Knowledge Base Article KB0236 - https://support.puppet.com/hc/en-us/articles/360001060434",
+  "parameters": {
+  }
+}

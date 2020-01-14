@@ -34,45 +34,45 @@ To view the available actions and parameters for each task, on the command line,
 
 **Tasks:**
 
-* [`kb0009_Change_PE_Service_Loglevel`](https://support.puppet.com/hc/en-us/articles/115000177368)
+* [`st0009_Change_PE_Service_Loglevel`](https://support.puppet.com/hc/en-us/articles/115000177368)
 
-* [`kb0149_Resolve_Stack_Level_Too_Deep`](https://support.puppet.com/hc/en-us/articles/218763948)
+* [`st0149_Resolve_Stack_Level_Too_Deep`](https://support.puppet.com/hc/en-us/articles/218763948)
 
-* [`kb0244_disable_mco_logrotate`](https://support.puppet.com/hc/en-us/articles/360002051354)
+* [`st0244_disable_mco_logrotate`](https://support.puppet.com/hc/en-us/articles/360002051354)
 
-* [`kb0267_clear_file_sync_locks`](https://support.puppet.com/hc/en-us/articles/360003883933)
+* [`st0267_clear_file_sync_locks`](https://support.puppet.com/hc/en-us/articles/360003883933)
 
-* [`kb0236_set_cache_paths_to_default`](https://support.puppet.com/hc/en-us/articles/360001060434)
+* [`st0236_set_cache_paths_to_default`](https://support.puppet.com/hc/en-us/articles/360001060434)
 
-* [`kb0285_find_disabled_agents`](https://support.puppet.com/hc/en-us/articles/360006717334)
+* [`st0285_find_disabled_agents`](https://support.puppet.com/hc/en-us/articles/360006717334)
 
-* [`kb0286_change_puppet_daemon_runmode`](https://support.puppet.com/hc/en-us/articles/360006721014)
+* [`st0286_change_puppet_daemon_runmode`](https://support.puppet.com/hc/en-us/articles/360006721014)
 
-* [`kb0287_Check_DB_Table_Sizes`](https://support.puppet.com/hc/en-us/articles/360006922673)
+* [`st0287_Check_DB_Table_Sizes`](https://support.puppet.com/hc/en-us/articles/360006922673)
 
-* [`kb0263_Rename_Pe_Master`](https://support.puppet.com/hc/en-us/articles/360003489634)
+* [`st0263_Rename_Pe_Master`](https://support.puppet.com/hc/en-us/articles/360003489634)
 
-* [`kb0298_Run_Code_Deploy`](https://support.puppet.com/hc/en-us/articles/360008192734)
+* [`st0298_Run_Code_Deploy`](https://support.puppet.com/hc/en-us/articles/360008192734)
 
-* [`kb0299_Regen_Master_Cert`](https://support.puppet.com/hc/en-us/articles/360008505193)
+* [`st0299_Regen_Master_Cert`](https://support.puppet.com/hc/en-us/articles/360008505193)
 
-* [`kb0305_support_script_and_upload`](https://support.puppet.com/hc/en-us/articles/360009970114)
+* [`st0305_support_script_and_upload`](https://support.puppet.com/hc/en-us/articles/360009970114)
 
-* [`kb0317_Clean_Or_Purge_Nodes`](https://support.puppet.com/hc/en-us/articles/360012551294)
+* [`st0317_Clean_Or_Purge_Nodes`](https://support.puppet.com/hc/en-us/articles/360012551294)
 
-* [`kb0346_Thundering_Herd_resolver`](https://support.puppet.com/hc/en-us/articles/360023988353)
+* [`st0346_Thundering_Herd_resolver`](https://support.puppet.com/hc/en-us/articles/360023988353)
 
-* [`KB#0361 Uploading facts to the Puppet master`](https://support.puppet.com/hc/en-us/articles/360036136533)
+* [`st0361 Uploading facts to the Puppet master`](https://support.puppet.com/hc/en-us/articles/360036136533)
 
-* [`KB#0362 Check for and download the latest patch for your current major release for Puppet Enterprise `](https://support.puppet.com/hc/en-us/articles/360036141593 )
+* [`st0362 Check for and download the latest patch for your current major release for Puppet Enterprise `](https://support.puppet.com/hc/en-us/articles/360036141593 )
 
-* [`kb0370_generate_token`](https://support.puppet.com/hc/en-us)
+* [`st0370_generate_token`](https://support.puppet.com/hc/en-us/articles/360040226053)
 
-* [`kb0371_puppet_commands`](https://support.puppet.com/hc/en-us)
+* [`st0371_puppet_commands`](https://support.puppet.com/hc/en-us/articles/360039726314)
 
-* [`kb0372_os_commands`](https://support.puppet.com/hc/en-us)
+* [`st0372_os_commands`](https://support.puppet.com/hc/en-us/articles/360040232993)
 
-* [`kb0373_api_calls`](https://support.puppet.com/hc/en-us)
+* [`st0373_api_calls`](https://support.puppet.com/hc/en-us/articles/360040234893)
 
 ## Getting Help
 

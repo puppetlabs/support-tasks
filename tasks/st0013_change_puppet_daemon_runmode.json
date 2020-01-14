@@ -1,0 +1,16 @@
+{
+  "puppet_task_version": 1,
+  "description": "KB0286 Change Puppet Daemon Runmode - This Task to be used in conjunction with Puppet Enterprise Knowledge Base Article KB0286 - https://support.puppet.com/hc/en-us/articles/360006721014",
+  "supports_noop": false,
+  "parameters": {
+    "puppet_mode": {
+      "description": "Can be either `enable` or `disable`, the mode to put the daemon in",
+      "type": "Enum['enable','disable']"
+    },
+    "reason": {
+      "description": "An optional message string to pass that will be added to disabled agents.  Shows up in syslog.",
+      "type": "Optional[String[1]]"
+    }
+  }
+}
+

@@ -1,0 +1,11 @@
+{
+  "puppet_task_version": 1,
+  "supports_noop": false,
+  "description": "KB0298 Run Code Deploy - This Task to be used in conjunction with Puppet Enterprise Knowledge Base Article KB0298 - https://support.puppet.com/hc/en-us/articles/360008192734",
+  "parameters": {
+    "environment": {
+      "description": "The name of the environment to deploy",
+      "type": "String[1]"
+    }
+  }
+}

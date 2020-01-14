@@ -1,0 +1,11 @@
+{
+  "puppet_task_version": 1,
+  "supports_noop": false,
+  "description": "KB0299 Regen Master Cert - This Task to be used in conjunction with Puppet Enterprise Knowledge Base Article KB0299 - https://support.puppet.com/hc/en-us/articles/360008505193",
+  "parameters": {
+    "dnsaltname_override": {
+      "description": "Override to prevent existing DNS alt name carryover.  Will force the use of only the DNS alt names present in pe.conf.",
+      "type": "Optional[Boolean]"
+    }
+  }
+}
