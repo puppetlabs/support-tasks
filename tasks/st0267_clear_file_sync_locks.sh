@@ -15,4 +15,4 @@ else
   echo  "Not a Puppet master node, exiting"
 
 fi
-echo "KB#0267 Task ended   $(date +%s)    --"
+echo "ST#0267 Task ended   $(date +%s)    --"

@@ -1,5 +1,5 @@
 #!/bin/bash
-# Puppet Task Name: KB0287_Check_DB_Table_Sizes
+# Puppet Task Name: ST0287_Check_DB_Table_Sizes
 
 declare PT_dbname
 dbname=$PT_dbname
@@ -21,4 +21,4 @@ then
 else
   echo "Node not running pe-postgresql service, please select node which is."
 fi
-  echo " -- KB#0287 Task ended: $(date +%s) --"
+  echo " -- ST#0287 Task ended: $(date +%s) --"

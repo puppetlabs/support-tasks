@@ -37,4 +37,4 @@ else
     echo "No changes necessary"
 fi
 
-echo "KB#0236 Task ended   $(date +%s)    --"
+echo "ST#0236 Task ended   $(date +%s)    --"
