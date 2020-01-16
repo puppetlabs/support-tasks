@@ -50,4 +50,4 @@ else
   echo  "-Not a Puppetserver node exiting "
 
 fi
-echo " -KB#0149 Task ended   $(date +%s)    --"
+echo " -ST#0149 Task ended   $(date +%s)    --"

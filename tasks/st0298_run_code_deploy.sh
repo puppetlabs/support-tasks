@@ -1,5 +1,5 @@
 #!/bin/bash
-# Puppet Task Name: kb0298_run_code_deploy
+# Puppet Task Name: st0298_run_code_deploy
 
 declare PT_environment
 environment=$PT_environment

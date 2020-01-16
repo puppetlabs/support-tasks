@@ -5,8 +5,8 @@
   "parameters": {
   },
   "implementations": [
-    {"name": "kb00361a_uploading_facts.sh", "requirements": ["shell"]},
-    {"name": "kb00361b_uploading_facts.ps1", "requirements": ["powershell"]}
+    {"name": "st0361a_uploading_facts.sh", "requirements": ["shell"]},
+    {"name": "st0361b_uploading_facts.ps1", "requirements": ["powershell"]}
   ]
 }
 
