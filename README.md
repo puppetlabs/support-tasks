@@ -78,7 +78,9 @@ To view the available actions and parameters for each task, on the command line,
 
 Puppet Enterprise Support customers can open a ticket with us at our portal for assistance <https://support.puppet.com/hc/en-us>, this module is officially supported by the Puppet Enterprise Support Team
 
-To display help for the support\_tasks task, run `puppet task show support_tasks`
+To display help for the support\_tasks task, run `puppet task show support_tasks::<task_name>`
+
+To display a list of all tasks provided by this module run `puppet task show --all | grep support_tasks`
 
 ## Copyright and License
 

@@ -2,6 +2,20 @@
 All notable changes to this project will be documented in this file.
 
 
+## [1.1.1] - 2020-01-17
+
+### Added
+
+
+### Changed
+
+- To support Upcoming Changes to the Support Knowledge base, number referencing from all tasks has been uncoupled from the Article Number, References going forward will be prefix "ST" followed by a 4 digit number etx "st9999" 
+
+### Fixed
+
+- https://github.com/puppetlabs/support-tasks/issues/71 
+
+
 ## [1.1] - 2019-12-20
  
 ### Added
