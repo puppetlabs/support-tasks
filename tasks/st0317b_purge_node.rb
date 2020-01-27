@@ -16,7 +16,7 @@ require 'facter'
 Puppet.initialize_settings
 
 def pe_master?
-    !Facter.value('pe_build').nil?
+  !Facter.value('pe_build').nil?
 end
 
 # This task only works when running against your Puppet CA server, so let's check for that.
