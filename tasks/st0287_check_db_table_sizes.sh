@@ -14,8 +14,8 @@ function getdbTables() {
     echo "${service} service detected, will continue to run against ${dbname}."
     su - "$service" -s /bin/bash -c "$path -d $dbname -c '\di+;'"
   else
-    echo "${service} service detected, will continue to run against ${dblist[*]}."
-    for db in $dblist[*]
+    echo "${service} service detected, will continue to run against "${dblist[@]}"."
+    for db in ${dblist[@]};
     do
       su - "$service" -s /bin/bash -c "$path -d $db -c '\di+;'"
     done
