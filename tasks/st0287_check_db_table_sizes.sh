@@ -12,12 +12,12 @@ function getdbTables() {
   dblist=("$@")
   if [ "$dbname" != 'all' ]; then
     echo "${service} service detected, will continue to run against ${dbname}."
-    su - $service -s /bin/bash -c "$path -d $dbname -c '\di+;'"
+    su - "$service" -s /bin/bash -c "$path -d $dbname -c '\di+;'"
   else
-    echo "${service} service detected, will continue to run against ${dblist}."
-    for db in $dblist
+    echo "${service} service detected, will continue to run against ${dblist[*]}."
+    for db in $dblist[*]
     do
-      su - $service -s /bin/bash -c "$path -d $db -c '\di+;'"
+      su - "$service" -s /bin/bash -c "$path -d $db -c '\di+;'"
     done
   fi
 }
@@ -41,7 +41,7 @@ fi
   case "${postgresservice}" in
     pe-postgres)
       echo "Found PE-Postgres"
-      pedbnames='pe-puppetdb pe-postgres pe-classifier pe-rbac pe-activity pe-orchestrator'
+      pedbnames='pe-puppetdb pe-postgres pe-classifier pe-rbac pe-activity pe-orchestrator postgres'
       getdbTables "/opt/puppetlabs/server/bin/psql" "${dbname}" "${postgresservice}" "${pedbnames}"
       ;;
     postgres)
