@@ -1,4 +1,5 @@
 #!/bin/bash
+# shellcheck disable=SC2068
 # Puppet Task Name: ST0287_Check_DB_Table_Sizes
 
 declare PT_dbname
@@ -10,11 +11,12 @@ function getdbTables() {
   service=$3
   shift 3
   dblist=("$@")
+
   if [ "$dbname" != 'all' ]; then
     echo "${service} service detected, will continue to run against ${dbname}."
     su - "$service" -s /bin/bash -c "$path -d $dbname -c '\di+;'"
   else
-    echo "${service} service detected, will continue to run against "${dblist[@]}"."
+    echo "${service} service detected, will continue to run against ${dblist[*]}."
     for db in ${dblist[@]};
     do
       su - "$service" -s /bin/bash -c "$path -d $db -c '\di+;'"
