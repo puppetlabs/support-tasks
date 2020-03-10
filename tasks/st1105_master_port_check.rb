@@ -8,7 +8,6 @@ require 'socket'
 require 'json'
 
 destination = Socket.gethostbyname(Socket.gethostname).first
-ports = '8140, 443, 4433, 8081, 8142, 8143, 5432, 8170'
 portdesc = {
   '8140' => "The master uses this port to accept inbound traffic/requests from agents.
              The console sends requests to the master on this port. Certificate requests are passed over this port unless ca_port is set differently.
@@ -35,7 +34,7 @@ end
 
 results_json = []
 
-ports.split(%r{\s*,\s*}).each do |port_no|
+portdesc.keys.each do |port_no|
   # If port is open
   result = if port_test(destination, port_no)
              {
