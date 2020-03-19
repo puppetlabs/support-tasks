@@ -37,7 +37,7 @@ $ cat pdb.yaml
 query: "inventory[certname] {}"
 groups:
 - name: windows
-  query: "inventory[certname] { facts.osfamily = 'windows' }"
+  query: "inventory[certname] { facts.os.family = 'windows' }"
   config:
     transport: winrm
     winrm:
@@ -64,7 +64,7 @@ $ cat ~/.puppetlabs/bolt/inventory.yaml
 query: inventory[certname] {}
 groups:
 - name: windows
-  query: inventory[certname] { facts.osfamily = 'windows' }
+  query: inventory[certname] { facts.os.family = 'windows' }
   config:
     transport: winrm
     winrm:
