@@ -74,7 +74,7 @@ To view the available actions and parameters for each task, on the command line,
 
 * [`st0373_api_calls`](https://support.puppet.com/hc/en-us/articles/360040234893)
 
-* [`st1105_master_port_check`](https://support.puppet.com/hc/en-us/articles/)
+* [`st1105_master_port_check`](https://support.puppet.com/hc/en-us/articles/360045363493)
 
 
 ## Getting Help
