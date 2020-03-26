@@ -1,6 +1,20 @@
 # Change Log
 All notable changes to this project will be documented in this file.
 
+## [1.1.2] - 2020-03-26
+
+### Added
+
+- st1105_master_port_check - Task to test TCP port connectivity of the Puppet Master
+
+### Changed
+
+- PDK updated to 1.17
+
+### Fixed
+
+- Removed "DOCS" reference to now removed cert regen tasks
+
 
 ## [1.1.1] - 2020-01-17
 

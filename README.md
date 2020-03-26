@@ -21,7 +21,7 @@ The knowledge base, available to our support customers, offers a range of self s
 
 ### Beginning with support_tasks
 
-Tasks in this module should only be executed by PE support customers in accompaniment with the corresponding knowledge base article. The task name corresponds to the KB article number, for instance, article KB#9999 corresponds to task kb9999.
+Tasks in this module should only be executed by PE support customers, and Opensource Knowledge base users, in accompaniment with the corresponding knowledge base article.
 
 ## Usage
 
@@ -73,6 +73,9 @@ To view the available actions and parameters for each task, on the command line,
 * [`st0372_os_commands`](https://support.puppet.com/hc/en-us/articles/360040232993)
 
 * [`st0373_api_calls`](https://support.puppet.com/hc/en-us/articles/360040234893)
+
+* [`st1105_master_port_check`](https://support.puppet.com/hc/en-us/articles/)
+
 
 ## Getting Help
 
