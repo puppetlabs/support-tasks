@@ -1,7 +1,7 @@
 {
   "puppet_task_version": 1,
   "supports_noop": false,
-  "description": "KB0370_Generate_Token This task to be used in conjunction with Puppet Enterprise Knowledge Base Article KB0370 - https://support.puppet.com/hc/en-us/articles",
+  "description": "ST0370_Generate_Token This task to be used in conjunction with Puppet Enterprise Knowledge Base Article KB0370 - https://support.puppet.com/hc/en-us/articles",
   "parameters": {
     "user": {
       "description": "PE RBAC User",

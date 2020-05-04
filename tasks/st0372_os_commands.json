@@ -1,7 +1,7 @@
 {
   "puppet_task_version": 1,
   "supports_noop": false,
-  "description": "KB0372 OS Commands - This Task to be used in conjunction with Puppet Enterprise Knowledge Base Article KB0372 - https://support.puppet.com/hc/en-us/articles/",
+  "description": "ST0372 OS Commands - This Task to be used in conjunction with Puppet Enterprise Knowledge Base Article KB0372 - https://support.puppet.com/hc/en-us/articles/",
   "parameters": {
     "command": {
       "description": "The Puppet Master Command Line action to perform",
