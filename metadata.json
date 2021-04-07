@@ -14,48 +14,54 @@
     {
       "operatingsystem": "CentOS",
       "operatingsystemrelease": [
-        "7",
+        "8",
+	"7",
         "6"
       ]
     },
     {
       "operatingsystem": "OracleLinux",
       "operatingsystemrelease": [
-        "7",
+        "8",
+	"7",
         "6"
       ]
     },
     {
       "operatingsystem": "RedHat",
       "operatingsystemrelease": [
-        "7",
+        "8",
+	"7",
         "6"
       ]
     },
     {
       "operatingsystem": "Scientific",
       "operatingsystemrelease": [
-        "7",
+        "8",
+	"7",
         "6"
       ]
     },
     {
       "operatingsystem": "Debian",
       "operatingsystemrelease": [
-        "8"
+        "10",
+	"9"
       ]
     },
     {
       "operatingsystem": "Ubuntu",
       "operatingsystemrelease": [
-        "14.04",
+        "20.04",
+	"18.04",
         "16.04"
       ]
     },
     {
       "operatingsystem": "windows",
       "operatingsystemrelease": [
-        "2008 R2",
+        "2019",
         "2012 R2",
         "2016"
       ]
@@ -63,20 +69,16 @@
     {
       "operatingsystem": "Fedora",
       "operatingsystemrelease": [
-        "25"
+        "30",
+	"31"
       ]
     },
     {
-      "operatingsystem": "Darwin",
-      "operatingsystemrelease": [
-        "16"
-      ]
-    },
-    {
-      "operatingsystem": "SLES",
-      "operatingsystemrelease": [
+    "operatingsystem": "SLES",  
+    "operatingsystemrelease": [
         "11",
-        "12"
+        "12",
+	"15"
       ]
     },
     {
@@ -90,7 +92,7 @@
   "requirements": [
     {
       "name": "puppet",
-      "version_requirement": ">= 5.3.2 < 7.0.0"
+      "version_requirement": ">= 5.3.2 < 8.0.0"
     }
   ],
   "pdk-version": "1.19.0.pre (110)",

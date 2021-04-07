@@ -34,7 +34,7 @@ end
 
 results_json = []
 
-portdesc.keys.each do |port_no|
+portdesc.each_key do |port_no|
   # If port is open
   result = if port_test(destination, port_no)
              {
