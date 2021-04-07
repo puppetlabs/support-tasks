@@ -28,11 +28,8 @@ group :development do
   gem "puppet-module-posix-dev-r#{minor_version}", '~> 0.4',     require: false, platforms: [:ruby]
   gem "puppet-module-win-default-r#{minor_version}", '~> 0.4',   require: false, platforms: [:mswin, :mingw, :x64_mingw]
   gem "puppet-module-win-dev-r#{minor_version}", '~> 0.4',       require: false, platforms: [:mswin, :mingw, :x64_mingw]
-end
-group :system_tests do
-  gem "puppet-module-posix-system-r#{minor_version}", require: false, platforms: [:ruby]
-  gem "puppet-module-win-system-r#{minor_version}",   require: false, platforms: [:mswin, :mingw, :x64_mingw]
-  gem "puppet_litmus",                                require: false, platforms: [:ruby, :mswin, :mingw, :x64_mingw] if ENV['PUPPET_GEM_VERSION'].nil? or ENV['PUPPET_GEM_VERSION'] !~ %r{ 5}
+  gem "github_changelog_generator",                              require: false
+  gem "puppet_litmus",                                           require: false, git: 'https://github.com/puppetlabs/puppet_litmus', ref: 'main' if Gem::Version.new(RUBY_VERSION.dup) >= Gem::Version.new('2.5.0')
 end
 
 puppet_version = ENV['PUPPET_GEM_VERSION']
