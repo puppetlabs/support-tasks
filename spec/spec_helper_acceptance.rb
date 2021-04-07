@@ -50,4 +50,3 @@ else
     Specinfra.configuration.winrm = winrm
   end
 end
-run_shell('chmod a+w+t /tmp')

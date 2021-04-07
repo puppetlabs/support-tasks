@@ -5,18 +5,18 @@ describe 'tasks' do
     expect(result['result']['_output']).to contain('No changes necessary')
   end
   it 'when vardir is not default ' do
-    run_shell('/opt/puppetlabs/bin/puppet config set vardir /tmp')
+    run_shell('/opt/puppetlabs/bin/puppet config set vardir /opt/puppetlabs/testingdirs')
     result = run_bolt_task('support_tasks::st0236_set_cache_paths_to_default')
-    expect(result['result']['_output']).to contain('vardir set to /tmp, resetting to the default')
+    expect(result['result']['_output']).to contain('vardir set to /opt/puppetlabs/testingdirs, resetting to the default')
   end
   it 'when statedir is not default ' do
-    run_shell('/opt/puppetlabs/bin/puppet config set statedir /tmp')
+    run_shell('/opt/puppetlabs/bin/puppet config set statedir /opt/puppetlabs/testingdirs')
     result = run_bolt_task('support_tasks::st0236_set_cache_paths_to_default')
-    expect(result['result']['_output']).to contain('statedir set to /tmp, resetting to the default')
+    expect(result['result']['_output']).to contain('statedir set to /opt/puppetlabs/testingdirs, resetting to the default')
   end
   it 'when rundir is not default ' do
-    run_shell('/opt/puppetlabs/bin/puppet config set rundir /tmp')
+    run_shell('/opt/puppetlabs/bin/puppet config set rundir /opt/puppetlabs/testingdirs')
     result = run_bolt_task('support_tasks::st0236_set_cache_paths_to_default')
-    expect(result['result']['_output']).to contain('rundir set to /tmp, resetting to the default')
+    expect(result['result']['_output']).to contain('rundir set to /opt/puppetlabs/testingdirs, resetting to the default')
   end
 end
