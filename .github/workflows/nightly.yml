@@ -187,7 +187,7 @@ jobs:
         buildevents step $TRACE_ID $STEP_ID $STEP_START 'Remove test environment'
 
   slack-workflow-status:
-    if: always()
+    if: failure()
     name: Post Workflow Status To Slack
     needs:
       - Acceptance
