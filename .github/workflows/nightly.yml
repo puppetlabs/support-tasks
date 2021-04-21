@@ -199,6 +199,3 @@ jobs:
           # Required Input
           repo_token: ${{ secrets.GITHUB_TOKEN }}
           slack_webhook_url: ${{ secrets.SLACK_WEBHOOK }}
-          # Optional Input
-          channel: '#team-support-tooling'
-          name: 'SupportTestingBot'
