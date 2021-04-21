@@ -142,7 +142,7 @@ jobs:
       run: |
         buildevents cmd $TRACE_ID $STEP_ID 'rake puppet-deploy_pe::provision_master' -- bundle exec bolt --modulepath spec/fixtures/modules plan run puppet-deploy_pe::provision_master targets='${{ matrix.collection }}' version='2019.8.5'  -i ./$INVENTORY_PATH
   
-  - name: Install module
+    - name: Install module
       run: |
         buildevents cmd $TRACE_ID $STEP_ID 'rake litmus:install_module' -- bundle exec rake 'litmus:install_module'
 
