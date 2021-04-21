@@ -8,4 +8,5 @@ fixtures:
     ruby_task_helper: "https://git@github.com/puppetlabs/puppetlabs-ruby_task_helper"
     bootstrap: "https://github.com/puppetlabs/puppetlabs-bootstrap"
     puppet_conf: "https://github.com/puppetlabs/puppetlabs-puppet_conf"
-    stdlib: "git@github.com:puppetlabs/puppetlabs-stdlib.git"
+  forge_modules:
+    stdlib: "puppetlabs/stdlib"
