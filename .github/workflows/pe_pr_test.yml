@@ -142,7 +142,7 @@ jobs:
       run: |
         buildevents cmd $TRACE_ID $STEP_ID 'rake deploy_pe::provision_master' -- bundle exec bolt --modulepath spec/fixtures/modules plan run deploy_pe::provision_master --params '{"version":"2019.8.5","pe_settings":{"password":"puppetlabs"}}'  targets='${{ matrix.collection }}'  -i ./$INVENTORY_PATH
   
-  - name: Install module
+    - name: Install module
       run: |
         buildevents cmd $TRACE_ID $STEP_ID 'rake litmus:install_module' -- bundle exec rake 'litmus:install_module'
 
