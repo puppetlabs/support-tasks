@@ -9,7 +9,7 @@
 4. [Reference - An under-the-hood peek at what the module is doing and how](#reference)
     * [Tasks](#tasks)
 5. [Getting Help](#getting-help)
-
+6. [How to Report an issue or contribute to the module](#How to Report an issue or contribute to the module)
 ## Description
 
 This is the companion module used to deliver the tasks for the solutions and configurations described in Puppet Support knowledge base <https://support.puppet.com/hc/en-us>.
@@ -88,9 +88,8 @@ To display a list of all tasks provided by this module run `puppet task show --a
 ## How to Report an issue or contribute to the module
 
 If you are a PE user and need support using this module or are encountering issues, our Support team would be happy to help you resolve your issue and help reproduce any bugs. Just raise a ticket on the [support portal](https://support.puppet.com/hc/en-us/requests/new).
-If you have a reproducible bug or are a community user you can raise it directly on the Github issues page of the module [here] (https://github.com/puppetlabs/support-tasks/issues). 
-We also welcome PR contributions to improve the module. Please see further details about contributing [here]
-(https://puppet.com/docs/puppet/7.5/contributing.html#contributing_changes_to_module_repositories)
+If you have a reproducible bug or are a community user you can raise it directly on the Github issues page of the module [here](https://github.com/puppetlabs/support-tasks/issues). 
+We also welcome PR contributions to improve the module. Please see further details about contributing [here](https://puppet.com/docs/puppet/7.5/contributing.html#contributing_changes_to_module_repositories)
 
 ## Copyright and License
 
