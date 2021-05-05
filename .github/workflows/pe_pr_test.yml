@@ -54,11 +54,7 @@ jobs:
     - name: Setup Acceptance Test Matrix
       id: get-matrix
       run: |
-        if [ '${{ github.repository_owner }}' == 'puppetlabs' ]; then
-          buildevents cmd $TRACE_ID $STEP_ID matrix_from_metadata -- bundle exec matrix_from_metadata_v2
-        else
-          echo  "::set-output name=matrix::{}"
-        fi
+          echo  "::set-output name=matrix::{"platforms":[{"label":"CentOS-7","provider":"provision::provision_service","image":"centos-7"},{"label":"CentOS-8","provider":"provision::provision_service","image":"centos-8"},{"label":"RedHat-7","provider":"provision::provision_service","image":"rhel-7"},{"label":"RedHat-8","provider":"provision::provision_service","image":"rhel-8"}],"collection":["2019.8.6","2021.1.0"]}"
 
     - name: "Honeycomb: Record Setup Test Matrix time"
       if: ${{ always() }}
@@ -141,7 +137,7 @@ jobs:
 
     - name: Install PE
       run: |
-        buildevents cmd $TRACE_ID $STEP_ID 'rake deploy_pe::provision_master' -- bundle exec bolt --run-as root --modulepath spec/fixtures/modules  -i ./$INVENTORY_PATH plan run deploy_pe::provision_master --params '{"version":"2019.8.5","pe_settings":{"password":"puppetlabs"}}'  --targets all
+        buildevents cmd $TRACE_ID $STEP_ID 'rake deploy_pe::provision_master' -- bundle exec bolt  --modulepath spec/fixtures/modules  -i ./$INVENTORY_PATH plan run deploy_pe::provision_master --params '{"version":"2019.8.6","pe_settings":{"password":"puppetlabs"}}'  --targets all
   
     - name: Install module
       run: |
