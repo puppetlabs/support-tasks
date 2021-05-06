@@ -1,211 +1,150 @@
-# Change Log
-All notable changes to this project will be documented in this file.
+# Change log
 
-## [1.1.2] - 2020-03-26
+All notable changes to this project will be documented in this file. The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/) and this project adheres to [Semantic Versioning](http://semver.org).
 
-### Added
+## [v1.1.3](https://github.com/puppetlabs/support-tasks/tree/v1.1.3) (2021-05-06)
 
-- st1105_master_port_check - Task to test TCP port connectivity of the Puppet Master
-
-### Changed
-
-- PDK updated to 1.17
+[Full Changelog](https://github.com/puppetlabs/support-tasks/compare/V1.1.2...v1.1.3)
 
 ### Fixed
 
-- Removed "DOCS" reference to now removed cert regen tasks
+- \[SUP-1835\] duplicate token task fix [\#84](https://github.com/puppetlabs/support-tasks/pull/84) ([MartyEwings](https://github.com/MartyEwings))
+- \[SUP-1642\] add opensource split arch support \(SUP-1642\) [\#83](https://github.com/puppetlabs/support-tasks/pull/83) ([MartyEwings](https://github.com/MartyEwings))
 
+## [V1.1.2](https://github.com/puppetlabs/support-tasks/tree/V1.1.2) (2020-03-26)
 
-## [1.1.1] - 2020-01-17
+[Full Changelog](https://github.com/puppetlabs/support-tasks/compare/V1.1.1...V1.1.2)
 
 ### Added
 
-
-### Changed
-
-- To support Upcoming Changes to the Support Knowledge base, number referencing from all tasks has been uncoupled from the Article Number, References going forward will be prefix "ST" followed by a 4 digit number etx "st9999" 
+- st1105 addition [\#80](https://github.com/puppetlabs/support-tasks/pull/80) ([pgrant87](https://github.com/pgrant87))
 
 ### Fixed
 
-- https://github.com/puppetlabs/support-tasks/issues/71 
+- Update st0346a\_bash\_herd\_resolver.sh [\#79](https://github.com/puppetlabs/support-tasks/pull/79) ([elainemccloskey](https://github.com/elainemccloskey))
+- \(SUP-1533\) [\#77](https://github.com/puppetlabs/support-tasks/pull/77) ([pgrant87](https://github.com/pgrant87))
+- \(SUP-1643\) Open Source Compatibility [\#76](https://github.com/puppetlabs/support-tasks/pull/76) ([pgrant87](https://github.com/pgrant87))
 
+## [V1.1.1](https://github.com/puppetlabs/support-tasks/tree/V1.1.1) (2020-01-17)
 
-## [1.1] - 2019-12-20
- 
+[Full Changelog](https://github.com/puppetlabs/support-tasks/compare/1.1.0...V1.1.1)
+
 ### Added
 
- - kb0370_generate_token
- - kb0371_puppet_commands
- - kb0372_os_commands
- - kb0373_api_calls
+- Task naming change [\#72](https://github.com/puppetlabs/support-tasks/pull/72) ([MartyEwings](https://github.com/MartyEwings))
 
+## [1.1.0](https://github.com/puppetlabs/support-tasks/tree/1.1.0) (2019-12-20)
 
-### Changed
+[Full Changelog](https://github.com/puppetlabs/support-tasks/compare/1.0.9...1.1.0)
 
-- Updated kb0285 for Windows support
-- Added Puppet OpenSource Support to compatible tasks
-- PDK 1.14 Update
+### Added
+
+- 1.1 release prep [\#69](https://github.com/puppetlabs/support-tasks/pull/69) ([MartyEwings](https://github.com/MartyEwings))
+- Add windows find disabled agents ps1 [\#66](https://github.com/puppetlabs/support-tasks/pull/66) ([cwebster61083](https://github.com/cwebster61083))
+- Console Command Line Tasks \[SUP-1383\] [\#62](https://github.com/puppetlabs/support-tasks/pull/62) ([MartyEwings](https://github.com/MartyEwings))
+- \[SUP-1531\] [\#61](https://github.com/puppetlabs/support-tasks/pull/61) ([pgrant87](https://github.com/pgrant87))
+- \[SUP-1408\] Update Changelog and Readme for Release 1.0.9 [\#60](https://github.com/puppetlabs/support-tasks/pull/60) ([MartyEwings](https://github.com/MartyEwings))
+- Remove ca\_extend plans and tasks from this module. [\#58](https://github.com/puppetlabs/support-tasks/pull/58) ([m0dular](https://github.com/m0dular))
+- \(SUP-624\) Execute the PE Support Script and upload it via SFTP [\#57](https://github.com/puppetlabs/support-tasks/pull/57) ([tkishel](https://github.com/tkishel))
+- \[SUP-1408\] Added cross-platform task metatdata where applicable [\#56](https://github.com/puppetlabs/support-tasks/pull/56) ([MartyEwings](https://github.com/MartyEwings))
 
 ### Fixed
 
-## [1.0.9] - 2019-10-10
- 
+- Updated to Usecase statement to include opensource [\#65](https://github.com/puppetlabs/support-tasks/pull/65) ([jasy125](https://github.com/jasy125))
+
+### UNCATEGORIZED PRS; LABEL THEM ON GITHUB
+
+- Osp update [\#64](https://github.com/puppetlabs/support-tasks/pull/64) ([pgrant87](https://github.com/pgrant87))
+- Osp update [\#63](https://github.com/puppetlabs/support-tasks/pull/63) ([pgrant87](https://github.com/pgrant87))
+
+## [1.0.9](https://github.com/puppetlabs/support-tasks/tree/1.0.9) (2019-10-10)
+
+[Full Changelog](https://github.com/puppetlabs/support-tasks/compare/1.0.8...1.0.9)
+
+## [1.0.8](https://github.com/puppetlabs/support-tasks/tree/1.0.8) (2019-09-23)
+
+[Full Changelog](https://github.com/puppetlabs/support-tasks/compare/1.0.7...1.0.8)
+
 ### Added
 
-- kb0305_support_script_and_upload
+- \(SUP-1376\) \(SUP-1375\) [\#55](https://github.com/puppetlabs/support-tasks/pull/55) ([MartyEwings](https://github.com/MartyEwings))
+- Acceptance for kb0286 \(SUP-1355\) [\#54](https://github.com/puppetlabs/support-tasks/pull/54) ([MartyEwings](https://github.com/MartyEwings))
 
+## [1.0.7](https://github.com/puppetlabs/support-tasks/tree/1.0.7) (2019-08-29)
 
-### Changed
-
-- Remove ca_extend plans and tasks from this module
-- [SUP-1408] Added cross-platform task metatdata where applicable 
+[Full Changelog](https://github.com/puppetlabs/support-tasks/compare/v1.0.6...1.0.7)
 
 ### Fixed
 
-## [1.0.8] - 2019-09-20
- 
+- \(bug\) Replace servername if in user\_data.conf \[SUP-1217\] [\#53](https://github.com/puppetlabs/support-tasks/pull/53) ([MartyEwings](https://github.com/MartyEwings))
+
+### UNCATEGORIZED PRS; LABEL THEM ON GITHUB
+
+- Acceptance for kb0236 [\#52](https://github.com/puppetlabs/support-tasks/pull/52) ([MartyEwings](https://github.com/MartyEwings))
+- pdk 1.12 update [\#51](https://github.com/puppetlabs/support-tasks/pull/51) ([MartyEwings](https://github.com/MartyEwings))
+- \(maint\) Add a CODEOWNERS file [\#50](https://github.com/puppetlabs/support-tasks/pull/50) ([jarretlavallee](https://github.com/jarretlavallee))
+
+## [v1.0.6](https://github.com/puppetlabs/support-tasks/tree/v1.0.6) (2019-07-01)
+
+[Full Changelog](https://github.com/puppetlabs/support-tasks/compare/v1.0.5...v1.0.6)
+
+### UNCATEGORIZED PRS; LABEL THEM ON GITHUB
+
+- 1.0.6 release prep [\#49](https://github.com/puppetlabs/support-tasks/pull/49) ([MartyEwings](https://github.com/MartyEwings))
+- thundering herd Tasks and tests [\#48](https://github.com/puppetlabs/support-tasks/pull/48) ([MartyEwings](https://github.com/MartyEwings))
+
+## [v1.0.5](https://github.com/puppetlabs/support-tasks/tree/v1.0.5) (2019-05-10)
+
+[Full Changelog](https://github.com/puppetlabs/support-tasks/compare/a99bbbc9acafd37777e6e2b6800b64e8b98023f0...v1.0.5)
+
 ### Added
 
-New Tasks:
+- \(KB20267\) Add a task to clean up index locks [\#5](https://github.com/puppetlabs/support-tasks/pull/5) ([jarretlavallee](https://github.com/jarretlavallee))
+- kb0149 task added [\#3](https://github.com/puppetlabs/support-tasks/pull/3) ([MartyEwings](https://github.com/MartyEwings))
+- \(maint\) Update to PDK 1.6.0 with some basic checks [\#2](https://github.com/puppetlabs/support-tasks/pull/2) ([jarretlavallee](https://github.com/jarretlavallee))
 
- - kb00362_download_latest_pe_in_stream
- - kb00361b_uploading_facts
- - kb00361a_uploading_facts
+### UNCATEGORIZED PRS; LABEL THEM ON GITHUB
 
-### Changed
-
-- Updated to PDK 1.13
-
- ### Fixed
-
-
-## [1.0.8] - 2019-09-20
- 
-### Added
-
-New Tasks:
-
- - kb00362_download_latest_pe_in_stream
- - kb00361b_uploading_facts
- - kb00361a_uploading_facts
-
-### Changed
-
-- Updated to PDK 1.13
-
- ### Fixed
-
-
-## [1.0.7] - 2019-09-01
- 
-### Added
-
-
-### Changed
-
-- Updated to PDK template version PDK 1.12
-
-- Updated Readme for missing links
- 
-### Fixed
-
- - SUP-1217
-
-## [1.0.6] - 2019-07-01
- 
-### Added
-
-New tasks to fix resolve thundering herd in Linux and windows
-
-- kb0346a
-  kb0346ba
-
-### Changed
-
-  - Updated to PDK template version PDK 1.11
- 
-### Fixed
+- \(maint\) Update CHANGELOG for 1.0.5 release [\#46](https://github.com/puppetlabs/support-tasks/pull/46) ([jarretlavallee](https://github.com/jarretlavallee))
+- Add a reference.md for kb0337 [\#45](https://github.com/puppetlabs/support-tasks/pull/45) ([misseuropa](https://github.com/misseuropa))
+- Check for the correct string in results.values.all? [\#44](https://github.com/puppetlabs/support-tasks/pull/44) ([m0dular](https://github.com/m0dular))
+- \(maint\) Prepare for travis to deploy the module to the forge [\#43](https://github.com/puppetlabs/support-tasks/pull/43) ([jarretlavallee](https://github.com/jarretlavallee))
+- systemd containers / kb0244 spec test [\#41](https://github.com/puppetlabs/support-tasks/pull/41) ([MartyEwings](https://github.com/MartyEwings))
+- Litmus addtions [\#40](https://github.com/puppetlabs/support-tasks/pull/40) ([MartyEwings](https://github.com/MartyEwings))
+- Merge m0dular/ca\_extend into support\_tasks [\#39](https://github.com/puppetlabs/support-tasks/pull/39) ([m0dular](https://github.com/m0dular))
+- \(SUP-2054\) Update module to support PE 2019.x. [\#38](https://github.com/puppetlabs/support-tasks/pull/38) ([jarretlavallee](https://github.com/jarretlavallee))
+- Bump version [\#37](https://github.com/puppetlabs/support-tasks/pull/37) ([m0dular](https://github.com/m0dular))
+- Release v1.0.4 [\#36](https://github.com/puppetlabs/support-tasks/pull/36) ([m0dular](https://github.com/m0dular))
+- New task to clean and purge certs [\#35](https://github.com/puppetlabs/support-tasks/pull/35) ([m0dular](https://github.com/m0dular))
+- Updating kb0263 script for 2019.0.0 [\#34](https://github.com/puppetlabs/support-tasks/pull/34) ([abottchen](https://github.com/abottchen))
+- Updating kb0299 for Puppet 6 [\#33](https://github.com/puppetlabs/support-tasks/pull/33) ([abottchen](https://github.com/abottchen))
+- \(maint\) Add task KB number to display on the forge [\#32](https://github.com/puppetlabs/support-tasks/pull/32) ([jarretlavallee](https://github.com/jarretlavallee))
+- Cutting 1.0.3 release [\#31](https://github.com/puppetlabs/support-tasks/pull/31) ([abottchen](https://github.com/abottchen))
+- \(SUP-602\) Update task for changing log level [\#30](https://github.com/puppetlabs/support-tasks/pull/30) ([abottchen](https://github.com/abottchen))
+- Update metadata and readme for a release 1.0.2  [\#29](https://github.com/puppetlabs/support-tasks/pull/29) ([MartyEwings](https://github.com/MartyEwings))
+- \(maint\) Upgrade PDK to 1.7.0 and Fix shellcheck issues with new tasks [\#28](https://github.com/puppetlabs/support-tasks/pull/28) ([jarretlavallee](https://github.com/jarretlavallee))
+- Add master certificate regeneration task [\#27](https://github.com/puppetlabs/support-tasks/pull/27) ([abottchen](https://github.com/abottchen))
+- Code Deploy Task [\#26](https://github.com/puppetlabs/support-tasks/pull/26) ([daniel5119](https://github.com/daniel5119))
+- Adding SSL dir backup to task kb0263 [\#25](https://github.com/puppetlabs/support-tasks/pull/25) ([abottchen](https://github.com/abottchen))
+- Add a script for KB 263 fixing a PE master whose hostname has been changed [\#23](https://github.com/puppetlabs/support-tasks/pull/23) ([abottchen](https://github.com/abottchen))
+- \(maint\) Clean up output messages in 236 and 267 [\#22](https://github.com/puppetlabs/support-tasks/pull/22) ([jarretlavallee](https://github.com/jarretlavallee))
+- Edit cleanup for the readme SMB 2018-07-25 [\#21](https://github.com/puppetlabs/support-tasks/pull/21) ([misseuropa](https://github.com/misseuropa))
+- Release v1.0.1 [\#19](https://github.com/puppetlabs/support-tasks/pull/19) ([MartyEwings](https://github.com/MartyEwings))
+- \(PDK-1090\) Test task names [\#18](https://github.com/puppetlabs/support-tasks/pull/18) ([jarretlavallee](https://github.com/jarretlavallee))
+- Release v1.0 [\#17](https://github.com/puppetlabs/support-tasks/pull/17) ([MartyEwings](https://github.com/MartyEwings))
+- Release v1.0 - Fix capital Letters in task names [\#16](https://github.com/puppetlabs/support-tasks/pull/16) ([MartyEwings](https://github.com/MartyEwings))
+- Prep for V1.0 Release [\#15](https://github.com/puppetlabs/support-tasks/pull/15) ([MartyEwings](https://github.com/MartyEwings))
+- \(maint\) change task names for kb0285 and kb0286 [\#14](https://github.com/puppetlabs/support-tasks/pull/14) ([suckatrash](https://github.com/suckatrash))
+- \(maint\) Rename kb0236 and kb0267 [\#13](https://github.com/puppetlabs/support-tasks/pull/13) ([jarretlavallee](https://github.com/jarretlavallee))
+- update task titles for 0244 and 0149 [\#12](https://github.com/puppetlabs/support-tasks/pull/12) ([MartyEwings](https://github.com/MartyEwings))
+- Adding kb0287.json and kb0287.sh [\#11](https://github.com/puppetlabs/support-tasks/pull/11) ([daniel5119](https://github.com/daniel5119))
+- \(kb0286\) Add task to change puppet daemon runmode enabled | disabled [\#10](https://github.com/puppetlabs/support-tasks/pull/10) ([suckatrash](https://github.com/suckatrash))
+- \(KB0285\) Task for identifying disabled agents [\#9](https://github.com/puppetlabs/support-tasks/pull/9) ([suckatrash](https://github.com/suckatrash))
+- \(KB0236\) Add a task for KB0236 [\#8](https://github.com/puppetlabs/support-tasks/pull/8) ([jarretlavallee](https://github.com/jarretlavallee))
+- KB\#0244 added [\#7](https://github.com/puppetlabs/support-tasks/pull/7) ([MartyEwings](https://github.com/MartyEwings))
+- KB\#0009 [\#6](https://github.com/puppetlabs/support-tasks/pull/6) ([halimwi](https://github.com/halimwi))
+- PDK Init and Readme [\#1](https://github.com/puppetlabs/support-tasks/pull/1) ([MartyEwings](https://github.com/MartyEwings))
 
 
 
-## [1.0.5] - 2018-05-09
- 
-### Added
-
-New plans to extend the CA certificate on a master:
-
-- kb0337a_extend_ca_cert
-- kb0337b_upload_ca_cert
-- kb0337c_get_agent_facts
-
-New tasks to check the expiry date of the CA certificate and signed agent certificates
-
-- kb0337f_check_agent_expiry
-- kb0337g_check_ca_expiry
-
-
-### Changed
-
-Updated to support PE 2019.x
-
-Added acceptance testing using [Litmus](https://github.com/puppetlabs/puppet_litmus)
- 
-### Fixed
-
-
-
-## [1.0.4] - 2018-12-19
- 
-### Added
-
-- kb0317a_clean_cert
-- kb0317b_purge_node
-
-
-### Changed
- 
-### Fixed
-
-
-## [1.0.3] - 2018-09-05
- 
-### Added
-
-- kb0009_change_pe_service_loglevel
-
-
-### Changed
- 
-### Fixed
-
-
- 
-## [1.0.2] - 2018-09-18
-  
- 
-### Added
-
- - kb0287_Check_DB_Table_Sizes
-
- - kb0263_Rename_Pe_Master
-
- - kb0298_Run_Code_Deploy
-
- - kb0299_Regen_Master_Cert
- 
-### Changed
-
-### Fixed
- 
-
- 
-## [1.0.0] - 2018-07-20
- 
-### Added
-
-Initial Release of Module
-
-### Changed
- 
-### Fixed
- 
+\* *This Changelog was automatically generated by [github_changelog_generator](https://github.com/github-changelog-generator/github-changelog-generator)*
