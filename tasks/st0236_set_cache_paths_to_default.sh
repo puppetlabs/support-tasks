@@ -5,7 +5,7 @@ if [ -e "/etc/sysconfig/pe-puppetserver" ] || [ -e "/etc/default/pe-puppetserver
 then
   echo "Puppet master node detected"   #Log Line to StdOut for the Console
   echo " This task should only be run on an agent, exiting"
-  exit 1
+  exit 0
 elif [ "$(facter kernel)" == 'Windows' ]
 then
   echo "Windows node detected. Not appliciable."
