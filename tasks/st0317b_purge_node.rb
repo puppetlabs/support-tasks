@@ -1,7 +1,7 @@
 #!/opt/puppetlabs/puppet/bin/ruby
 
 # Puppet Task to purge nodes
-# This can only be run against the Puppet Master.
+# This can only be run against the Puppet Primary Server.
 
 # Parameters:
 #   * agent_certnames - A comma-separated list of agent certificate names.
@@ -18,7 +18,7 @@ Puppet.initialize_settings
 # In Puppetserver, that means that the bootstrap.cfg file contains 'certificate-authority-service'.
 bootstrap_cfg = '/etc/puppetlabs/puppetserver/bootstrap.cfg'
 if !File.exist?(bootstrap_cfg) || File.readlines(bootstrap_cfg).grep(%r{^[^#].+certificate-authority-service$}).empty?
-  puts 'This task can only be run on your certificate authority Puppet master (MoM)'
+  puts 'This task can only be run on your certificate authority Puppet Primary Server'
   exit 1
 end
 
@@ -38,7 +38,7 @@ agents.each do |agent|
   results[agent] = {}
 
   if agent == Puppet[:certname]
-    results[agent][:result] = 'Refusing to purge the Puppet Master'
+    results[agent][:result] = 'Refusing to purge the Puppet Primary Server'
     next
   end
 

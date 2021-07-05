@@ -30,10 +30,10 @@ tar -cvf "/etc/puppetlabs/puppet/ssl_$(date +%Y-%m-%d-%M-%S).tar.gz" /etc/puppet
 
 grep reverse-proxy-ca-service /etc/puppetlabs/puppetserver/bootstrap.cfg 2>&1 /dev/null
 if [ $? -eq 0 ]; then
-  echo "Target server appears to be a PE compile master.  This script is intended to be targeted only at a PE Master of Masters.  Exiting."
+  echo "Target server appears to be a PE compiler.  This script is intended to be targeted only at a PE Primary Server.  Exiting."
   exit 255
 elif [ $? -eq 2 ]; then
-  echo "Target server does not appear to be a PE master.  This script is intended to be targeted only at a PE Master of Masters.  Exiting."
+  echo "Target server does not appear to be a PE Primary Server.  This script is intended to be targeted only at a PE Primary Server.  Exiting."
   exit 255
 fi
 

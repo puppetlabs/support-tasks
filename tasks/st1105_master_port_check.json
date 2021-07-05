@@ -1,5 +1,0 @@
-{
-    "puppet_task_version": 1,
-    "description": "Task to test TCP port connectivity of the Puppet Master",
-    "supports_noop": false
-}

@@ -50,11 +50,11 @@ To view the available actions and parameters for each task, on the command line,
 
 * [`st0287_Check_DB_Table_Sizes`](https://support.puppet.com/hc/en-us/articles/360006922673)
 
-* [`st0263_Rename_Pe_Master`](https://support.puppet.com/hc/en-us/articles/360003489634)
+* [`st0263_Rename_Pe_Primary_Server`](https://support.puppet.com/hc/en-us/articles/360003489634)
 
 * [`st0298_Run_Code_Deploy`](https://support.puppet.com/hc/en-us/articles/360008192734)
 
-* [`st0299_Regen_Master_Cert`](https://support.puppet.com/hc/en-us/articles/360008505193)
+* [`st0299_Regen_Primary_Server_Cert`](https://support.puppet.com/hc/en-us/articles/360008505193)
 
 * [`st0305_support_script_and_upload`](https://support.puppet.com/hc/en-us/articles/360009970114)
 
@@ -62,7 +62,7 @@ To view the available actions and parameters for each task, on the command line,
 
 * [`st0346_Thundering_Herd_resolver`](https://support.puppet.com/hc/en-us/articles/360023988353)
 
-* [`st0361 Uploading facts to the Puppet master`](https://support.puppet.com/hc/en-us/articles/360036136533)
+* [`st0361 Uploading facts to the Puppet Primary Server`](https://support.puppet.com/hc/en-us/articles/360036136533)
 
 * [`st0362 Check for and download the latest patch for your current major release for Puppet Enterprise `](https://support.puppet.com/hc/en-us/articles/360036141593 )
 
@@ -74,7 +74,7 @@ To view the available actions and parameters for each task, on the command line,
 
 * [`st0373_api_calls`](https://support.puppet.com/hc/en-us/articles/360040234893)
 
-* [`st1105_master_port_check`](https://support.puppet.com/hc/en-us/articles/360045363493)
+* [`st1105_primary_server_port_check`](https://support.puppet.com/hc/en-us/articles/360045363493)
 
 
 ## Getting Help

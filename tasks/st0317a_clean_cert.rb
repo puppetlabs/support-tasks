@@ -1,7 +1,7 @@
 #!/opt/puppetlabs/puppet/bin/ruby
 
 # Puppet Task to clean a node's certificate
-# This can only be run against the Puppet Master.
+# This can only be run against the Puppet Primary Server.
 
 # Parameters:
 #   * agent_certnames - A comma-separated list of agent certificates to clean/remove.
@@ -52,7 +52,7 @@ agents.each do |agent|
   results[agent] = {}
 
   if agent == Puppet[:certname]
-    results[agent][:result] = 'Refusing to remove the Puppet Master certificate'
+    results[agent][:result] = 'Refusing to remove the Puppet Primary Server certificate'
     next
   end
 
