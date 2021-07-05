@@ -8,7 +8,7 @@ declare PT_service
 loglevel=$PT_loglevel
 service=$PT_service
 
-declare -a arrpathstocheck=("/etc/sysconfig/pe-puppetserver" "/etc/default/pe-puppetserver" "/etc/sysconfig/puppetserver" "/etc/default/puppetserver")
+declare -a arrpathstocheck=("/etc/sysconfig/pe-puppetserver" "/etc/default/pe-puppetserver" "/etc/sysconfig/puppetserver" "/etc/default/puppetserver " "/etc/sysconfig/puppetdb" "/etc/default/puppetdb ")
 
 function checkpaths(){
   pathsarry=("$@")
@@ -36,7 +36,7 @@ case "${path##*/}" in
       echo "Found Puppet Enterprise"
       changeServiceLevel "pe-${service}"
       ;;
-   puppetserver)
+   puppetserver|puppetdb)
        echo "Found Opensource"
        changeServiceLevel "${service}"
        ;;
