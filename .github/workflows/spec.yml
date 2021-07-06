@@ -69,6 +69,14 @@ jobs:
         run: |
           buildevents step $TRACE_ID $STEP_ID $STEP_START 'Setup Test Matrix'
 
+  shellcheck:
+    name: Shellcheck
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Run ShellCheck
+      uses: ludeeus/action-shellcheck@master
+        
   Spec:
     name: "Spec Tests (Puppet: ${{matrix.puppet_version}}, Ruby Ver: ${{matrix.ruby_version}})"
     needs:
