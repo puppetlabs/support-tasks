@@ -6,16 +6,13 @@
 2. [Setup - The basics of getting started with support_tasks](#setup)
     * [Beginning with support_tasks](#beginning-with-support_tasks)
 3. [Usage - Configuration options and additional functionality](#usage)
-4. [Reference - An under-the-hood peek at what the module is doing and how](#reference)
-    * [Tasks](#tasks)
-5. [Getting Help](#getting-help)
-6. [How to Report an issue or contribute to the module](#How to Report an issue or contribute to the module)
+4. [Getting Help](#getting-help)
+5. [How to Report an issue or contribute to the module](#how-to-report-an-issue-or-contribute-to-the-module)
 ## Description
 
 This is the companion module used to deliver the tasks for the solutions and configurations described in Puppet Support knowledge base <https://support.puppet.com/hc/en-us>.
 
 The knowledge base, available to our support customers, offers a range of self service solutions, ranging from fixes to known issues to  useful configuration and deployment options. Some of the knowledge base articles include an accompanying Puppet task to automate the configuration of these self service solutions, this module delivers these tasks.
-
 
 ## Setup
 
@@ -26,56 +23,6 @@ Tasks in this module should only be executed by PE support customers, and Openso
 ## Usage
 
 Support customers should follow the instructions in the corresponding knowledge base articles linked below.
-
-
-## Reference
-
-To view the available actions and parameters for each task, on the command line, run `puppet task show <task_name>` or see the support\_tasks module page on the [Forge](https://forge.puppet.com/puppetlabs/support_tasks/tasks).
-
-**Tasks:**
-
-* [`st0009_Change_PE_Service_Loglevel`](https://support.puppet.com/hc/en-us/articles/115000177368)
-
-* [`st0149_Resolve_Stack_Level_Too_Deep`](https://support.puppet.com/hc/en-us/articles/218763948)
-
-* [`st0244_disable_mco_logrotate`](https://support.puppet.com/hc/en-us/articles/360002051354)
-
-* [`st0267_clear_file_sync_locks`](https://support.puppet.com/hc/en-us/articles/360003883933)
-
-* [`st0236_set_cache_paths_to_default`](https://support.puppet.com/hc/en-us/articles/360001060434)
-
-* [`st0285_find_disabled_agents`](https://support.puppet.com/hc/en-us/articles/360006717334)
-
-* [`st0286_change_puppet_daemon_runmode`](https://support.puppet.com/hc/en-us/articles/360006721014)
-
-* [`st0287_Check_DB_Table_Sizes`](https://support.puppet.com/hc/en-us/articles/360006922673)
-
-* [`st0263_Rename_Pe_Primary_Server`](https://support.puppet.com/hc/en-us/articles/360003489634)
-
-* [`st0298_Run_Code_Deploy`](https://support.puppet.com/hc/en-us/articles/360008192734)
-
-* [`st0299_Regen_Primary_Server_Cert`](https://support.puppet.com/hc/en-us/articles/360008505193)
-
-* [`st0305_support_script_and_upload`](https://support.puppet.com/hc/en-us/articles/360009970114)
-
-* [`st0317_Clean_Or_Purge_Nodes`](https://support.puppet.com/hc/en-us/articles/360012551294)
-
-* [`st0346_Thundering_Herd_resolver`](https://support.puppet.com/hc/en-us/articles/360023988353)
-
-* [`st0361 Uploading facts to the Puppet Primary Server`](https://support.puppet.com/hc/en-us/articles/360036136533)
-
-* [`st0362 Check for and download the latest patch for your current major release for Puppet Enterprise `](https://support.puppet.com/hc/en-us/articles/360036141593 )
-
-* [`st0370_generate_token`](https://support.puppet.com/hc/en-us/articles/360040226053)
-
-* [`st0371_puppet_commands`](https://support.puppet.com/hc/en-us/articles/360039726314)
-
-* [`st0372_os_commands`](https://support.puppet.com/hc/en-us/articles/360040232993)
-
-* [`st0373_api_calls`](https://support.puppet.com/hc/en-us/articles/360040234893)
-
-* [`st1105_primary_server_port_check`](https://support.puppet.com/hc/en-us/articles/360045363493)
-
 
 ## Getting Help
 
