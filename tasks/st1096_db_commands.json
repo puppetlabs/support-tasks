@@ -1,7 +1,7 @@
 {
   "puppet_task_version": 1,
   "supports_noop": false,
-  "description": "ST1096 PDB Commands - This Task to be used in conjunction with Puppet Enterprise Guide Article - TBD",
+  "description": "ST1096 PDB Commands - This Task to be used in conjunction with Puppet Enterprise Guide Article - https://support.puppet.com/hc/en-us/articles/4403877435927",
   "parameters": {
     "command": {
       "description": "The PDB or PostgreSQL command to perform",
