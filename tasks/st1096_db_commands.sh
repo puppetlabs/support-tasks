@@ -4,9 +4,9 @@ declare PT_database
 command=$PT_command
 database=$PT_database
 
-if [ -e "/etc/sysconfig/pe-puppetserver" ] || [ -e "/etc/default/pe-puppetserver" ] || [ -e "/etc/default/puppetserver" ] || [ -e "/etc/sysconfig/puppetserver" ] # Test to confirm this is a Puppetserver
+if [ `ps -acx|grep postgres|wc -l` -gt 1 ]
 then
-  echo "Primary Server or Compiler node detected"   #Log Line to StdOut for the Console
+  echo "PostgreSQL service detected."   #Log Line to StdOut for the Console
 
 case $command in
      resource_events_per_resource)
@@ -35,5 +35,5 @@ case $command in
           ;;
 esac
 else
-  echo  "Not a Primary Server or Compiler node, exiting"
+  echo  "Not a PostgreSQL node, exiting"
 fi
