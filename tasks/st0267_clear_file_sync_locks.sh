@@ -3,7 +3,7 @@
 
 if [ -e "/etc/sysconfig/pe-puppetserver" ] || [ -e "/etc/default/pe-puppetserver" ] # Test to confirm this is a Puppetserver
 then
-  echo "Puppet master node detected"   #Log Line to StdOut for the Console
+  echo "Puppet Primary server node detected"   #Log Line to StdOut for the Console
 
   echo "  Ensuring the Puppetserver service is stopped"
   puppet resource service pe-puppetserver ensure=stopped
@@ -12,7 +12,7 @@ then
   echo "  Ensuring the Puppetserver service is running"
   puppet resource service pe-puppetserver ensure=running
 else
-  echo  "Not a Puppet master node, exiting"
+  echo  "Not a Puppet Primary Server node, exiting"
 
 fi
 echo "ST#0267 Task ended   $(date +%s)    --"

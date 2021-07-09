@@ -4,7 +4,7 @@
 
 if [ -e "/etc/sysconfig/pe-puppetserver" ] # Test to see if EL-based system
 then
- echo "-Puppetmaster node detected - EL "   #Log Line to StdOut for the Console
+ echo "-Puppet Primary Server node detected - EL "   #Log Line to StdOut for the Console
 
 
         if $(/usr/bin/which grep) -q "Xss" /etc/sysconfig/pe-puppetserver
@@ -15,7 +15,7 @@ then
         fi
 elif [ -e "/etc/default/pe-puppetserver" ] # cover ubuntu
 then
- echo "-Puppetmaster node detected - Ubuntu "   #Log Line to StdOut for the Console
+ echo "-Puppet Primary Server node detected - Ubuntu "   #Log Line to StdOut for the Console
 
 
         if $(/usr/bin/which grep) -q "Xss" /etc/default/pe-puppetserver

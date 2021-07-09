@@ -14,7 +14,6 @@ This is the companion module used to deliver the tasks for the solutions and con
 
 The knowledge base, available to our support customers, offers a range of self service solutions, ranging from fixes to known issues to  useful configuration and deployment options. Some of the knowledge base articles include an accompanying Puppet task to automate the configuration of these self service solutions, this module delivers these tasks.
 
-
 ## Setup
 
 ### Beginning with support_tasks
@@ -24,7 +23,6 @@ Tasks in this module should only be executed by PE support customers, and Openso
 ## Usage
 
 Support customers should follow the instructions in the corresponding knowledge base articles linked below.
-
 
 ## Getting Help
 

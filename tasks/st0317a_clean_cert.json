@@ -1,5 +1,5 @@
 {
-  "description": "Clean (remove) a Puppet agent's certificate from your Master",
+  "description": "Clean (remove) a Puppet agent's certificate from your Primary Server",
   "input_method": "environment",
   "supports_noop": false,
   "parameters": {

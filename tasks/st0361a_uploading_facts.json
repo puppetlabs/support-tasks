@@ -1,7 +1,7 @@
 {
   "puppet_task_version": 1,
   "supports_noop": false,
-  "description": "ST0361 Uploading Facts To the Puppet Master Outside of a Puppet Run - This Task to be used in conjunction with Puppet Enterprise Knowledge Base Article KB0361 - https://support.puppet.com/hc/en-us/articles/360036136533",
+  "description": "ST0361 Uploading Facts To the Puppet Primary Server Outside of a Puppet Run - This Task to be used in conjunction with Puppet Enterprise Knowledge Base Article KB0361 - https://support.puppet.com/hc/en-us/articles/360036136533",
   "parameters": {
   }
 }

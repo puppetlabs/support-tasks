@@ -10,7 +10,7 @@ command=$PT_command
 
 if [ -e "/etc/sysconfig/pe-puppetserver" ] || [ -e "/etc/default/pe-puppetserver" ] # Test to confirm this is a Puppetserver
 then
-  echo "Puppet master node detected"   #Log Line to StdOut for the Console
+  echo "Puppet primary server node detected"   #Log Line to StdOut for the Console
 
 
 case $command in
@@ -37,7 +37,7 @@ case $command in
 	  ;;
 esac
 else
-  echo  "Not a Puppet master node, exiting"
+  echo  "Not a Puppet primary server node, exiting"
 
 fi
 

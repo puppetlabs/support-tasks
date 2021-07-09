@@ -11,9 +11,9 @@ majorversion=${pe%.*}
 latest=$(curl https://forge.puppet.com/private/versions/pe |  sed -E -e 's/(release")/\n\1/g'  | grep "${majorversion}.x"  |grep -o -P '.{0,0}latest.{0,13}' | awk '{split($0,a,":"); print a[2]}' |  grep -o '".*"' | sed 's/"//g')
 
 if [ -e "/etc/sysconfig/pe-puppetserver" ] || [ -e "/etc/default/pe-puppetserver" ];then
-        echo "Puppet master node detected"   #Log Line to StdOut for the Console
+        echo "Puppet primary server node detected"   #Log Line to StdOut for the Console
         else
-                echo  "Not a Puppet master node, exiting"
+                echo  "Not a Puppet primary server node, exiting"
                 exit 0
         fi
 
@@ -36,7 +36,7 @@ case $family in
           curlfam="sles"
           ;;
      *)
-          echo "Not a Supported Master OS."
+          echo "Not a Supported primary server OS."
           exit 0
           ;;
 esac
