@@ -9,8 +9,7 @@
 * [`st0009_change_pe_service_loglevel`](#st0009_change_pe_service_loglevel): ST0009 Change PE Service Loglevel - This Task to be used in conjunction with Puppet Enterprise Knowledge Base Article KB0009 - https://suppor
 * [`st0149_resolve_stack_level_too_deep`](#st0149_resolve_stack_level_too_deep): ST0149 Resolve Stack Level Too Deep - This Task to be used in conjunction with Puppet Enterprise Knowledge Base Article KB0149 - https://supp
 * [`st0236_set_cache_paths_to_default`](#st0236_set_cache_paths_to_default): ST0236 Set Cache Paths To Default - This Task to be used in conjunction with Puppet Enterprise Knowledge Base Article KB0236 - https://suppor
-* [`st0244_disable_mco_logrotate`](#st0244_disable_mco_logrotate): ST0244 Disable MCO Logrotate - This Task to be used in conjunction with Puppet Enterprise Knowledge Base Article KB0244 - https://support.pup
-* [`st0263_rename_pe_master`](#st0263_rename_pe_master): ST0263 Rename PE Master - This task to be used in conjunction with Puppet Enterprise Knowledge Base Article KB0263 - https://support.puppet.c
+* [`st0263_rename_pe_primary_server`](#st0263_rename_pe_primary_server): ST0263 Rename PE Primary Server - This task to be used in conjunction with Puppet Enterprise Knowledge Base Article KB0263 - https://support.
 * [`st0267_clear_file_sync_locks`](#st0267_clear_file_sync_locks): ST0267 Clear File Sync Locks - This Task to be used in conjunction with Puppet Enterprise Knowledge Base Article KB0267 - https://support.pup
 * [`st0285_find_disabled_agents`](#st0285_find_disabled_agents): ST0285 Find Disabled Agents - This Task to be used in conjunction with Puppet Enterprise Knowledge Base Article KB0285 - https://support.pupp
 * [`st0285a_bash_find_disabled_agents`](#st0285a_bash_find_disabled_agents): ST0285 Find Disabled Agents - This Task to be used in conjunction with Puppet Enterprise Knowledge Base Article KB0285 - https://support.pupp
@@ -18,22 +17,22 @@
 * [`st0286_change_puppet_daemon_runmode`](#st0286_change_puppet_daemon_runmode): ST0286 Change Puppet Daemon Runmode - This Task to be used in conjunction with Puppet Enterprise Knowledge Base Article KB0286 - https://supp
 * [`st0287_check_db_table_sizes`](#st0287_check_db_table_sizes): ST0287 Check DB Table Sizes - This task is to be used in conjunction with Puppet Enterprise Knowledge Base Article KB0287 - https://support.p
 * [`st0298_run_code_deploy`](#st0298_run_code_deploy): ST0298 Run Code Deploy - This Task to be used in conjunction with Puppet Enterprise Knowledge Base Article KB0298 - https://support.puppet.co
-* [`st0299_regen_master_cert`](#st0299_regen_master_cert): ST0299 Regen Master Cert - This Task to be used in conjunction with Puppet Enterprise Knowledge Base Article KB0299 - https://support.puppet.
+* [`st0299_regen_primary_server_cert`](#st0299_regen_primary_server_cert): ST0299 Regen Primary Server Cert - This Task to be used in conjunction with Puppet Enterprise Knowledge Base Article KB0299 - https://support
 * [`st0305_support_script_and_upload`](#st0305_support_script_and_upload): Execute the PE Support Script and upload it via SFTP
-* [`st0317a_clean_cert`](#st0317a_clean_cert): Clean (remove) a Puppet agent's certificate from your Master
+* [`st0317a_clean_cert`](#st0317a_clean_cert): Clean (remove) a Puppet agent's certificate from your Primary Server
 * [`st0317b_purge_node`](#st0317b_purge_node): Purge Puppet agent nodes
 * [`st0346_herd_resolver`](#st0346_herd_resolver): This Task will restart the puppet agent process in a randomised period between 0 and the currently set runinterval
 * [`st0346a_bash_herd_resolver`](#st0346a_bash_herd_resolver): This Task will restart the puppet agent process in a randomised period between 0 and the currently set runinterval
 * [`st0346b_powershell_herd_resolver`](#st0346b_powershell_herd_resolver): powershell thundering herd script
-* [`st0361_uploading_facts`](#st0361_uploading_facts): ST0361 Uploading Facts To the Puppet Master Outside of a Puppet Run - This Task to be used in conjunction with Puppet Enterprise Knowledge Ba
-* [`st0361a_uploading_facts`](#st0361a_uploading_facts): ST0361 Uploading Facts To the Puppet Master Outside of a Puppet Run - This Task to be used in conjunction with Puppet Enterprise Knowledge Ba
-* [`st0361b_uploading_facts`](#st0361b_uploading_facts): ST0361 Uploading Facts To the Puppet Master Outside of a Puppet Run - This Task to be used in conjunction with Puppet Enterprise Knowledge Ba
+* [`st0361_uploading_facts`](#st0361_uploading_facts): ST0361 Uploading Facts To the Puppet Primary Server Outside of a Puppet Run - This Task to be used in conjunction with Puppet Enterprise Know
+* [`st0361a_uploading_facts`](#st0361a_uploading_facts): ST0361 Uploading Facts To the Puppet Primary Server Outside of a Puppet Run - This Task to be used in conjunction with Puppet Enterprise Know
+* [`st0361b_uploading_facts`](#st0361b_uploading_facts): ST0361 Uploading Facts To the Puppet Primary Server Outside of a Puppet Run - This Task to be used in conjunction with Puppet Enterprise Know
 * [`st0362_download_latest_pe_in_stream`](#st0362_download_latest_pe_in_stream): ST0362 Download Latest PE Z release in the currently installed stream  - This task to be used in conjunction with Puppet Enterprise Knowledge
 * [`st0370_generate_token`](#st0370_generate_token): ST0370_Generate_Token This task to be used in conjunction with Puppet Enterprise Knowledge Base Article KB0370 - https://support.puppet.com/h
 * [`st0371_puppet_commands`](#st0371_puppet_commands): ST0371 Puppet Commands - This Task to be used in conjunction with Puppet Enterprise Knowledge Base Article KB0371 - https://support.puppet.co
 * [`st0372_os_commands`](#st0372_os_commands): ST0372 OS Commands - This Task to be used in conjunction with Puppet Enterprise Knowledge Base Article KB0372 - https://support.puppet.com/hc
 * [`st0373_api_calls`](#st0373_api_calls): ST0373 API Calls - This Task to be used in conjunction with Puppet Enterprise Knowledge Base Article KB0373 - https://support.puppet.com/hc/e
-* [`st1105_master_port_check`](#st1105_master_port_check): Task to test TCP port connectivity of the Puppet Master
+* [`st1105_primary_server_port_check`](#st1105_primary_server_port_check): Task to test TCP port connectivity of the Puppet Primary Server
 
 ## Tasks
 
@@ -69,15 +68,9 @@ ST0236 Set Cache Paths To Default - This Task to be used in conjunction with Pup
 
 **Supports noop?** false
 
-### <a name="st0244_disable_mco_logrotate"></a>`st0244_disable_mco_logrotate`
+### <a name="st0263_rename_pe_primary_server"></a>`st0263_rename_pe_primary_server`
 
-ST0244 Disable MCO Logrotate - This Task to be used in conjunction with Puppet Enterprise Knowledge Base Article KB0244 - https://support.puppet.com/hc/en-us/articles/360002051354
-
-**Supports noop?** false
-
-### <a name="st0263_rename_pe_master"></a>`st0263_rename_pe_master`
-
-ST0263 Rename PE Master - This task to be used in conjunction with Puppet Enterprise Knowledge Base Article KB0263 - https://support.puppet.com/hc/en-us/articles/360003489634
+ST0263 Rename PE Primary Server - This task to be used in conjunction with Puppet Enterprise Knowledge Base Article KB0263 - https://support.puppet.com/hc/en-us/articles/360003489634
 
 **Supports noop?** false
 
@@ -153,9 +146,9 @@ Data type: `String[1]`
 
 The name of the environment to deploy
 
-### <a name="st0299_regen_master_cert"></a>`st0299_regen_master_cert`
+### <a name="st0299_regen_primary_server_cert"></a>`st0299_regen_primary_server_cert`
 
-ST0299 Regen Master Cert - This Task to be used in conjunction with Puppet Enterprise Knowledge Base Article KB0299 - https://support.puppet.com/hc/en-us/articles/360008505193
+ST0299 Regen Primary Server Cert - This Task to be used in conjunction with Puppet Enterprise Knowledge Base Article KB0299 - https://support.puppet.com/hc/en-us/articles/360008505193
 
 **Supports noop?** false
 
@@ -195,7 +188,7 @@ Support ticket number. Required
 
 ### <a name="st0317a_clean_cert"></a>`st0317a_clean_cert`
 
-Clean (remove) a Puppet agent's certificate from your Master
+Clean (remove) a Puppet agent's certificate from your Primary Server
 
 **Supports noop?** false
 
@@ -241,19 +234,19 @@ powershell thundering herd script
 
 ### <a name="st0361_uploading_facts"></a>`st0361_uploading_facts`
 
-ST0361 Uploading Facts To the Puppet Master Outside of a Puppet Run - This Task to be used in conjunction with Puppet Enterprise Knowledge Base Article KB0361 - https://support.puppet.com/hc/en-us/articles/360036136533
+ST0361 Uploading Facts To the Puppet Primary Server Outside of a Puppet Run - This Task to be used in conjunction with Puppet Enterprise Knowledge Base Article KB0361 - https://support.puppet.com/hc/en-us/articles/360036136533
 
 **Supports noop?** false
 
 ### <a name="st0361a_uploading_facts"></a>`st0361a_uploading_facts`
 
-ST0361 Uploading Facts To the Puppet Master Outside of a Puppet Run - This Task to be used in conjunction with Puppet Enterprise Knowledge Base Article KB0361 - https://support.puppet.com/hc/en-us/articles/360036136533
+ST0361 Uploading Facts To the Puppet Primary Server Outside of a Puppet Run - This Task to be used in conjunction with Puppet Enterprise Knowledge Base Article KB0361 - https://support.puppet.com/hc/en-us/articles/360036136533
 
 **Supports noop?** false
 
 ### <a name="st0361b_uploading_facts"></a>`st0361b_uploading_facts`
 
-ST0361 Uploading Facts To the Puppet Master Outside of a Puppet Run - This Task to be used in conjunction with Puppet Enterprise Knowledge Base Article KB0361 - https://support.puppet.com/hc/en-us/articles/360036136533
+ST0361 Uploading Facts To the Puppet Primary Server Outside of a Puppet Run - This Task to be used in conjunction with Puppet Enterprise Knowledge Base Article KB0361 - https://support.puppet.com/hc/en-us/articles/360036136533
 
 **Supports noop?** false
 
@@ -303,7 +296,7 @@ ST0371 Puppet Commands - This Task to be used in conjunction with Puppet Enterpr
 
 Data type: `Enum[config_print, module_list, infrastructure_status, tune]`
 
-The Puppet Master Command Line action to perform
+The Puppet Primary Server Command Line action to perform
 
 ### <a name="st0372_os_commands"></a>`st0372_os_commands`
 
@@ -317,7 +310,7 @@ ST0372 OS Commands - This Task to be used in conjunction with Puppet Enterprise 
 
 Data type: `Enum[puppet_port_status, puppetserver_log, puppetdb_log, console_log, orchestrator_log, syslog_log, ssldir_permissions ]`
 
-The Puppet Master Command Line action to perform
+The Puppet Primary Server Command Line action to perform
 
 ### <a name="st0373_api_calls"></a>`st0373_api_calls`
 
@@ -331,11 +324,11 @@ ST0373 API Calls - This Task to be used in conjunction with Puppet Enterprise Kn
 
 Data type: `Enum[ get_all_services_status, manual_gitlab_webhook_hit, create_role_cd4pe, list_tokens  ]`
 
-The Puppet Master API Commands to Run
+The Puppet Primary Server API Commands to Run
 
-### <a name="st1105_master_port_check"></a>`st1105_master_port_check`
+### <a name="st1105_primary_server_port_check"></a>`st1105_primary_server_port_check`
 
-Task to test TCP port connectivity of the Puppet Master
+Task to test TCP port connectivity of the Puppet Primary Server
 
 **Supports noop?** false
 
