@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/) and this project adheres to [Semantic Versioning](http://semver.org).
 
+## [v2.0.0](https://github.com/puppetlabs/support-tasks/tree/v2.0.0) (2021-07-24)
+
+[Full Changelog](https://github.com/puppetlabs/support-tasks/compare/v1.1.3...v2.0.0)
+
+### Changed
+
+- Remove Tasks that are for EOL PE \(SUP-2431\) [\#101](https://github.com/puppetlabs/support-tasks/pull/101) ([MartyEwings](https://github.com/MartyEwings))
+
+### Added
+
+- \(SUP-2502\) Remove harmful terminology [\#109](https://github.com/puppetlabs/support-tasks/pull/109) ([elainemccloskey](https://github.com/elainemccloskey))
+
 ## [v1.1.3](https://github.com/puppetlabs/support-tasks/tree/v1.1.3) (2021-05-06)
 
 [Full Changelog](https://github.com/puppetlabs/support-tasks/compare/V1.1.2...v1.1.3)
