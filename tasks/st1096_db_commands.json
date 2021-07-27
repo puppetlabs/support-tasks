@@ -1,0 +1,18 @@
+{
+  "description": "ST1096 PDB Commands - This Task to be used in conjunction with Puppet Enterprise Guide Article - https://support.puppet.com/hc/en-us/articles/4403877435927",
+  "parameters": {
+    "command": {
+      "description": "The PDB or PostgreSQL command to perform",
+      "type": "Enum[resource_events_per_resource,longest_resource_titles,postgres_replication_slots,postgres_replication_status,postgres_activity,database_table_sizes,database_sizes]"
+      },
+    "database": {
+      "description": "The database name for the PDB command. Default is pe-puppetdb",
+      "type": "Enum[pe-puppetdb,pe-classifier,pe-orchestrator,pe-activity,pe-inventory,pe-rbac,pe-postgres]",
+      "default": "pe-puppetdb"
+     }
+  },
+    "implementations": [
+    {"name": "st1096_db_commands.sh", "requirements": ["shell"], "files": ["support_tasks/files/common.sh", "support_tasks/files/db_sizes.sql"], "input_method": "environment"}
+  ]
+
+}
