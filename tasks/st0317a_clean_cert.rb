@@ -15,14 +15,14 @@ require 'facter'
 
 Puppet.initialize_settings
 
-def pe_master?
+def pe_primary?
   !Facter.value('pe_build').nil?
 end
 
 # This task only works when running against your Puppet CA server, so let's check for that.
 # In Puppetserver, that means the configs contain 'certificate-authority-service', uncommented.
 # The puppetserver config file differs between PE and open-source puppetserver.
-ca_cfg = pe_master? ? '/etc/puppetlabs/puppetserver/bootstrap.cfg' : '/etc/puppetlabs/puppetserver/services.d/ca.cfg'
+ca_cfg = pe_primary? ? '/etc/puppetlabs/puppetserver/bootstrap.cfg' : '/etc/puppetlabs/puppetserver/services.d/ca.cfg'
 
 if !File.exist?(ca_cfg) || File.readlines(ca_cfg).grep(%r{^[^#].+certificate-authority-service$}).empty?
   puts 'This task can only be run on your certificate authority Puppetserver'
