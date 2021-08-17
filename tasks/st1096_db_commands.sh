@@ -9,7 +9,7 @@ psql_options=("-d" "$database")
   fail 'pe-postgresql service not found'
 }
 
-case "$command" in
+case "${command?}" in
   resource_events_per_resource)
     query='select certname, containing_class, file, count(*) from resource_events join certnames on certnames.id = resource_events.certname_id group by certname, containing_class, file order by count desc limit 20;'
     psql_options+=("-c" "$query")
@@ -36,7 +36,7 @@ case "$command" in
     ;;
   database_sizes)
     # Hard-coded to pe-puppetdb
-    query_file="$_installdir/support_tasks/files/db_sizes.sql"
+    query_file="${_installdir?}/support_tasks/files/db_sizes.sql"
     # To avoid quoting issues, putting complicated queries in files makes sense
     # But, _installdir is created as the --run-as user, so allow pe-postgres to read a copy of the file
     tmp_query="$(mktemp)"; cp "$query_file" "$tmp_query"; chmod 644 "$tmp_query"
@@ -49,5 +49,7 @@ chmod +r "$_installdir"
 runuser -u pe-postgres -- /opt/puppetlabs/server/bin/psql "${psql_options[@]}" || {
   fail "Error running query"
 }
-# Use || true to avoid exiting 1 if the tmp file doesn't exist
-[[ -e $tmp_query ]] && rm -- "$tmp_query" || true
+
+[[ -e $tmp_query ]] && rm -- "$tmp_query"
+# Include a noop so we don't exit 1 if the temp file doesn't exist
+:
