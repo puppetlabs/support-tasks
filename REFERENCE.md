@@ -17,7 +17,6 @@
 * [`st0286_change_puppet_daemon_runmode`](#st0286_change_puppet_daemon_runmode): ST0286 Change Puppet Daemon Runmode - This Task to be used in conjunction with Puppet Enterprise Knowledge Base Article KB0286 - https://supp
 * [`st0287_check_db_table_sizes`](#st0287_check_db_table_sizes): ST0287 Check DB Table Sizes - This task is to be used in conjunction with Puppet Enterprise Knowledge Base Article KB0287 - https://support.p
 * [`st0298_run_code_deploy`](#st0298_run_code_deploy): ST0298 Run Code Deploy - This Task to be used in conjunction with Puppet Enterprise Knowledge Base Article KB0298 - https://support.puppet.co
-* [`st0299_regen_primary_server_cert`](#st0299_regen_primary_server_cert): ST0299 Regen Primary Server Cert - This Task to be used in conjunction with Puppet Enterprise Knowledge Base Article KB0299 - https://support
 * [`st0305_support_script_and_upload`](#st0305_support_script_and_upload): Execute the PE Support Script and upload it via SFTP
 * [`st0317a_clean_cert`](#st0317a_clean_cert): Clean (remove) a Puppet agent's certificate from your Primary Server
 * [`st0317b_purge_node`](#st0317b_purge_node): Purge Puppet agent nodes
@@ -146,12 +145,6 @@ ST0298 Run Code Deploy - This Task to be used in conjunction with Puppet Enterpr
 Data type: `String[1]`
 
 The name of the environment to deploy
-
-### <a name="st0299_regen_primary_server_cert"></a>`st0299_regen_primary_server_cert`
-
-ST0299 Regen Primary Server Cert - This Task to be used in conjunction with Puppet Enterprise Knowledge Base Article KB0299 - https://support.puppet.com/hc/en-us/articles/360008505193
-
-**Supports noop?** false
 
 ### <a name="st0305_support_script_and_upload"></a>`st0305_support_script_and_upload`
 
