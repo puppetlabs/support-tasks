@@ -1,40 +1,39 @@
 #!/bin/bash
 # shellcheck disable=SC2230
+declare PT__installdir
+source "$PT__installdir/bash_task_helper/files/task_helper.sh"
 
-if [ -e "/etc/sysconfig/pe-puppetserver" ] || [ -e "/etc/default/pe-puppetserver" ] || [ -e "/etc/sysconfig/puppetserver" ] || [ -e "/etc/default/puppetserver" ] # Test to confirm this is a Puppetserver
+if [ -n  "$(facter -p pe_build)" ]
 then
-  echo "Puppet Primary Server node detected"   #Log Line to StdOut for the Console
-  echo " This task should only be run on an agent, exiting"
-  exit 1
-elif [ "$(facter kernel)" == 'Windows' ]
-then
-  echo "Windows node detected. Not appliciable."
-  exit 0
+	success '{ "status": "success - Not an agent node" }'
 fi
 
 manifest=""
+vardir=$(puppet config print vardir) || fail "unable to determine vardir "
+statedir=$(puppet config print statedir) || fail "unable to determine statedir "
+rundir=$(puppet config print rundir) || fail "unable to determine rundir "
 
-if [ "$(puppet config print vardir)" != "/opt/puppetlabs/puppet/cache" ]
+if [ "$vardir" != "/opt/puppetlabs/puppet/cache" ]
 then
-  echo  " vardir set to $(puppet config print vardir), resetting to the default"
+  echo  "{ \"vardir\": \"needs reset from $vardir\" }"
   manifest+=" augeas {'Remove vardir': changes => 'rm etc/puppetlabs/puppet/puppet.conf/main/vardir' } "
 fi
-if [ "$(puppet config print statedir)" != "/opt/puppetlabs/puppet/cache/state" ]
+if [ "$statedir" != "/opt/puppetlabs/puppet/cache/state" ]
 then
-  echo  " statedir set to $(puppet config print statedir), resetting to the default"
+  echo  "{ \"statedir\": \"needs reset from $statedir\" }"
   manifest+=" augeas {'Remove statedir': changes => 'rm etc/puppetlabs/puppet/puppet.conf/main/statedir' } "
 fi
-if [ "$(puppet config print rundir)" != "/var/run/puppetlabs" ]
+if [ "$rundir" != "/var/run/puppetlabs" ]
 then
-  echo  " rundir set to $(puppet config print rundir), resetting to the default"
-  manifest+=" augeas {'Remove rundir': changes => 'rm etc/puppetlabs/puppet/puppet.conf/main/rundir' } "
+  echo  "{ \"rundir\": \"needs reset from $statedir\" }"
+   manifest+=" augeas {'Remove rundir': changes => 'rm etc/puppetlabs/puppet/puppet.conf/main/rundir' } "
 fi
 
 if [ "$manifest" != "" ]
 then
-  puppet apply -e "$manifest"
+  puppet apply -e "$manifest" || fail "unable to reset parameters "
+  success '{ "status": "success - parameters reset to default" }'
 else
-    echo "No changes necessary"
+    success '{ "status": "success - No changes necessary" }'	
 fi
 
-echo "ST#0236 Task ended   $(date +%s)    --"

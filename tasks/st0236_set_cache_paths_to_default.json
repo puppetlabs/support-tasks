@@ -3,5 +3,8 @@
   "supports_noop": false,
   "description": "ST0236 Set Cache Paths To Default - This Task to be used in conjunction with Puppet Enterprise Knowledge Base Article KB0236 - https://support.puppet.com/hc/en-us/articles/360001060434",
   "parameters": {
-  }
+  },
+   "implementations": [
+    {"name": "st0236_set_cache_paths_to_default.sh", "requirements": ["shell"], "files": ["bash_task_helper/files/task_helper.sh"], "input_method": "environment"}
+  ]
 }
