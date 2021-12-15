@@ -3,5 +3,8 @@
   "supports_noop": false,
   "description": "This Task will restart the puppet agent process in a randomised period between 0 and the currently set runinterval",
   "parameters": {
-  }
+  },
+   "implementations": [
+    {"name": "st0346a_bash_herd_resolver.sh", "requirements": ["shell"], "files": ["bash_task_helper/files/task_helper.sh"], "input_method": "environment"}
+  ]
 }
