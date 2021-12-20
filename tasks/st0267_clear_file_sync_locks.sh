@@ -1,18 +1,22 @@
 #!/bin/bash
 # shellcheck disable=SC2230
 
+declare PT__installdir
+source "$PT__installdir/bash_task_helper/files/task_helper.sh"
+
+if [ -z  "$(facter -p pe_build)" ]
+then
+	success '{ "status": "success -  Agent Node Not Proceeding" }'
+fi
+
 if [ -e "/etc/sysconfig/pe-puppetserver" ] || [ -e "/etc/default/pe-puppetserver" ] # Test to confirm this is a Puppetserver
 then
-  echo "Puppet Primary server node detected"   #Log Line to StdOut for the Console
 
-  echo "  Ensuring the Puppetserver service is stopped"
-  puppet resource service pe-puppetserver ensure=stopped
-  echo "  Removing File Sync locks"
-  $(/usr/bin/which find) /opt/puppetlabs/server/data/puppetserver/filesync/ -type f -name 'index.lock' -delete -print
-  echo "  Ensuring the Puppetserver service is running"
-  puppet resource service pe-puppetserver ensure=running
+  puppet resource service pe-puppetserver ensure=stopped || fail "Could not stop pe-puppetserver "
+  $(/usr/bin/which find) /opt/puppetlabs/server/data/puppetserver/filesync/ -type f -name 'index.lock' -delete -print || fail "Could not remove lockfile"
+  puppet resource service pe-puppetserver ensure=running || fail "Could not start pe-puppetserver "
 else
-  echo  "Not a Puppet Primary Server node, exiting"
-
+  success '{ "status": "success - pe-puppetserver not installed" }'
 fi
-echo "ST#0267 Task ended   $(date +%s)    --"
+
+success '{ "status": "success - filesync lock removed or not present" }'

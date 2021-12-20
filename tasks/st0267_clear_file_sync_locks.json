@@ -3,5 +3,8 @@
   "supports_noop": false,
   "description": "ST0267 Clear File Sync Locks - This Task to be used in conjunction with Puppet Enterprise Knowledge Base Article KB0267 - https://support.puppet.com/hc/en-us/articles/360003883933",
   "parameters": {
-  }
+  },
+  "implementations": [
+    {"name": "st0267_clear_file_sync_locks.sh", "requirements": ["shell"], "files": ["bash_task_helper/files/task_helper.sh"], "input_method": "environment"}
+  ]
 }
