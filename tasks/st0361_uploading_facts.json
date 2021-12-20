@@ -1,12 +1,6 @@
 {
   "puppet_task_version": 1,
   "supports_noop": false,
-  "description": "ST0361 Uploading Facts To the Puppet Primary Server Outside of a Puppet Run - This Task to be used in conjunction with Puppet Enterprise Knowledge Base Article KB0361 - https://support.puppet.com/hc/en-us/articles/360036136533",
-  "parameters": {
-  },
-  "implementations": [
-    {"name": "st0361a_uploading_facts.sh", "requirements": ["shell"]},
-    {"name": "st0361b_uploading_facts.ps1", "requirements": ["powershell"]}
-  ]
+  "description": "ST0361 Uploading Facts To the Puppet Primary Server Outside of a Puppet Run - This Task to be used in conjunction with Puppet Enterprise Knowledge Base Article - https://support.puppet.com/hc/en-us/articles/360036136533"
 }
 
