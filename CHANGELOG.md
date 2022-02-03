@@ -2,6 +2,23 @@
 
 All notable changes to this project will be documented in this file. The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/) and this project adheres to [Semantic Versioning](http://semver.org).
 
+## [v3.0.0](https://github.com/puppetlabs/support-tasks/tree/v3.0.0) (2022-02-03)
+
+[Full Changelog](https://github.com/puppetlabs/support-tasks/compare/v2.0.0...v3.0.0)
+
+### Changed
+
+- \(SUP-2838\) Remove rename pe primary server task [\#132](https://github.com/puppetlabs/support-tasks/pull/132) ([MartyEwings](https://github.com/MartyEwings))
+- \(SUP-2856\) Bash Task helper module added to dependancies [\#124](https://github.com/puppetlabs/support-tasks/pull/124) ([MartyEwings](https://github.com/MartyEwings))
+- \(SUP-2739\) Remove Support Task kb0299\_regen\_master\_cert [\#123](https://github.com/puppetlabs/support-tasks/pull/123) ([henrywangpuppet](https://github.com/henrywangpuppet))
+
+### Added
+
+- \(SUP-2839\) Acceptance tests and structured task returns for st0267\_clear\_file\_sync\_locks [\#130](https://github.com/puppetlabs/support-tasks/pull/130) ([MartyEwings](https://github.com/MartyEwings))
+- \(SUP-2847\) Structured Returns for Herd resolver [\#129](https://github.com/puppetlabs/support-tasks/pull/129) ([MartyEwings](https://github.com/MartyEwings))
+- \(SUP-2848\) st0361a\_uploading\_facts convert to ruby [\#127](https://github.com/puppetlabs/support-tasks/pull/127) ([MartyEwings](https://github.com/MartyEwings))
+- \(Sup-2837\) st0236\_set\_cache\_paths\_to\_default Audit and Update [\#125](https://github.com/puppetlabs/support-tasks/pull/125) ([MartyEwings](https://github.com/MartyEwings))
+
 ## [v2.0.0](https://github.com/puppetlabs/support-tasks/tree/v2.0.0) (2021-08-20)
 
 [Full Changelog](https://github.com/puppetlabs/support-tasks/compare/v1.1.3...v2.0.0)

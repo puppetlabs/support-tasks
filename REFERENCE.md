@@ -9,7 +9,6 @@
 * [`st0009_change_pe_service_loglevel`](#st0009_change_pe_service_loglevel): ST0009 Change PE Service Loglevel - This Task to be used in conjunction with Puppet Enterprise Knowledge Base Article KB0009 - https://suppor
 * [`st0149_resolve_stack_level_too_deep`](#st0149_resolve_stack_level_too_deep): ST0149 Resolve Stack Level Too Deep - This Task to be used in conjunction with Puppet Enterprise Knowledge Base Article KB0149 - https://supp
 * [`st0236_set_cache_paths_to_default`](#st0236_set_cache_paths_to_default): ST0236 Set Cache Paths To Default - This Task to be used in conjunction with Puppet Enterprise Knowledge Base Article KB0236 - https://suppor
-* [`st0263_rename_pe_primary_server`](#st0263_rename_pe_primary_server): ST0263 Rename PE Primary Server - This task to be used in conjunction with Puppet Enterprise Knowledge Base Article KB0263 - https://support.
 * [`st0267_clear_file_sync_locks`](#st0267_clear_file_sync_locks): ST0267 Clear File Sync Locks - This Task to be used in conjunction with Puppet Enterprise Knowledge Base Article KB0267 - https://support.pup
 * [`st0285_find_disabled_agents`](#st0285_find_disabled_agents): ST0285 Find Disabled Agents - This Task to be used in conjunction with Puppet Enterprise Knowledge Base Article KB0285 - https://support.pupp
 * [`st0285a_bash_find_disabled_agents`](#st0285a_bash_find_disabled_agents): ST0285 Find Disabled Agents - This Task to be used in conjunction with Puppet Enterprise Knowledge Base Article KB0285 - https://support.pupp
@@ -24,8 +23,6 @@
 * [`st0346a_bash_herd_resolver`](#st0346a_bash_herd_resolver): This Task will restart the puppet agent process in a randomised period between 0 and the currently set runinterval
 * [`st0346b_powershell_herd_resolver`](#st0346b_powershell_herd_resolver): powershell thundering herd script
 * [`st0361_uploading_facts`](#st0361_uploading_facts): ST0361 Uploading Facts To the Puppet Primary Server Outside of a Puppet Run - This Task to be used in conjunction with Puppet Enterprise Know
-* [`st0361a_uploading_facts`](#st0361a_uploading_facts): ST0361 Uploading Facts To the Puppet Primary Server Outside of a Puppet Run - This Task to be used in conjunction with Puppet Enterprise Know
-* [`st0361b_uploading_facts`](#st0361b_uploading_facts): ST0361 Uploading Facts To the Puppet Primary Server Outside of a Puppet Run - This Task to be used in conjunction with Puppet Enterprise Know
 * [`st0362_download_latest_pe_in_stream`](#st0362_download_latest_pe_in_stream): ST0362 Download Latest PE Z release in the currently installed stream  - This task to be used in conjunction with Puppet Enterprise Knowledge
 * [`st0370_generate_token`](#st0370_generate_token): ST0370_Generate_Token This task to be used in conjunction with Puppet Enterprise Knowledge Base Article KB0370 - https://support.puppet.com/h
 * [`st0371_puppet_commands`](#st0371_puppet_commands): ST0371 Puppet Commands - This Task to be used in conjunction with Puppet Enterprise Knowledge Base Article KB0371 - https://support.puppet.co
@@ -65,12 +62,6 @@ ST0149 Resolve Stack Level Too Deep - This Task to be used in conjunction with P
 ### <a name="st0236_set_cache_paths_to_default"></a>`st0236_set_cache_paths_to_default`
 
 ST0236 Set Cache Paths To Default - This Task to be used in conjunction with Puppet Enterprise Knowledge Base Article KB0236 - https://support.puppet.com/hc/en-us/articles/360001060434
-
-**Supports noop?** false
-
-### <a name="st0263_rename_pe_primary_server"></a>`st0263_rename_pe_primary_server`
-
-ST0263 Rename PE Primary Server - This task to be used in conjunction with Puppet Enterprise Knowledge Base Article KB0263 - https://support.puppet.com/hc/en-us/articles/360003489634
 
 **Supports noop?** false
 
@@ -220,19 +211,7 @@ powershell thundering herd script
 
 ### <a name="st0361_uploading_facts"></a>`st0361_uploading_facts`
 
-ST0361 Uploading Facts To the Puppet Primary Server Outside of a Puppet Run - This Task to be used in conjunction with Puppet Enterprise Knowledge Base Article KB0361 - https://support.puppet.com/hc/en-us/articles/360036136533
-
-**Supports noop?** false
-
-### <a name="st0361a_uploading_facts"></a>`st0361a_uploading_facts`
-
-ST0361 Uploading Facts To the Puppet Primary Server Outside of a Puppet Run - This Task to be used in conjunction with Puppet Enterprise Knowledge Base Article KB0361 - https://support.puppet.com/hc/en-us/articles/360036136533
-
-**Supports noop?** false
-
-### <a name="st0361b_uploading_facts"></a>`st0361b_uploading_facts`
-
-ST0361 Uploading Facts To the Puppet Primary Server Outside of a Puppet Run - This Task to be used in conjunction with Puppet Enterprise Knowledge Base Article KB0361 - https://support.puppet.com/hc/en-us/articles/360036136533
+ST0361 Uploading Facts To the Puppet Primary Server Outside of a Puppet Run - This Task to be used in conjunction with Puppet Enterprise Knowledge Base Article - https://support.puppet.com/hc/en-us/articles/360036136533
 
 **Supports noop?** false
 
