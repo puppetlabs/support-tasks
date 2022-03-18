@@ -1,11 +1,14 @@
 {
   "puppet_task_version": 1,
   "supports_noop": false,
-  "description": "ST0298 Run Code Deploy - This Task to be used in conjunction with Puppet Enterprise Knowledge Base Article KB0298 - https://support.puppet.com/hc/en-us/articles/360008192734",
+  "description": "ST0298 Run Code Deploy - This Task to be used in conjunction with Puppet Enterprise Knowledge Base Article https://support.puppet.com/hc/en-us/articles/360008192734",
   "parameters": {
     "environment": {
-      "description": "The name of the environment to deploy",
+      "description": "The name of the environment to deploy, use all to deploy every environment",
       "type": "String[1]"
     }
-  }
+  },
+    "implementations": [
+    {"name": "st0298_run_code_deploy.sh", "requirements": ["shell"], "files": ["bash_task_helper/files/task_helper.sh"], "input_method": "environment"}
+  ]
 }
