@@ -4,6 +4,8 @@
 
 declare PT_dbname
 dbname=$PT_dbname
+declare PT__installdir
+source "$PT__installdir/bash_task_helper/files/task_helper.sh"
 
 function getdbTables() {
   path=$1
@@ -36,7 +38,7 @@ elif puppet resource service postgresql-* | grep -q running; then
     dbname="puppetdb"
   fi
 else
-  echo "Node not running pe-postgresql or postgresql service, please select node which is."
+  success '{ "status": "success - Node not running pe-postgresql or postgresql service, please select node which is." }'
 fi
 
 #Run for the correct environment
@@ -51,8 +53,7 @@ fi
       getdbTables "psql" "${dbname}" "${postgresservice}" "puppetdb"
       ;;
     *)
-      echo "Cannot Determine if Puppet Enterprise or Puppet Open Source "
-      exit 1
+      fail "Cannot Determine if Puppet Enterprise or Puppet Open Source"
   esac
 
-echo " -- ST#0287 Task ended: $(date +%s) --"
+success '{ "status": "success - Task completed" }'
