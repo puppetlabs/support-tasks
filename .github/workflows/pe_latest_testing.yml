@@ -131,32 +131,35 @@ jobs:
         echo STEP_START=$(date +%s) >> $GITHUB_ENV
     - name: Provision test environment
       run: |
-        x=0
-        while [ $x -ne 3 ]
-        do
-          buildevents cmd $TRACE_ID $STEP_ID 'rake litmus:provision ${{ matrix.platforms.image }}' -- bundle exec rake 'litmus:provision[${{matrix.platforms.provider}},${{ matrix.platforms.image }}]'
-          echo ::group::=== REQUEST ===
-          cat request.json || true
-          echo
-          echo ::endgroup::
-          echo ::group::=== INVENTORY ===
-          if [ -f 'spec/fixtures/litmus_inventory.yaml' ];
-          then
-            FILE='spec/fixtures/litmus_inventory.yaml'
-          elif [ -f 'inventory.yaml' ];
-          then
-            FILE='inventory.yaml'
-          fi
-          sed -e 's/password: .*/password: "[redacted]"/' < $FILE || true
-          echo ::endgroup::
-          echo INVENTORY_PATH=$FILE >> $GITHUB_ENV
-          if [ $? -eq 1 ]; then
-            x=$(( x + 1 ))
-            echo "Failed, trying Again $x out of 3"
-          else
-            x=3
-          fi
-        done
+        buildevents cmd $TRACE_ID $STEP_ID 'rake litmus:provision ${{ matrix.platforms.image }}' -- bundle exec rake 'litmus:provision[${{matrix.platforms.provider}},${{ matrix.platforms.image }}]'
+        rc=$?
+        if test $rc -ne 0; then
+            attempt_number=0
+            while test $attempt_number -lt 0; do
+                buildevents cmd $TRACE_ID $STEP_ID 'rake litmus:provision ${{ matrix.platforms.image }}' -- bundle exec rake 'litmus:provision[${{matrix.platforms.provider}},${{ matrix.platforms.image }}]'
+            rc=$?
+            if test $rc -eq 0; then
+              break
+            fi
+            sleep 2s
+            ((attempt_number=attempt_number+1))
+          done
+        fi
+        echo ::group::=== REQUEST ===
+        cat request.json || true
+        echo
+        echo ::endgroup::
+        echo ::group::=== INVENTORY ===
+        if [ -f 'spec/fixtures/litmus_inventory.yaml' ];
+        then
+          FILE='spec/fixtures/litmus_inventory.yaml'
+        elif [ -f 'inventory.yaml' ];
+        then
+          FILE='inventory.yaml'
+        fi
+        sed -e 's/password: .*/password: "[redacted]"/' < $FILE || true
+        echo ::endgroup::
+        echo INVENTORY_PATH=$FILE >> $GITHUB_ENV
     - name: Install PE
       run: |
         buildevents cmd $TRACE_ID $STEP_ID 'rake deploy_pe::provision_master' -- bundle exec bolt --tmpdir /tmp --log-level debug  --modulepath spec/fixtures/modules  -i ./$INVENTORY_PATH plan run deploy_pe::provision_master --params '{"version":"${{ matrix.collection }}","pe_settings":{"password":"puppetlabs", "configure_tuning": false}}'  --targets all --stream
