@@ -150,6 +150,7 @@ jobs:
           sed -e 's/password: .*/password: "[redacted]"/' < $FILE || true
           echo ::endgroup::
           echo INVENTORY_PATH=$FILE >> $GITHUB_ENV
+          exit 1
           if [ $? -eq 1 ]; then
             x=$(( x + 1 ))
           echo "Failed, trying Again $x out of 3"
