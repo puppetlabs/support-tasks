@@ -134,6 +134,7 @@ jobs:
       with: 
         max_attempts: 3
         retry_on: error
+        timeout_minutes: 3
         command: |
           buildevents cmd $TRACE_ID $STEP_ID 'rake litmus:provision ${{ matrix.platforms.image }}' -- bundle exec rake 'litmus:provision[${{matrix.platforms.provider}},${{ matrix.platforms.image }}]'
           echo ::group::=== REQUEST ===
