@@ -131,7 +131,26 @@ jobs:
         echo STEP_START=$(date +%s) >> $GITHUB_ENV
     - name: Provision test environment
       run: |
-        (buildevents cmd $TRACE_ID $STEP_ID 'rake litmus:provision ${{ matrix.platforms.image }}' -- bundle exec rake 'litmus:provision[${{matrix.platforms.provider}},${{ matrix.platforms.image }}]') || (buildevents cmd $TRACE_ID $STEP_ID 'rake litmus:provision ${{ matrix.platforms.image }}' -- bundle exec rake 'litmus:provision[${{matrix.platforms.provider}},${{ matrix.platforms.image }}]') || ( exit 1 )
+        # (buildevents cmd $TRACE_ID $STEP_ID 'rake litmus:provision ${{ matrix.platforms.image }}' -- bundle exec rake 'litmus:provision[${{matrix.platforms.provider}},${{ matrix.platforms.image }}]') || (buildevents cmd $TRACE_ID $STEP_ID 'rake litmus:provision ${{ matrix.platforms.image }}' -- bundle exec rake 'litmus:provision[${{matrix.platforms.provider}},${{ matrix.platforms.image }}]') || ( exit 1 )
+        (buildevents cmd $TRACE_ID $STEP_ID 'rake litmus:provision ${{ matrix.platforms.image }}' -- bundle exec rake 'litmus:provision[${{matrix.platforms.provider}},${{ matrix.platforms.image }}]'
+        rc=$?
+        echo "Checking Status code: $rc"
+        if test $rc -ne 0; then
+            attempt_number=0
+            while test $attempt_number -eq 3; do
+                echo "Failed to provision an environment, re-trying... $attempt_number out of 3"
+                buildevents cmd $TRACE_ID $STEP_ID 'rake litmus:provision ${{ matrix.platforms.image }}' -- bundle exec rake 'litmus:provision[${{matrix.platforms.provider}},${{ matrix.platforms.image }}]'
+            rc=$?
+            if test $rc -eq 0; then
+              echo "Re-try successful"
+              break
+            fi
+            sleep 2s
+            ((attempt_number=attempt_number+1))
+          done
+        fi
+        echo "While Loop Finished")
+
         echo ::group::=== REQUEST ===
         cat request.json || true
         echo
