@@ -133,8 +133,9 @@ jobs:
       uses: nick-fields/retry@v2
       with: 
         max_attempts: 3
-        retry_on: error
+        retry_on: any
         timeout_minutes: 3
+        warning_on_retry: true
         command: |
           buildevents cmd $TRACE_ID $STEP_ID 'rake litmus:provision ${{ matrix.platforms.image }}' -- bundle exec rake 'litmus:provision[${{matrix.platforms.provider}},${{ matrix.platforms.image }}]'
           echo ::group::=== REQUEST ===
