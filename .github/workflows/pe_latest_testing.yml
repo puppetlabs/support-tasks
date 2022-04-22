@@ -130,7 +130,6 @@ jobs:
         echo STEP_ID=${{ matrix.platforms.image }}-${{ matrix.collection }}-2 >> $GITHUB_ENV
         echo STEP_START=$(date +%s) >> $GITHUB_ENV
     - name: Provision test environment
-      uses: nick-fields/retry@v2
       run: |
         (buildevents cmd $TRACE_ID $STEP_ID 'rake litmus:provision ${{ matrix.platforms.image }}' -- bundle exec rake 'litmus:provision[${{matrix.platforms.provider}},${{ matrix.platforms.image }}]') || (buildevents cmd $TRACE_ID $STEP_ID 'rake litmus:provision ${{ matrix.platforms.image }}' -- bundle exec rake 'litmus:provision[${{matrix.platforms.provider}},${{ matrix.platforms.image }}]') || ( exit 1 )
         echo ::group::=== REQUEST ===
