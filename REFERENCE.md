@@ -15,7 +15,7 @@
 * [`st0285b_powershell_find_disabled_agents`](#st0285b_powershell_find_disabled_agents): ST0285 Find Disabled Agents - This Task to be used in conjunction with Puppet Enterprise Knowledge Base Article KB0285 - https://support.pupp
 * [`st0286_change_puppet_daemon_runmode`](#st0286_change_puppet_daemon_runmode): ST0286 Change Puppet Daemon Runmode - This Task to be used in conjunction with Puppet Enterprise Knowledge Base Article KB0286 - https://supp
 * [`st0287_check_db_table_sizes`](#st0287_check_db_table_sizes): ST0287 Check DB Table Sizes - This task is to be used in conjunction with Puppet Enterprise Knowledge Base Article KB0287 - https://support.p
-* [`st0298_run_code_deploy`](#st0298_run_code_deploy): ST0298 Run Code Deploy - This Task to be used in conjunction with Puppet Enterprise Knowledge Base Article KB0298 - https://support.puppet.co
+* [`st0298_run_code_deploy`](#st0298_run_code_deploy): ST0298 Run Code Deploy - This Task to be used in conjunction with Puppet Enterprise Knowledge Base Article https://support.puppet.com/hc/en-u
 * [`st0305_support_script_and_upload`](#st0305_support_script_and_upload): Execute the PE Support Script and upload it via SFTP
 * [`st0317a_clean_cert`](#st0317a_clean_cert): Clean (remove) a Puppet agent's certificate from your Primary Server
 * [`st0317b_purge_node`](#st0317b_purge_node): Purge Puppet agent nodes
@@ -125,7 +125,7 @@ The name of the db to connect to
 
 ### <a name="st0298_run_code_deploy"></a>`st0298_run_code_deploy`
 
-ST0298 Run Code Deploy - This Task to be used in conjunction with Puppet Enterprise Knowledge Base Article KB0298 - https://support.puppet.com/hc/en-us/articles/360008192734
+ST0298 Run Code Deploy - This Task to be used in conjunction with Puppet Enterprise Knowledge Base Article https://support.puppet.com/hc/en-us/articles/360008192734
 
 **Supports noop?** false
 
@@ -135,7 +135,7 @@ ST0298 Run Code Deploy - This Task to be used in conjunction with Puppet Enterpr
 
 Data type: `String[1]`
 
-The name of the environment to deploy
+The name of the environment to deploy, use all to deploy every environment
 
 ### <a name="st0305_support_script_and_upload"></a>`st0305_support_script_and_upload`
 
