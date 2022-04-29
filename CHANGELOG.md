@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/) and this project adheres to [Semantic Versioning](http://semver.org).
 
+## [v3.1.0](https://github.com/puppetlabs/support-tasks/tree/v3.1.0) (2022-04-29)
+
+[Full Changelog](https://github.com/puppetlabs/support-tasks/compare/v3.0.0...v3.1.0)
+
+### Added
+
+- \(SUP-2843\) Update code deploy task to use bash helper [\#136](https://github.com/puppetlabs/support-tasks/pull/136) ([MartyEwings](https://github.com/MartyEwings))
+
 ## [v3.0.0](https://github.com/puppetlabs/support-tasks/tree/v3.0.0) (2022-02-03)
 
 [Full Changelog](https://github.com/puppetlabs/support-tasks/compare/v2.0.0...v3.0.0)
