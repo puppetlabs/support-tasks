@@ -8,12 +8,12 @@
       "type": "Optional[Pattern[/^[0-9]$/]]"
     },
     "scope": {
-      "description": "Scope (comma-delimited) of diagnostics to collect. Defaults to 'enterprise,etc,log,networking,resources,system'",
+      "description": "Scope (comma-delimited) of diagnostics to collect. Defaults to 'base-status,system,puppet-agent,puppetserver,puppetdb,pe'",
       "type": "Optional[Pattern[/^[a-z,]+$/]]"
     },
     "ticket": {
       "description": "Support ticket number. Required",
-      "type": "Pattern[/^[0-9]+$/]"
+      "type": "Integer"
     }
   }
 }
