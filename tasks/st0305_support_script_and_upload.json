@@ -13,7 +13,7 @@
     },
     "ticket": {
       "description": "Support ticket number. Required",
-      "type": "Pattern[/^[0-9]+$/]"
+      "type": "Integer"
     }
   }
 }
