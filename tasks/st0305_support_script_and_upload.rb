@@ -7,12 +7,12 @@ require 'json'
 require 'open3'
 
 logage = ENV['PT_logage'] || 3
-scope  = ENV['PT_scope']  || 'enterprise,etc,log,networking,resources,system'
+scope  = ENV['PT_scope']  || 'base-status,system,puppet-agent,puppetserver,puppetdb,pe'
 ticket = ENV['PT_ticket']
 
 def puppet_enterprise_support(logage, scope, ticket)
   command = '/opt/puppetlabs/puppet/bin/puppet'
-  command_line = [command, 'enterprise', 'support', '--v3', '--log-age', logage, '--scope', scope, '--ticket', ticket, '--upload'].join(' ')
+  command_line = [command, 'enterprise', 'support', '--log-age', logage, '--only', scope, '--ticket', ticket, '--upload'].join(' ')
   stdout, stderr, status = Open3.capture3(command_line)
   {
     stdout:    stdout.strip,
