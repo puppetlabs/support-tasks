@@ -17,7 +17,6 @@
     {
       "operatingsystem": "CentOS",
       "operatingsystemrelease": [
-        "8",
         "7",
         "6"
       ]
@@ -33,7 +32,8 @@
     {
       "operatingsystem": "RedHat",
       "operatingsystemrelease": [
-        "8",
+        "9",
+	"8",
         "7",
         "6"
       ]
@@ -41,7 +41,6 @@
     {
       "operatingsystem": "Scientific",
       "operatingsystemrelease": [
-        "8",
         "7",
         "6"
       ]
@@ -49,7 +48,8 @@
     {
       "operatingsystem": "Debian",
       "operatingsystemrelease": [
-        "10",
+        "11",
+	"10",
         "9"
       ]
     },
@@ -72,15 +72,13 @@
     {
       "operatingsystem": "Fedora",
       "operatingsystemrelease": [
-        "30",
-        "31",
-        "32"
+        "32",
+	"34"
       ]
     },
     {
       "operatingsystem": "SLES",
       "operatingsystemrelease": [
-        "11",
         "12",
         "15"
       ]
@@ -88,7 +86,6 @@
     {
       "operatingsystem": "Solaris",
       "operatingsystemrelease": [
-        "10",
         "11"
       ]
     }
