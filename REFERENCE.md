@@ -7,7 +7,6 @@
 ### Tasks
 
 * [`st0009_change_pe_service_loglevel`](#st0009_change_pe_service_loglevel): ST0009 Change PE Service Loglevel - This Task to be used in conjunction with Puppet Enterprise Knowledge Base Article KB0009 - https://suppor
-* [`st0149_resolve_stack_level_too_deep`](#st0149_resolve_stack_level_too_deep): ST0149 Resolve Stack Level Too Deep - This Task to be used in conjunction with Puppet Enterprise Knowledge Base Article KB0149 - https://supp
 * [`st0236_set_cache_paths_to_default`](#st0236_set_cache_paths_to_default): ST0236 Set Cache Paths To Default - This Task to be used in conjunction with Puppet Enterprise Knowledge Base Article KB0236 - https://suppor
 * [`st0267_clear_file_sync_locks`](#st0267_clear_file_sync_locks): ST0267 Clear File Sync Locks - This Task to be used in conjunction with Puppet Enterprise Knowledge Base Article KB0267 - https://support.pup
 * [`st0285_find_disabled_agents`](#st0285_find_disabled_agents): ST0285 Find Disabled Agents - This Task to be used in conjunction with Puppet Enterprise Knowledge Base Article KB0285 - https://support.pupp
@@ -52,12 +51,6 @@ The level to which the logging will be set
 Data type: `Enum[puppetserver, puppetdb, console-services, orchestration-services]`
 
 PE service
-
-### <a name="st0149_resolve_stack_level_too_deep"></a>`st0149_resolve_stack_level_too_deep`
-
-ST0149 Resolve Stack Level Too Deep - This Task to be used in conjunction with Puppet Enterprise Knowledge Base Article KB0149 - https://support.puppet.com/hc/en-us/articles/218763948
-
-**Supports noop?** false
 
 ### <a name="st0236_set_cache_paths_to_default"></a>`st0236_set_cache_paths_to_default`
 
@@ -159,7 +152,7 @@ Scope (comma-delimited) of diagnostics to collect. Defaults to 'enterprise,etc,l
 
 ##### `ticket`
 
-Data type: `Pattern[/^[0-9]+$/]`
+Data type: `Integer`
 
 Support ticket number. Required
 
