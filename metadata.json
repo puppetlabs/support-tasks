@@ -1,6 +1,6 @@
 {
   "name": "puppetlabs-support_tasks",
-  "version": "3.1.0",
+  "version": "4.0.0",
   "author": "Puppet Support Team",
   "summary": "A module used to deliver Tasks for the solutions & configurations described in the PE Support Knowledgebase https://support.puppet.com/hc/en-us",
   "license": "Apache-2.0",
@@ -33,7 +33,7 @@
       "operatingsystem": "RedHat",
       "operatingsystemrelease": [
         "9",
-	"8",
+        "8",
         "7",
         "6"
       ]
@@ -49,7 +49,7 @@
       "operatingsystem": "Debian",
       "operatingsystemrelease": [
         "11",
-	"10",
+        "10",
         "9"
       ]
     },
@@ -73,7 +73,7 @@
       "operatingsystem": "Fedora",
       "operatingsystemrelease": [
         "32",
-	"34"
+        "34"
       ]
     },
     {
