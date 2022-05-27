@@ -10,14 +10,11 @@ path = if Facter.value(:osfamily).eql? 'windows'
          '/opt/puppetlabs/bin/'
        end
 
-
-
-
-       def facts_upload(path)
+def facts_upload(path)
   stdout, stderr, status = Open3.capture3("#{path}puppet", 'facts', 'upload')
   {
     stdout:    stdout.strip,
-        stderr:    stderr.strip,
+ stderr:    stderr.strip,
   exit_code: status.exitstatus,
   }
 end
@@ -26,7 +23,7 @@ results = {}
 
 if File.exist?('/etc/puppetlabs/puppet/ssl/certs/ca.pem')
   output = facts_upload(path)
-if output[:exit_code].zero?
+  if output[:exit_code].zero?
     puts output[:exit_code]
     results[:result] = 'Facts uploaded successfully'
   else
