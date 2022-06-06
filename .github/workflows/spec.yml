@@ -1,4 +1,4 @@
-name: "Spec Tests"
+name: Spec Tests
 
 on:
   workflow_dispatch:
