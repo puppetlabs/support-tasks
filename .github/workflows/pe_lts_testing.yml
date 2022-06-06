@@ -11,20 +11,10 @@ env:
   HONEYCOMB_DATASET: litmus tests
 
 jobs:
-  on-success:
-    runs-on: ubuntu-latest
-    if: ${{ github.event.workflow_run.conclusion == 'success' }}
-    steps:
-      - run: echo 'The triggering workflow passed'
-  on-failure:
-    runs-on: ubuntu-latest
-    if: ${{ github.event.workflow_run.conclusion == 'failure' }}
-    steps:
-      - run: echo 'The triggering workflow failed'
-
   setup_matrix:
     name: "Setup Test Matrix"
     runs-on: ubuntu-20.04
+    if: ${{ github.event.workflow_run.conclusion == 'success' }}
     outputs:
       matrix: ${{ steps.get-matrix.outputs.matrix }}
 
