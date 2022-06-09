@@ -44,3 +44,4 @@ case "${path##*/}" in
      echo "Cannot Determine if Puppet Enterprise or Puppet Open Source "
      exit 1
 esac
+
