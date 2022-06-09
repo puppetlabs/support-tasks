@@ -2,12 +2,15 @@
 
 #### Table of Contents
 
-1. [Description](#description)
-2. [Setup - The basics of getting started with support_tasks](#setup)
-    * [Beginning with support_tasks](#beginning-with-support_tasks)
-3. [Usage - Configuration options and additional functionality](#usage)
-4. [Getting Help](#getting-help)
-5. [How to Report an issue or contribute to the module](#how-to-report-an-issue-or-contribute-to-the-module)
+- [support_tasks](#support_tasks)
+      - [Table of Contents](#table-of-contents)
+  - [Description](#description)
+  - [Setup](#setup)
+    - [Beginning with support_tasks](#beginning-with-support_tasks)
+  - [Usage](#usage)
+  - [Getting Help](#getting-help)
+  - [How to Report an issue or contribute to the module](#how-to-report-an-issue-or-contribute-to-the-module)
+  - [Copyright and License](#copyright-and-license)
 ## Description
 
 This is the companion module used to deliver the tasks for the solutions and configurations described in Puppet Support knowledge base <https://support.puppet.com/hc/en-us>.
@@ -45,5 +48,3 @@ Licensed under the Apache License, Version 2.0 (the "License"); you may not use 
 <http://www.apache.org/licenses/LICENSE-2.0>
 
 Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.
-
-
