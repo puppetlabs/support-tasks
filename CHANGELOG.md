@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/) and this project adheres to [Semantic Versioning](http://semver.org).
 
+## [v4.1.0](https://github.com/puppetlabs/support-tasks/tree/v4.1.0) (2022-09-29)
+
+[Full Changelog](https://github.com/puppetlabs/support-tasks/compare/v4.0.0...v4.1.0)
+
+### Added
+
+- SUP-3551 Change password to sensitive [\#150](https://github.com/puppetlabs/support-tasks/pull/150) ([elainemccloskey](https://github.com/elainemccloskey))
+
 ## [v4.0.0](https://github.com/puppetlabs/support-tasks/tree/v4.0.0) (2022-05-17)
 
 [Full Changelog](https://github.com/puppetlabs/support-tasks/compare/v3.1.0...v4.0.0)
