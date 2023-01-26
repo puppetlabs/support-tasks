@@ -104,8 +104,6 @@ All notable changes to this project will be documented in this file. The format 
 - \[SUP-1531\] [\#61](https://github.com/puppetlabs/support-tasks/pull/61) ([pgrant87](https://github.com/pgrant87))
 - \[SUP-1408\] Update Changelog and Readme for Release 1.0.9 [\#60](https://github.com/puppetlabs/support-tasks/pull/60) ([MartyEwings](https://github.com/MartyEwings))
 - Remove ca\_extend plans and tasks from this module. [\#58](https://github.com/puppetlabs/support-tasks/pull/58) ([m0dular](https://github.com/m0dular))
-- \(SUP-624\) Execute the PE Support Script and upload it via SFTP [\#57](https://github.com/puppetlabs/support-tasks/pull/57) ([tkishel](https://github.com/tkishel))
-- \[SUP-1408\] Added cross-platform task metatdata where applicable [\#56](https://github.com/puppetlabs/support-tasks/pull/56) ([MartyEwings](https://github.com/MartyEwings))
 
 ### Fixed
 
@@ -119,6 +117,11 @@ All notable changes to this project will be documented in this file. The format 
 ## [1.0.9](https://github.com/puppetlabs/support-tasks/tree/1.0.9) (2019-10-10)
 
 [Full Changelog](https://github.com/puppetlabs/support-tasks/compare/1.0.8...1.0.9)
+
+### Added
+
+- \(SUP-624\) Execute the PE Support Script and upload it via SFTP [\#57](https://github.com/puppetlabs/support-tasks/pull/57) ([tkishel](https://github.com/tkishel))
+- \[SUP-1408\] Added cross-platform task metatdata where applicable [\#56](https://github.com/puppetlabs/support-tasks/pull/56) ([MartyEwings](https://github.com/MartyEwings))
 
 ## [1.0.8](https://github.com/puppetlabs/support-tasks/tree/1.0.8) (2019-09-23)
 
