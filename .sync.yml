@@ -9,6 +9,7 @@ Gemfile:
   optional:
     ":development":
     - gem: github_changelog_generator
+      version: '= 1.15.2'
     - gem: puppet_litmus
       git: https://github.com/puppetlabs/puppet_litmus
       ref: main
