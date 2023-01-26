@@ -10,10 +10,6 @@ Gemfile:
     ":development":
     - gem: github_changelog_generator
       version: '= 1.15.2'
-    - gem: puppet_litmus
-      git: https://github.com/puppetlabs/puppet_litmus
-      ref: main
-      condition: Gem::Version.new(RUBY_VERSION.dup) >= Gem::Version.new('2.5.0')
     - gem: 'octokit'
       version:
        '= 4.21.0'
