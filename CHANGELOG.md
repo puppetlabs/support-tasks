@@ -47,6 +47,10 @@ All notable changes to this project will be documented in this file. The format 
 - \(SUP-2848\) st0361a\_uploading\_facts convert to ruby [\#127](https://github.com/puppetlabs/support-tasks/pull/127) ([MartyEwings](https://github.com/MartyEwings))
 - \(Sup-2837\) st0236\_set\_cache\_paths\_to\_default Audit and Update [\#125](https://github.com/puppetlabs/support-tasks/pull/125) ([MartyEwings](https://github.com/MartyEwings))
 
+### Fixed
+
+- \[SUP-1642\] add opensource split arch support \(SUP-1642\) [\#83](https://github.com/puppetlabs/support-tasks/pull/83) ([MartyEwings](https://github.com/MartyEwings))
+
 ## [v2.0.0](https://github.com/puppetlabs/support-tasks/tree/v2.0.0) (2021-08-20)
 
 [Full Changelog](https://github.com/puppetlabs/support-tasks/compare/v1.1.3...v2.0.0)
@@ -68,7 +72,6 @@ All notable changes to this project will be documented in this file. The format 
 ### Fixed
 
 - \[SUP-1835\] duplicate token task fix [\#84](https://github.com/puppetlabs/support-tasks/pull/84) ([MartyEwings](https://github.com/MartyEwings))
-- \[SUP-1642\] add opensource split arch support \(SUP-1642\) [\#83](https://github.com/puppetlabs/support-tasks/pull/83) ([MartyEwings](https://github.com/MartyEwings))
 
 ## [V1.1.2](https://github.com/puppetlabs/support-tasks/tree/V1.1.2) (2020-03-26)
 
@@ -104,8 +107,6 @@ All notable changes to this project will be documented in this file. The format 
 - \[SUP-1531\] [\#61](https://github.com/puppetlabs/support-tasks/pull/61) ([pgrant87](https://github.com/pgrant87))
 - \[SUP-1408\] Update Changelog and Readme for Release 1.0.9 [\#60](https://github.com/puppetlabs/support-tasks/pull/60) ([MartyEwings](https://github.com/MartyEwings))
 - Remove ca\_extend plans and tasks from this module. [\#58](https://github.com/puppetlabs/support-tasks/pull/58) ([m0dular](https://github.com/m0dular))
-- \(SUP-624\) Execute the PE Support Script and upload it via SFTP [\#57](https://github.com/puppetlabs/support-tasks/pull/57) ([tkishel](https://github.com/tkishel))
-- \[SUP-1408\] Added cross-platform task metatdata where applicable [\#56](https://github.com/puppetlabs/support-tasks/pull/56) ([MartyEwings](https://github.com/MartyEwings))
 
 ### Fixed
 
@@ -119,6 +120,11 @@ All notable changes to this project will be documented in this file. The format 
 ## [1.0.9](https://github.com/puppetlabs/support-tasks/tree/1.0.9) (2019-10-10)
 
 [Full Changelog](https://github.com/puppetlabs/support-tasks/compare/1.0.8...1.0.9)
+
+### Added
+
+- \(SUP-624\) Execute the PE Support Script and upload it via SFTP [\#57](https://github.com/puppetlabs/support-tasks/pull/57) ([tkishel](https://github.com/tkishel))
+- \[SUP-1408\] Added cross-platform task metatdata where applicable [\#56](https://github.com/puppetlabs/support-tasks/pull/56) ([MartyEwings](https://github.com/MartyEwings))
 
 ## [1.0.8](https://github.com/puppetlabs/support-tasks/tree/1.0.8) (2019-09-23)
 
@@ -142,6 +148,7 @@ All notable changes to this project will be documented in this file. The format 
 - Acceptance for kb0236 [\#52](https://github.com/puppetlabs/support-tasks/pull/52) ([MartyEwings](https://github.com/MartyEwings))
 - pdk 1.12 update [\#51](https://github.com/puppetlabs/support-tasks/pull/51) ([MartyEwings](https://github.com/MartyEwings))
 - \(maint\) Add a CODEOWNERS file [\#50](https://github.com/puppetlabs/support-tasks/pull/50) ([jarretlavallee](https://github.com/jarretlavallee))
+- 1.0.6 release prep [\#49](https://github.com/puppetlabs/support-tasks/pull/49) ([MartyEwings](https://github.com/MartyEwings))
 
 ## [v1.0.6](https://github.com/puppetlabs/support-tasks/tree/v1.0.6) (2019-07-01)
 
@@ -149,7 +156,6 @@ All notable changes to this project will be documented in this file. The format 
 
 ### UNCATEGORIZED PRS; LABEL THEM ON GITHUB
 
-- 1.0.6 release prep [\#49](https://github.com/puppetlabs/support-tasks/pull/49) ([MartyEwings](https://github.com/MartyEwings))
 - thundering herd Tasks and tests [\#48](https://github.com/puppetlabs/support-tasks/pull/48) ([MartyEwings](https://github.com/MartyEwings))
 
 ## [v1.0.5](https://github.com/puppetlabs/support-tasks/tree/v1.0.5) (2019-05-10)
