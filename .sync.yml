@@ -35,3 +35,4 @@ spec/spec_helper.rb:
   delete: true
 Rakefile:
   changelog_user: "puppetlabs"
+  changelog_since_tag: '4.1.0'
