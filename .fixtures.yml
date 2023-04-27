@@ -16,7 +16,6 @@ fixtures:
     bash_task_helper: 'https://github.com/puppetlabs/puppetlabs-bash_task_helper'
     node_manager: 'https://github.com/WhatsARanjit/puppet-node_manager'
     apply_helpers: 'https://github.com/puppetlabs/puppetlabs-apply_helpers'
-    bolt_shim: 'https://github.com/puppetlabs/puppetlabs-bolt_shim'
     debug: 'https://github.com/nwops/puppet-debug'
     format: 'https://github.com/voxpupuli/puppet-format'
     container_inventory: 'https://gitlab.com/nwops/bolt-container_inventory'
