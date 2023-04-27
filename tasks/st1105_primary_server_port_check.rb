@@ -7,7 +7,7 @@
 require 'socket'
 require 'json'
 
-destination = Socket.gethostbyname(Socket.gethostname).first
+destination = Addrinfo.getaddrinfo(Socket.gethostname, nil).first.getnameinfo.first
 portdesc = {
   '8140' => "The primary server uses this port to accept inbound traffic/requests from agents.
              The console sends requests to the primary server on this port. Certificate requests are passed over this port unless ca_port is set differently.
