@@ -22,4 +22,4 @@ fixtures:
     peadm: 'https://github.com/puppetlabs/puppetlabs-peadm.git'
   symlinks:
     peadm_spec: "#{source_dir}/spec/fixtures/modules/peadm/spec/acceptance/peadm_spec/"
-    support-tasks: "#{source_dir}"
+    support_tasks: "#{source_dir}"
