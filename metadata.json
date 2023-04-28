@@ -17,16 +17,14 @@
     {
       "operatingsystem": "CentOS",
       "operatingsystemrelease": [
-        "7",
-        "6"
+        "7"
       ]
     },
     {
       "operatingsystem": "OracleLinux",
       "operatingsystemrelease": [
         "8",
-        "7",
-        "6"
+        "7"
       ]
     },
     {
@@ -34,8 +32,7 @@
       "operatingsystemrelease": [
         "9",
         "8",
-        "7",
-        "6"
+        "7"
       ]
     },
     {
@@ -48,8 +45,7 @@
       "operatingsystem": "Debian",
       "operatingsystemrelease": [
         "11",
-        "10",
-        "9"
+        "10"
       ]
     },
     {
