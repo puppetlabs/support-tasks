@@ -38,7 +38,7 @@ elif puppet resource service postgresql-* | grep -q running; then
     dbname="puppetdb"
   fi
 else
-  success '{ "status": "success - Node not running pe-postgresql or postgresql service, please select node which is." }'
+  task-succeed "success - Node not running pe-postgresql or postgresql service, please select node which is."
 fi
 
 #Run for the correct environment
@@ -53,7 +53,7 @@ fi
       getdbTables "psql" "${dbname}" "${postgresservice}" "puppetdb"
       ;;
     *)
-      fail "Cannot Determine if Puppet Enterprise or Puppet Open Source"
+      task-fail "Cannot Determine if Puppet Enterprise or Puppet Open Source"
   esac
 
-success '{ "status": "success - Task completed" }'
+task-succeed "success - Task completed"

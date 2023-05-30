@@ -5,13 +5,13 @@ source "$PT__installdir/bash_task_helper/files/task_helper.sh"
 
 if [ -n  "$(facter -p pe_build)" ]
 then
-	success '{ "status": "success - Not an agent node" }'
+	task-suceed "success - Not an agent node"
 fi
 
 manifest=""
-vardir=$(puppet config print vardir) || fail "unable to determine vardir "
-statedir=$(puppet config print statedir) || fail "unable to determine statedir "
-rundir=$(puppet config print rundir) || fail "unable to determine rundir "
+vardir=$(puppet config print vardir) || task-fail "unable to determine vardir"
+statedir=$(puppet config print statedir) || task-fail "unable to determine statedir"
+rundir=$(puppet config print rundir) || task-fail "unable to determine rundir"
 
 if [ "$vardir" != "/opt/puppetlabs/puppet/cache" ]
 then
@@ -31,9 +31,9 @@ fi
 
 if [ "$manifest" != "" ]
 then
-  puppet apply -e "$manifest" || fail "unable to reset parameters "
-  success '{ "status": "success - parameters reset to default" }'
+  puppet apply -e "$manifest" || task-fail "unable to reset parameters"
+  task-succeed "success - parameters reset to default"
 else
-    success '{ "status": "success - No changes necessary" }'	
+    task-succeed "success - No changes necessary"	
 fi
 
