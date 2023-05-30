@@ -1,12 +1,13 @@
 #!/bin/bash
 
 declare PT__installdir
-source "$PT__installdir/support_tasks/files/common.sh"
+source "$PT__installdir/bash_task_helper/files/task_helper.sh"
+
 PUPPET_BIN='/opt/puppetlabs/puppet/bin'
 psql_options=("-d" "$database")
 
 "$PUPPET_BIN/puppet" resource service pe-postgresql | grep -q running || {
-  fail 'pe-postgresql service not found'
+  task-fail "pe-postgresql service not found"
 }
 
 case "${command?}" in
@@ -47,7 +48,7 @@ esac
 # For better readability, return stdout to the caller instead of trying to munge psql output to json
 chmod +r "$_installdir"
 runuser -u pe-postgres -- /opt/puppetlabs/server/bin/psql "${psql_options[@]}" || {
-  fail "Error running query"
+  task-fail "Error running query"
 }
 
 [[ -e $tmp_query ]] && rm -- "$tmp_query"
