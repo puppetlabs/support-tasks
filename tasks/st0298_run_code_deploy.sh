@@ -4,17 +4,16 @@ declare PT__installdir
 source "$PT__installdir/bash_task_helper/files/task_helper.sh"
 declare PT_environment
 environment=$PT_environment
-
+[ "$environment" == 'all' ] && environment='--all'
+failpat='"status": "failed"'
+code=/opt/puppetlabs/bin/puppet-code
 if [ -f "/etc/puppetlabs/puppetserver/conf.d/code-manager.conf" ] 
 then
   if [ -f "/root/.puppetlabs/token" ]
   then  
-    if [ "$environment" != 'all' ]
-    then
-      /opt/puppetlabs/bin/puppet-code deploy "$environment" --wait -l debug 2>&1  || task-fail "code deploy failed"
-    else
-      /opt/puppetlabs/bin/puppet-code deploy --all --wait -l debug 2>&1  ||  task-fail "code deploy failed"
-    fi
+    output="$("$code" deploy "$environment" --wait -l debug 2>&1)" || \
+      task-fail "code deploy failed with exit code $?"
+    [[ "${output}" =~ $failpat ]] && task-fail 'code deploy failed'
   else
    task-fail "Token not available in default location /root/.puppetlabs/token: https://puppet.com/docs/pe/latest/rbac_token_auth_intro.html#generate-a-token-using-puppet-access"
   fi
