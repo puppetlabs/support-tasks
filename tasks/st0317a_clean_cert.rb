@@ -6,6 +6,10 @@
 # Parameters:
 #   * agent_certnames - A comma-separated list of agent certificates to clean/remove.
 
+# DEPRECATION:
+# This script is now Deprecated and will be removed in a further update
+# For cert removal using API https://www.puppet.com/docs/puppet/8/server/http_certificate_clean
+
 # Original code by Nate McCurdy
 # https://github.com/natemccurdy/puppet-purge_node
 
@@ -45,7 +49,11 @@ def clean_cert(agent, cmd)
   }
 end
 
-results = {}
+deprecation_msg = "This task is deprecated and has been replaced by the certificate clean api, which provides the same functionality. 
+                   This task will be removed in a future release.  Please see this module's README for more information"
+results = {
+  deprecation: deprecation_msg
+}
 agents = ENV['PT_agent_certnames'].split(',')
 
 agents.each do |agent|
@@ -62,4 +70,4 @@ end
 
 puts results.to_json
 
-exit(results.values.all? { |v| v[:result] == 'Certificate removed' }) ? 0 : 1
+exit(results.values.reject { |v| v == deprecation_msg }.all? { |v| v[:result] == 'Certificate removed' }) ? 0 : 1
