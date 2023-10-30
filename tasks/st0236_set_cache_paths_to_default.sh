@@ -1,11 +1,13 @@
 #!/bin/bash
 # shellcheck disable=SC2230
+# DEPRECATION:
+# This script is now Deprecated and will be removed in a further update
 declare PT__installdir
 source "$PT__installdir/bash_task_helper/files/task_helper.sh"
 
 if [ -n  "$(facter -p pe_build)" ]
 then
-	task-suceed "success - Not an agent node"
+	task-suceed "***THIS TASK IS NOW DEPRECATED - Please see README*** - success - Not an agent node"
 fi
 
 manifest=""
@@ -32,8 +34,8 @@ fi
 if [ "$manifest" != "" ]
 then
   puppet apply -e "$manifest" || task-fail "unable to reset parameters"
-  task-succeed "success - parameters reset to default"
+  task-succeed "***THIS TASK IS NOW DEPRECATED - Please see README for information*** - success - parameters reset to default"
 else
-    task-succeed "success - No changes necessary"	
+    task-succeed "***THIS TASK IS NOW DEPRECATED - Please see README for information*** - success - No changes necessary"	
 fi
 
