@@ -7,7 +7,7 @@ source "$PT__installdir/bash_task_helper/files/task_helper.sh"
 
 if [ -n  "$(facter -p pe_build)" ]
 then
-	task-suceed "***THIS TASK IS NOW DEPRECATED - Please see README for information*** - success - Not an agent node"
+	task-suceed "***THIS TASK IS NOW DEPRECATED - Please see README*** - success - Not an agent node"
 fi
 
 manifest=""
