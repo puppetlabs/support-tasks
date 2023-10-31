@@ -8,6 +8,7 @@
   - [Setup](#setup)
     - [Beginning with support_tasks](#beginning-with-support_tasks)
   - [Usage](#usage)
+  - [Deprecation Notice](#deprecation-notice)
   - [Getting Help](#getting-help)
   - [How to Report an issue or contribute to the module](#how-to-report-an-issue-or-contribute-to-the-module)
 - [Supporting Content](#supporting-content)
@@ -29,6 +30,14 @@ Tasks in this module should only be executed by PE support customers in accompan
 ## Usage
 
 Support customers should follow the instructions in the corresponding knowledge base articles linked below.
+
+## Deprecation Notice
+
+The following tasks are no longer being developed and will be deprecated in a future version:
+
+| Task Name | Alternative |
+|-----------|-------------|
+| st0317a_clean_cert | User [certificate clean](https://www.puppet.com/docs/puppet/7/server/http_certificate_clean) API to remove certifications |
 
 ## Getting Help
 
