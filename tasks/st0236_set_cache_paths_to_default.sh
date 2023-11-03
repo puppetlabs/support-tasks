@@ -1,11 +1,14 @@
 #!/bin/bash
 # shellcheck disable=SC2230
+# DEPRECATION:
+# This script is now Deprecated and will be removed in a further update
 declare PT__installdir
 source "$PT__installdir/bash_task_helper/files/task_helper.sh"
+task-output "deprecation" "This task is deprecated and will be removed in a future release. Please see this module's README for more information"
 
 if [ -n  "$(facter -p pe_build)" ]
 then
-	task-suceed "success - Not an agent node"
+	task-suceed "Not an agent node"
 fi
 
 manifest=""
@@ -26,7 +29,7 @@ fi
 if [ "$rundir" != "/var/run/puppetlabs" ]
 then
   echo  "{ \"rundir\": \"needs reset from $statedir\" }"
-   manifest+=" augeas {'Remove rundir': changes => 'rm etc/puppetlabs/puppet/puppet.conf/main/rundir' } "
+  manifest+=" augeas {'Remove rundir': changes => 'rm etc/puppetlabs/puppet/puppet.conf/main/rundir' } "
 fi
 
 if [ "$manifest" != "" ]
@@ -34,6 +37,6 @@ then
   puppet apply -e "$manifest" || task-fail "unable to reset parameters"
   task-succeed "success - parameters reset to default"
 else
-    task-succeed "success - No changes necessary"	
+  task-succeed "success - No changes necessary"	
 fi
 

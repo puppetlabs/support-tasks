@@ -37,7 +37,8 @@ The following tasks are no longer being developed and will be deprecated in a fu
 
 | Task Name | Alternative |
 |-----------|-------------|
-| st0317a_clean_cert | User [certificate clean](https://www.puppet.com/docs/puppet/7/server/http_certificate_clean) API to remove certifications |
+| st0236_set_cache_paths_to_default | Use [puppet conf](https://forge.puppet.com/modules/puppetlabs/puppet_conf/readme) |
+| st0317a_clean_cert | Use [certificate clean](https://www.puppet.com/docs/puppet/7/server/http_certificate_clean) API to remove certifications | 
 
 ## Getting Help
 
