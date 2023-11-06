@@ -1,8 +1,12 @@
 #!/bin/bash
 # shellcheck disable=SC2230
 
+# DEPRECATION:
+# This script is now Deprecated and will be removed in a further update
+
 declare PT__installdir
 source "$PT__installdir/bash_task_helper/files/task_helper.sh"
+task-output "deprecation" "This task is deprecated and will be removed in a future release. Please see this module's README for more information"
 
 if [ -z  "$(facter -p pe_build)" ]
 then
