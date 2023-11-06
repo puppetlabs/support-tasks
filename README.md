@@ -38,6 +38,7 @@ The following tasks are no longer being developed and will be deprecated in a fu
 | Task Name | Alternative |
 |-----------|-------------|
 | st0236_set_cache_paths_to_default | Use [puppet conf](https://forge.puppet.com/modules/puppetlabs/puppet_conf/readme) |
+| st0298_run_code_deploy | See [documentation](https://www.puppet.com/docs/pe/2019.7/code_mgr) for suitable solution |
 | st0317a_clean_cert | Use [certificate clean](https://www.puppet.com/docs/puppet/7/server/http_certificate_clean) API to remove certifications | 
 
 ## Getting Help
