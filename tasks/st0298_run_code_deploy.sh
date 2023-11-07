@@ -1,24 +1,41 @@
 #!/bin/bash
-# Puppet Task Name: st0298_run_code_deploy
+# shellcheck disable=SC2230
+# DEPRECATION:
+# This script is now Deprecated and will be removed in a further update
 declare PT__installdir
 source "$PT__installdir/bash_task_helper/files/task_helper.sh"
-declare PT_environment
-environment=$PT_environment
-[ "$environment" == 'all' ] && environment='--all'
-failpat='"status": "failed"'
-code=/opt/puppetlabs/bin/puppet-code
-if [ -f "/etc/puppetlabs/puppetserver/conf.d/code-manager.conf" ] 
+task-output "deprecation" "This task is deprecated and will be removed in a future release. Please see this module's README for more information"
+
+if [ -n  "$(facter -p pe_build)" ]
 then
-  if [ -f "/root/.puppetlabs/token" ]
-  then  
-    output="$("$code" deploy "$environment" --wait -l debug 2>&1)" || \
-      task-fail "code deploy failed with exit code $?"
-    [[ "${output}" =~ $failpat ]] && task-fail 'code deploy failed'
-  else
-   task-fail "Token not available in default location /root/.puppetlabs/token: https://puppet.com/docs/pe/latest/rbac_token_auth_intro.html#generate-a-token-using-puppet-access"
-  fi
-else
-  task-fail  "Node is not a Primary or does not have Code Manager configured. To enable Code Manager please follow the documentation here: https://puppet.com/docs/pe/latest/code_mgr_config.html"
+	task-suceed "Not an agent node"
 fi
 
-    task-succeed "success - Code Deploy completed"
+manifest=""
+vardir=$(puppet config print vardir) || task-fail "unable to determine vardir"
+statedir=$(puppet config print statedir) || task-fail "unable to determine statedir"
+rundir=$(puppet config print rundir) || task-fail "unable to determine rundir"
+
+if [ "$vardir" != "/opt/puppetlabs/puppet/cache" ]
+then
+  echo  "{ \"vardir\": \"needs reset from $vardir\" }"
+  manifest+=" augeas {'Remove vardir': changes => 'rm etc/puppetlabs/puppet/puppet.conf/main/vardir' } "
+fi
+if [ "$statedir" != "/opt/puppetlabs/puppet/cache/state" ]
+then
+  echo  "{ \"statedir\": \"needs reset from $statedir\" }"
+  manifest+=" augeas {'Remove statedir': changes => 'rm etc/puppetlabs/puppet/puppet.conf/main/statedir' } "
+fi
+if [ "$rundir" != "/var/run/puppetlabs" ]
+then
+  echo  "{ \"rundir\": \"needs reset from $statedir\" }"
+  manifest+=" augeas {'Remove rundir': changes => 'rm etc/puppetlabs/puppet/puppet.conf/main/rundir' } "
+fi
+
+if [ "$manifest" != "" ]
+then
+  puppet apply -e "$manifest" || task-fail "unable to reset parameters"
+  task-succeed "success - parameters reset to default"
+else
+  task-succeed "success - No changes necessary"	
+fi
