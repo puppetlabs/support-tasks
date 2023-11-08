@@ -3,6 +3,9 @@
 # Puppet Task to execute the Puppet Enterprise Support Script and upload the result via SFTP.
 # This should only be run against the PE Infrastructure Nodes.
 
+# DEPRECATION:
+# This script is now Deprecated and will be removed in a further update
+
 require 'json'
 require 'open3'
 
@@ -21,7 +24,11 @@ def puppet_enterprise_support(logage, scope, ticket)
   }
 end
 
-results = {}
+deprecation_msg = "This task is deprecated with support script uploading to be handled according to documentation, and will be removed in a future release.
+                   Please see this module's README for more information"
+results = {
+  deprecation: deprecation_msg
+}
 output = puppet_enterprise_support(logage, scope, ticket)
 
 # rubocop:disable Style/ConditionalAssignment
