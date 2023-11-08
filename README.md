@@ -41,7 +41,8 @@ The following tasks are no longer being developed and will be deprecated in a fu
 | st0267_clear_file_sync_locks | See [knowledge article](https://support.puppet.com/hc/en-us/articles/360003883933) for manual steps |
 | st0286_change_puppet_daemon_runmode | To enable or disable puppet agent, see [documentation](https://www.puppet.com/docs/puppet/latest/man/agent.html#options) |
 | st0298_run_code_deploy | See [documentation](https://www.puppet.com/docs/pe/latest/code_mgr) for suitable solution |
-| st0305_support_script_and_upload | See [documentation](https://portal.perforce.com/s/article/360009970114) for upload methods. SFTP and MFT are preferred| 
+| st0305_support_script_and_upload | See [documentation](https://portal.perforce.com/s/article/360009970114) for upload methods. SFTP and MFT are preferred|
+| st0362_download_latest_pe_in_stream |  See [documentation](https://portal.perforce.com/s/article/218822507) for latest version of PE |
 | st0317a_clean_cert | Use [certificate clean](https://www.puppet.com/docs/puppet/7/server/http_certificate_clean) API to remove certifications | 
 
 ## Getting Help
