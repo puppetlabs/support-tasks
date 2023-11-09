@@ -9,7 +9,7 @@ family=$(facter -p os.family)
 pe=$(facter -p pe_server_version)
 majorversion=${pe%.*}
 latest=$(curl https://forge.puppet.com/private/versions/pe |  sed -E -e 's/(release")/\n\1/g'  | grep "${majorversion}.x"  |grep -o -P '.{0,0}latest.{0,13}' | awk '{split($0,a,":"); print a[2]}' |  grep -o '".*"' | sed 's/"//g')
-
+echo "This task is deprecated and will be removed in a future release. Please see this module's README for more information"
 if [ -e "/etc/sysconfig/pe-puppetserver" ] || [ -e "/etc/default/pe-puppetserver" ];then
         echo "Puppet primary server node detected"   #Log Line to StdOut for the Console
         else

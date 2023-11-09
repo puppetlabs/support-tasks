@@ -42,7 +42,8 @@ The following tasks are no longer being developed and will be deprecated in a fu
 | st0285_find_disabled_agents | This task can be handled manually in a custom task by running the following code: ```if [ -e "$LOCKFILE" ] then echo "Puppet agent is disabled" cat "$(puppet config print statedir)/agent_disabled.lock" else echo "Puppet agent is enabled" exit 1 fi``` |
 | st0286_change_puppet_daemon_runmode | To enable or disable puppet agent, see [documentation](https://www.puppet.com/docs/puppet/latest/man/agent.html#options) |
 | st0298_run_code_deploy | See [documentation](https://www.puppet.com/docs/pe/latest/code_mgr) for suitable solution |
-| st0305_support_script_and_upload | See [documentation](https://portal.perforce.com/s/article/360009970114) for upload methods. SFTP and MFT are preferred| 
+| st0305_support_script_and_upload | See [documentation](https://portal.perforce.com/s/article/360009970114) for upload methods. SFTP and MFT are preferred|
+| st0362_download_latest_pe_in_stream |  See [documentation](https://portal.perforce.com/s/article/218822507) for latest version of PE |
 | st0317a_clean_cert | Use [certificate clean](https://www.puppet.com/docs/puppet/7/server/http_certificate_clean) API to remove certifications | 
 
 ## Getting Help
