@@ -45,7 +45,8 @@ The following tasks are no longer being developed and will be deprecated in a fu
 | st0305_support_script_and_upload | See [documentation](https://portal.perforce.com/s/article/360009970114) for upload methods. SFTP and MFT are preferred|
 | st0362_download_latest_pe_in_stream |  See [documentation](https://portal.perforce.com/s/article/218822507) for latest version of PE |
 | st0317a_clean_cert | Use [certificate clean](https://www.puppet.com/docs/puppet/7/server/http_certificate_clean) API to remove certifications |
-| st0317b_purge_node | Use [certificate clean](https://www.puppet.com/docs/puppet/7/server/http_certificate_clean) API to purge nodes | 
+| st0317b_purge_node | Use [certificate clean](https://www.puppet.com/docs/puppet/7/server/http_certificate_clean) API to purge nodes |
+| st0370_generate_token | Use [puppet access CLI](https://www.puppet.com/docs/pe/latest/rbac_token_auth_intro.html#generate_a_token_using_puppet_access) |
 
 ## Getting Help
 
