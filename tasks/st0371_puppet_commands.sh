@@ -7,6 +7,7 @@ declare PT_command
 command=$PT_command
 
 
+echo "This task is deprecated and will be removed in a future release. Please see this module's README for more information"
 
 if [ -e "/etc/sysconfig/pe-puppetserver" ] || [ -e "/etc/default/pe-puppetserver" ] || [ -e "/etc/sysconfig/puppetserver" ] || [ -e "/etc/default/puppetserver" ] # Test to confirm this is a Puppetserver
 then

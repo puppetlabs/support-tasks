@@ -47,6 +47,7 @@ The following tasks are no longer being developed and will be deprecated in a fu
 | st0317a_clean_cert | Use [certificate clean](https://www.puppet.com/docs/puppet/7/server/http_certificate_clean) API to remove certifications |
 | st0317b_purge_node | Use [certificate clean](https://www.puppet.com/docs/puppet/7/server/http_certificate_clean) API to purge nodes |
 | st0370_generate_token | Use [puppet access CLI](https://www.puppet.com/docs/pe/latest/rbac_token_auth_intro.html#generate_a_token_using_puppet_access) |
+| st0371_puppet_commands | Use [Pe status check](https://forge.puppet.com/modules/puppetlabs/pe_status_check/readme) |
 
 ## Getting Help
 
