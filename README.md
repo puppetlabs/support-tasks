@@ -49,6 +49,7 @@ The following tasks are no longer being developed and will be deprecated in a fu
 | st0370_generate_token | Use [puppet access CLI](https://www.puppet.com/docs/pe/latest/rbac_token_auth_intro.html#generate_a_token_using_puppet_access) |
 | st0371_puppet_commands | Use [Pe status check](https://forge.puppet.com/modules/puppetlabs/pe_status_check/readme) |
 | st0372_os_commands |  See documentation on [system configuration](https://portal.perforce.com/s/article/360040232993) |
+| st0373_api_calls | See docomentation on [CD4PE](https://www.puppet.com/docs/continuous-delivery/4.x/cd_user_guide.html) and [Tokens Endpoint](https://www.puppet.com/docs/pe/latest/rbac_api_v1_token.html) |
 
 ## Getting Help
 
