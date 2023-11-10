@@ -50,6 +50,7 @@ The following tasks are no longer being developed and will be deprecated in a fu
 | st0371_puppet_commands | Use [Pe status check](https://forge.puppet.com/modules/puppetlabs/pe_status_check/readme) |
 | st0372_os_commands |  See documentation on [system configuration](https://portal.perforce.com/s/article/360040232993) |
 | st0373_api_calls | See docomentation on [CD4PE](https://www.puppet.com/docs/continuous-delivery/4.x/cd_user_guide.html) and [Tokens Endpoint](https://www.puppet.com/docs/pe/latest/rbac_api_v1_token.html) |
+| st1105_primary_server_port_check | See [documentation](https://www.puppet.com/docs/pe/latest/system_configuration.html#firewall_standard) for checking TCP port configuration |
 
 ## Getting Help
 
