@@ -2,6 +2,34 @@
 
 All notable changes to this project will be documented in this file. The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/) and this project adheres to [Semantic Versioning](http://semver.org).
 
+## [v5.0.0](https://github.com/puppetlabs/support-tasks/tree/v5.0.0) (2023-11-14)
+
+[Full Changelog](https://github.com/puppetlabs/support-tasks/compare/v4.1.0...v5.0.0)
+
+### Changed
+
+- \(SUP-3952\) Remove Puppet 6 as a supported platform [\#156](https://github.com/puppetlabs/support-tasks/pull/156) ([elainemccloskey](https://github.com/elainemccloskey))
+
+### Added
+
+- SUP-4604 - Deprecation of primary\_server\_port\_check task \[st1105\] [\#186](https://github.com/puppetlabs/support-tasks/pull/186) ([Aaronoftheages](https://github.com/Aaronoftheages))
+- SUP-4603 - Deprecation of Api\_calls task \[st0373\] [\#185](https://github.com/puppetlabs/support-tasks/pull/185) ([Aaronoftheages](https://github.com/Aaronoftheages))
+- SUP-4602 -  Deprecation of OS-Commands task \[st0372\] [\#184](https://github.com/puppetlabs/support-tasks/pull/184) ([Aaronoftheages](https://github.com/Aaronoftheages))
+- SUP-4601 - Deprecation of Puppet\_Commands task \[st0371\] [\#183](https://github.com/puppetlabs/support-tasks/pull/183) ([Aaronoftheages](https://github.com/Aaronoftheages))
+- Sup 4600 - Deprecation of generate\_token task \[st0370\] [\#182](https://github.com/puppetlabs/support-tasks/pull/182) ([Aaronoftheages](https://github.com/Aaronoftheages))
+- SUP-4598 - Deprecation of Purge\_Node task \[st0317b\] [\#181](https://github.com/puppetlabs/support-tasks/pull/181) ([Aaronoftheages](https://github.com/Aaronoftheages))
+- SUP-4599 - Deprecation of download latest pe in stream task \[St0362\] [\#180](https://github.com/puppetlabs/support-tasks/pull/180) ([Aaronoftheages](https://github.com/Aaronoftheages))
+- SUP-4593 - Deprecation of find\_disabled\_agents \[st0285\] [\#179](https://github.com/puppetlabs/support-tasks/pull/179) ([Aaronoftheages](https://github.com/Aaronoftheages))
+- SUP-4565 - Deprecation of change\_puppet\_daemon\_runmode \[st0286\] [\#178](https://github.com/puppetlabs/support-tasks/pull/178) ([Aaronoftheages](https://github.com/Aaronoftheages))
+- SUP-4596 - Deprecation of run\_code\_deploy task \[st0298\] [\#177](https://github.com/puppetlabs/support-tasks/pull/177) ([Aaronoftheages](https://github.com/Aaronoftheages))
+- Sup-4597 - Deprecation of support\_script\_and\_upload task \[st0305\] [\#175](https://github.com/puppetlabs/support-tasks/pull/175) ([Aaronoftheages](https://github.com/Aaronoftheages))
+- SUP-4591 - Deprecation of clear\_file\_sync\_locks \[st0267\] [\#172](https://github.com/puppetlabs/support-tasks/pull/172) ([Aaronoftheages](https://github.com/Aaronoftheages))
+- SUP-4423 - Deprecation of clean\_certs task \[st0317a\] [\#170](https://github.com/puppetlabs/support-tasks/pull/170) ([Aaronoftheages](https://github.com/Aaronoftheages))
+- Sup-4590 - Deprecation of set\_cache\_paths\_to\_default task \[st0236\] [\#169](https://github.com/puppetlabs/support-tasks/pull/169) ([Aaronoftheages](https://github.com/Aaronoftheages))
+- Fixes:164 Report failure when code-deploy fails [\#165](https://github.com/puppetlabs/support-tasks/pull/165) ([pillarsdotnet](https://github.com/pillarsdotnet))
+- \(SUP-4277\) Update bash helper functions to support V2 [\#162](https://github.com/puppetlabs/support-tasks/pull/162) ([elainemccloskey](https://github.com/elainemccloskey))
+-  \(SUP-4199\) Puppet 8 release prep [\#159](https://github.com/puppetlabs/support-tasks/pull/159) ([MartyEwings](https://github.com/MartyEwings))
+
 ## [v4.1.0](https://github.com/puppetlabs/support-tasks/tree/v4.1.0) (2022-09-29)
 
 [Full Changelog](https://github.com/puppetlabs/support-tasks/compare/v4.0.0...v4.1.0)
@@ -104,8 +132,6 @@ All notable changes to this project will be documented in this file. The format 
 - \[SUP-1531\] [\#61](https://github.com/puppetlabs/support-tasks/pull/61) ([pgrant87](https://github.com/pgrant87))
 - \[SUP-1408\] Update Changelog and Readme for Release 1.0.9 [\#60](https://github.com/puppetlabs/support-tasks/pull/60) ([MartyEwings](https://github.com/MartyEwings))
 - Remove ca\_extend plans and tasks from this module. [\#58](https://github.com/puppetlabs/support-tasks/pull/58) ([m0dular](https://github.com/m0dular))
-- \(SUP-624\) Execute the PE Support Script and upload it via SFTP [\#57](https://github.com/puppetlabs/support-tasks/pull/57) ([tkishel](https://github.com/tkishel))
-- \[SUP-1408\] Added cross-platform task metatdata where applicable [\#56](https://github.com/puppetlabs/support-tasks/pull/56) ([MartyEwings](https://github.com/MartyEwings))
 
 ### Fixed
 
@@ -119,6 +145,11 @@ All notable changes to this project will be documented in this file. The format 
 ## [1.0.9](https://github.com/puppetlabs/support-tasks/tree/1.0.9) (2019-10-10)
 
 [Full Changelog](https://github.com/puppetlabs/support-tasks/compare/1.0.8...1.0.9)
+
+### Added
+
+- \(SUP-624\) Execute the PE Support Script and upload it via SFTP [\#57](https://github.com/puppetlabs/support-tasks/pull/57) ([tkishel](https://github.com/tkishel))
+- \[SUP-1408\] Added cross-platform task metatdata where applicable [\#56](https://github.com/puppetlabs/support-tasks/pull/56) ([MartyEwings](https://github.com/MartyEwings))
 
 ## [1.0.8](https://github.com/puppetlabs/support-tasks/tree/1.0.8) (2019-09-23)
 
