@@ -3,7 +3,6 @@
 #### Table of Contents
 
 - [support_tasks](#support_tasks)
-      - [Table of Contents](#table-of-contents)
   - [Description](#description)
   - [Setup](#setup)
     - [Beginning with support_tasks](#beginning-with-support_tasks)
