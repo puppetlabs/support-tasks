@@ -4,7 +4,7 @@ require 'facter'
 require 'json'
 require 'open3'
 
-path = if Facter.value(:osfamily).eql? 'windows'
+path = if Facter.value(:'os.family').eql? 'windows'
          'C:\\"Program Files"\\"Puppet Labs"\\Puppet\\bin\\'
        else
          '/opt/puppetlabs/bin/'
