@@ -30,9 +30,9 @@ Tasks in this module should only be executed by PE support customers in accompan
 
 Support customers should follow the instructions in the corresponding knowledge base articles linked below.
 
-## Deprecation Notice
+## Removal Notice
 
-The following tasks are no longer being developed and will be deprecated in a future version:
+The following tasks are no longer being developed and where removed:
 
 | Task Name | Alternative |
 |-----------|-------------|
