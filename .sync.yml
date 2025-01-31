@@ -13,6 +13,9 @@ Gemfile:
     - gem: 'octokit'
       version:
        '= 4.21.0'
+    - gem: 'faraday'
+      version:
+       '= 1.10.3'
 spec/spec_helper.rb:
   mock_with: ":rspec"
   coverage_report: true
