@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/) and this project adheres to [Semantic Versioning](http://semver.org).
 
+## [v5.1.0](https://github.com/puppetlabs/support-tasks/tree/v5.1.0) (2025-02-03)
+
+[Full Changelog](https://github.com/puppetlabs/support-tasks/compare/v5.0.0...v5.1.0)
+
+### Added
+
+- \(CAT-2207\) Remove legacy facts [\#194](https://github.com/puppetlabs/support-tasks/pull/194) ([amitkarsale](https://github.com/amitkarsale))
+- Remove deprecated tasks [\#193](https://github.com/puppetlabs/support-tasks/pull/193) ([MartyEwings](https://github.com/MartyEwings))
+
 ## [v5.0.0](https://github.com/puppetlabs/support-tasks/tree/v5.0.0) (2023-11-14)
 
 [Full Changelog](https://github.com/puppetlabs/support-tasks/compare/v4.1.0...v5.0.0)

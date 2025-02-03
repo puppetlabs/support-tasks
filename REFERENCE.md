@@ -7,28 +7,12 @@
 ### Tasks
 
 * [`st0009_change_pe_service_loglevel`](#st0009_change_pe_service_loglevel): ST0009 Change PE Service Loglevel - This Task to be used in conjunction with Puppet Enterprise Knowledge Base Article KB0009 - https://suppor
-* [`st0236_set_cache_paths_to_default`](#st0236_set_cache_paths_to_default): ST0236 Set Cache Paths To Default - This Task to be used in conjunction with Puppet Enterprise Knowledge Base Article KB0236 - https://suppor
-* [`st0267_clear_file_sync_locks`](#st0267_clear_file_sync_locks): ST0267 Clear File Sync Locks - This Task to be used in conjunction with Puppet Enterprise Knowledge Base Article KB0267 - https://support.pup
-* [`st0285_find_disabled_agents`](#st0285_find_disabled_agents): ST0285 Find Disabled Agents - This Task to be used in conjunction with Puppet Enterprise Knowledge Base Article KB0285 - https://support.pupp
-* [`st0285a_bash_find_disabled_agents`](#st0285a_bash_find_disabled_agents): ST0285 Find Disabled Agents - This Task to be used in conjunction with Puppet Enterprise Knowledge Base Article KB0285 - https://support.pupp
-* [`st0285b_powershell_find_disabled_agents`](#st0285b_powershell_find_disabled_agents): ST0285 Find Disabled Agents - This Task to be used in conjunction with Puppet Enterprise Knowledge Base Article KB0285 - https://support.pupp
-* [`st0286_change_puppet_daemon_runmode`](#st0286_change_puppet_daemon_runmode): ST0286 Change Puppet Daemon Runmode - This Task to be used in conjunction with Puppet Enterprise Knowledge Base Article KB0286 - https://supp
 * [`st0287_check_db_table_sizes`](#st0287_check_db_table_sizes): ST0287 Check DB Table Sizes - This task is to be used in conjunction with Puppet Enterprise Knowledge Base Article KB0287 - https://support.p
-* [`st0298_run_code_deploy`](#st0298_run_code_deploy): ST0298 Run Code Deploy - This Task to be used in conjunction with Puppet Enterprise Knowledge Base Article https://support.puppet.com/hc/en-u
-* [`st0305_support_script_and_upload`](#st0305_support_script_and_upload): Execute the PE Support Script and upload it via SFTP
-* [`st0317a_clean_cert`](#st0317a_clean_cert): Clean (remove) a Puppet agent's certificate from your Primary Server
-* [`st0317b_purge_node`](#st0317b_purge_node): Purge Puppet agent nodes
 * [`st0346_herd_resolver`](#st0346_herd_resolver): This Task will restart the puppet agent process in a randomised period between 0 and the currently set runinterval
 * [`st0346a_bash_herd_resolver`](#st0346a_bash_herd_resolver): This Task will restart the puppet agent process in a randomised period between 0 and the currently set runinterval
 * [`st0346b_powershell_herd_resolver`](#st0346b_powershell_herd_resolver): powershell thundering herd script
 * [`st0361_uploading_facts`](#st0361_uploading_facts): ST0361 Uploading Facts To the Puppet Primary Server Outside of a Puppet Run - This Task to be used in conjunction with Puppet Enterprise Know
-* [`st0362_download_latest_pe_in_stream`](#st0362_download_latest_pe_in_stream): ST0362 Download Latest PE Z release in the currently installed stream  - This task to be used in conjunction with Puppet Enterprise Knowledge
-* [`st0370_generate_token`](#st0370_generate_token): ST0370_Generate_Token This task to be used in conjunction with Puppet Enterprise Knowledge Base Article KB0370 - https://support.puppet.com/h
-* [`st0371_puppet_commands`](#st0371_puppet_commands): ST0371 Puppet Commands - This Task to be used in conjunction with Puppet Enterprise Knowledge Base Article KB0371 - https://support.puppet.co
-* [`st0372_os_commands`](#st0372_os_commands): ST0372 OS Commands - This Task to be used in conjunction with Puppet Enterprise Knowledge Base Article KB0372 - https://support.puppet.com/hc
-* [`st0373_api_calls`](#st0373_api_calls): ST0373 API Calls - This Task to be used in conjunction with Puppet Enterprise Knowledge Base Article KB0373 - https://support.puppet.com/hc/e
 * [`st1096_db_commands`](#st1096_db_commands): ST1096 PDB Commands - This Task to be used in conjunction with Puppet Enterprise Guide Article - https://support.puppet.com/hc/en-us/articles
-* [`st1105_primary_server_port_check`](#st1105_primary_server_port_check): Task to test TCP port connectivity of the Puppet Primary Server
 
 ## Tasks
 
@@ -52,56 +36,6 @@ Data type: `Enum[puppetserver, puppetdb, console-services, orchestration-service
 
 PE service
 
-### <a name="st0236_set_cache_paths_to_default"></a>`st0236_set_cache_paths_to_default`
-
-ST0236 Set Cache Paths To Default - This Task to be used in conjunction with Puppet Enterprise Knowledge Base Article KB0236 - https://support.puppet.com/hc/en-us/articles/360001060434
-
-**Supports noop?** false
-
-### <a name="st0267_clear_file_sync_locks"></a>`st0267_clear_file_sync_locks`
-
-ST0267 Clear File Sync Locks - This Task to be used in conjunction with Puppet Enterprise Knowledge Base Article KB0267 - https://support.puppet.com/hc/en-us/articles/360003883933
-
-**Supports noop?** false
-
-### <a name="st0285_find_disabled_agents"></a>`st0285_find_disabled_agents`
-
-ST0285 Find Disabled Agents - This Task to be used in conjunction with Puppet Enterprise Knowledge Base Article KB0285 - https://support.puppet.com/hc/en-us/articles/360006717334
-
-**Supports noop?** false
-
-### <a name="st0285a_bash_find_disabled_agents"></a>`st0285a_bash_find_disabled_agents`
-
-ST0285 Find Disabled Agents - This Task to be used in conjunction with Puppet Enterprise Knowledge Base Article KB0285 - https://support.puppet.com/hc/en-us/articles/360006717334
-
-**Supports noop?** false
-
-### <a name="st0285b_powershell_find_disabled_agents"></a>`st0285b_powershell_find_disabled_agents`
-
-ST0285 Find Disabled Agents - This Task to be used in conjunction with Puppet Enterprise Knowledge Base Article KB0285 - https://support.puppet.com/hc/en-us/articles/360006717334
-
-**Supports noop?** false
-
-### <a name="st0286_change_puppet_daemon_runmode"></a>`st0286_change_puppet_daemon_runmode`
-
-ST0286 Change Puppet Daemon Runmode - This Task to be used in conjunction with Puppet Enterprise Knowledge Base Article KB0286 - https://support.puppet.com/hc/en-us/articles/360006721014
-
-**Supports noop?** false
-
-#### Parameters
-
-##### `puppet_mode`
-
-Data type: `Enum['enable','disable']`
-
-Can be either `enable` or `disable`, the mode to put the daemon in
-
-##### `reason`
-
-Data type: `Optional[String[1]]`
-
-An optional message string to pass that will be added to disabled agents.  Shows up in syslog.
-
 ### <a name="st0287_check_db_table_sizes"></a>`st0287_check_db_table_sizes`
 
 ST0287 Check DB Table Sizes - This task is to be used in conjunction with Puppet Enterprise Knowledge Base Article KB0287 - https://support.puppet.com/hc/en-us/articles/360006922673
@@ -115,74 +49,6 @@ ST0287 Check DB Table Sizes - This task is to be used in conjunction with Puppet
 Data type: `Enum['pe-puppetdb', 'pe-postgres', 'pe-classifier', 'pe-rbac', 'pe-activity', 'pe-orchestrator', 'postgres', all]`
 
 The name of the db to connect to
-
-### <a name="st0298_run_code_deploy"></a>`st0298_run_code_deploy`
-
-ST0298 Run Code Deploy - This Task to be used in conjunction with Puppet Enterprise Knowledge Base Article https://support.puppet.com/hc/en-us/articles/360008192734
-
-**Supports noop?** false
-
-#### Parameters
-
-##### `environment`
-
-Data type: `String[1]`
-
-The name of the environment to deploy, use all to deploy every environment
-
-### <a name="st0305_support_script_and_upload"></a>`st0305_support_script_and_upload`
-
-Execute the PE Support Script and upload it via SFTP
-
-**Supports noop?** false
-
-#### Parameters
-
-##### `logage`
-
-Data type: `Optional[Pattern[/^[0-9]$/]]`
-
-Log age (in days) to collect. Defaults to '3'
-
-##### `scope`
-
-Data type: `Optional[Pattern[/^[a-z,]+$/]]`
-
-Scope (comma-delimited) of diagnostics to collect. Defaults to 'enterprise,etc,log,networking,resources,system'
-
-##### `ticket`
-
-Data type: `Integer`
-
-Support ticket number. Required
-
-### <a name="st0317a_clean_cert"></a>`st0317a_clean_cert`
-
-Clean (remove) a Puppet agent's certificate from your Primary Server
-
-**Supports noop?** false
-
-#### Parameters
-
-##### `agent_certnames`
-
-Data type: `Pattern[/^([A-Za-z0-9._-]+,?)+$/]`
-
-A comma-separated list of agent certificate to clean
-
-### <a name="st0317b_purge_node"></a>`st0317b_purge_node`
-
-Purge Puppet agent nodes
-
-**Supports noop?** false
-
-#### Parameters
-
-##### `agent_certnames`
-
-Data type: `Pattern[/^([A-Za-z0-9._-]+,?)+$/]`
-
-A comma-separated list of agent certificate names
 
 ### <a name="st0346_herd_resolver"></a>`st0346_herd_resolver`
 
@@ -208,82 +74,6 @@ ST0361 Uploading Facts To the Puppet Primary Server Outside of a Puppet Run - Th
 
 **Supports noop?** false
 
-### <a name="st0362_download_latest_pe_in_stream"></a>`st0362_download_latest_pe_in_stream`
-
-ST0362 Download Latest PE Z release in the currently installed stream  - This task to be used in conjunction with Puppet Enterprise Knowledge Base Article KB00362 - https://support.puppet.com/hc/en-us/articles/360036141593
-
-**Supports noop?** false
-
-#### Parameters
-
-##### `dlpath`
-
-Data type: `String`
-
-The Path to Download PE too
-
-### <a name="st0370_generate_token"></a>`st0370_generate_token`
-
-ST0370_Generate_Token This task to be used in conjunction with Puppet Enterprise Knowledge Base Article KB0370 - https://support.puppet.com/hc/en-us/articles
-
-**Supports noop?** false
-
-#### Parameters
-
-##### `user`
-
-Data type: `String`
-
-PE RBAC User
-
-##### `password`
-
-Data type: `String`
-
-PE RBAC User Password
-
-### <a name="st0371_puppet_commands"></a>`st0371_puppet_commands`
-
-ST0371 Puppet Commands - This Task to be used in conjunction with Puppet Enterprise Knowledge Base Article KB0371 - https://support.puppet.com/hc/en-us/articles/
-
-**Supports noop?** false
-
-#### Parameters
-
-##### `command`
-
-Data type: `Enum[config_print, module_list, infrastructure_status, tune]`
-
-The Puppet Primary Server Command Line action to perform
-
-### <a name="st0372_os_commands"></a>`st0372_os_commands`
-
-ST0372 OS Commands - This Task to be used in conjunction with Puppet Enterprise Knowledge Base Article KB0372 - https://support.puppet.com/hc/en-us/articles/
-
-**Supports noop?** false
-
-#### Parameters
-
-##### `command`
-
-Data type: `Enum[puppet_port_status, puppetserver_log, puppetdb_log, console_log, orchestrator_log, syslog_log, ssldir_permissions ]`
-
-The Puppet Primary Server Command Line action to perform
-
-### <a name="st0373_api_calls"></a>`st0373_api_calls`
-
-ST0373 API Calls - This Task to be used in conjunction with Puppet Enterprise Knowledge Base Article KB0373 - https://support.puppet.com/hc/en-us/articles/
-
-**Supports noop?** false
-
-#### Parameters
-
-##### `command`
-
-Data type: `Enum[ get_all_services_status, manual_gitlab_webhook_hit, create_role_cd4pe, list_tokens  ]`
-
-The Puppet Primary Server API Commands to Run
-
 ### <a name="st1096_db_commands"></a>`st1096_db_commands`
 
 ST1096 PDB Commands - This Task to be used in conjunction with Puppet Enterprise Guide Article - https://support.puppet.com/hc/en-us/articles/4403877435927
@@ -303,10 +93,4 @@ The PDB or PostgreSQL command to perform
 Data type: `Enum[pe-puppetdb,pe-classifier,pe-orchestrator,pe-activity,pe-inventory,pe-rbac,pe-postgres]`
 
 The database name for the PDB command. Default is pe-puppetdb
-
-### <a name="st1105_primary_server_port_check"></a>`st1105_primary_server_port_check`
-
-Task to test TCP port connectivity of the Puppet Primary Server
-
-**Supports noop?** false
 
